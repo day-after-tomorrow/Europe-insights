@@ -1,0 +1,35 @@
+name: Fetch Intelligence Data & Deploy Dashboard
+
+on:
+  schedule:
+    - cron: "0 7 * * 1-5"   # Every weekday at 07:00 UTC
+  workflow_dispatch:          # Also allows manual "Run workflow" button
+
+jobs:
+  fetch-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests feedparser
+
+      - name: Fetch intelligence data (all 15 markets)
+        run: python fetch_intelligence.py --output intelligence_data.json
+
+      - name: Commit updated data file
+        run: |
+          git config user.name  "TIC Bot"
+          git config user.email "tic-bot@tuvsud.local"
+          git add intelligence_data.json
+          git diff --cached --quiet || git commit -m "🔄 Intelligence update $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push

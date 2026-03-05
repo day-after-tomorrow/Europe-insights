@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TÜV SÜD · Competitive Intelligence</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <style>
+    *    { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Aptos', 'Segoe UI', Calibri, system-ui, -apple-system, sans-serif; background: #F7F8FA; }
+    @keyframes shimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+const { useState, useEffect, useCallback } = React;
+
+// ── Static config (mirrors fetch_intelligence.py) ────────────────────────────
+const FLAGS = {
+  Poland:"🇵🇱","Czech Republic":"🇨🇿",Slovakia:"🇸🇰",Hungary:"🇭🇺",
+  Romania:"🇷🇴",Turkey:"🇹🇷","United Kingdom":"🇬🇧",France:"🇫🇷",
+  Belgium:"🇧🇪",Italy:"🇮🇹",Switzerland:"🇨🇭",Spain:"🇪🇸",
+  Austria:"🇦🇹",Denmark:"🇩🇰",Slovenia:"🇸🇮",
+};
+const CURRENCY = {
+  Poland:"PLN","Czech Republic":"CZK",Slovakia:"EUR",Hungary:"HUF",
+  Romania:"RON",Turkey:"TRY","United Kingdom":"GBP",France:"EUR",
+  Belgium:"EUR",Italy:"EUR",Switzerland:"CHF",Spain:"EUR",
+  Austria:"EUR",Denmark:"DKK",Slovenia:"EUR",
+};
+const ACCRED = {
+  Poland:"PCA","Czech Republic":"ČIA",Slovakia:"SNAS",Hungary:"NAH",
+  Romania:"RENAR",Turkey:"TÜRKAK","United Kingdom":"UKAS",France:"COFRAC",
+  Belgium:"BELAC",Italy:"ACCREDIA",Switzerland:"SAS",Spain:"ENAC",
+  Austria:"BMAW",Denmark:"DANAK",Slovenia:"SA",
+};
+
+// Regional groupings for the country selector
+const REGIONS = [
+  { label:"Western Europe",  countries:["United Kingdom","France","Belgium","Italy","Switzerland","Spain","Austria","Denmark"] },
+  { label:"CEE",             countries:["Poland","Czech Republic","Slovakia","Hungary","Romania","Slovenia"] },
+  { label:"Turkey",          countries:["Turkey"] },
+];
+
+// Feed definitions grouped into tabs
+const FEED_GROUPS = [
+  {
+    id: "competition",
+    label: "Competition",
+    icon: "⚔",
+    feeds: [
+      { id:"competitor",  label:"Competitor Moves",   icon:"⚔",  color:"#C0392B", bg:"#FDF0EF", border:"#E8B4B0" },
+      { id:"jobs",        label:"Hiring Signals",      icon:"👤", color:"#8E44AD", bg:"#F8F0FD", border:"#D7B8F0" },
+      { id:"ma",          label:"M&A Activity",        icon:"🤝", color:"#1A5276", bg:"#EBF5FB", border:"#A9CCE3" },
+    ],
+  },
+  {
+    id: "market",
+    label: "Market",
+    icon: "📋",
+    feeds: [
+      { id:"market",      label:"Market & Regulatory", icon:"📋", color:"#2980B9", bg:"#EEF6FB", border:"#AACFE8" },
+      { id:"regulatory",  label:"EU Regulatory Watch", icon:"🌍", color:"#154360", bg:"#EBF5FB", border:"#7FB3D3" },
+      { id:"tenders",     label:"Tenders & Contracts", icon:"📄", color:"#117A65", bg:"#E8F8F5", border:"#A2D9CE" },
+      { id:"standards",   label:"Accreditation & Standards", icon:"📐", color:"#6C3483", bg:"#F5EEF8", border:"#C39BD3" },
+    ],
+  },
+  {
+    id: "growth",
+    label: "Growth",
+    icon: "🚀",
+    feeds: [
+      { id:"investments", label:"Investment Projects",  icon:"🏗",  color:"#D68910", bg:"#FEF9EE", border:"#F0D080" },
+      { id:"emerging",    label:"Emerging Sectors",     icon:"⚡", color:"#1E8449", bg:"#EAFAF1", border:"#A9DFBF" },
+      { id:"esg",         label:"Sustainability & ESG", icon:"🌱", color:"#1D6A4A", bg:"#E9F7EF", border:"#82C9A5" },
+    ],
+  },
+];
+
+const ALL_FEEDS = FEED_GROUPS.flatMap(g => g.feeds);
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+function timeAgo(pubDate) {
+  if (!pubDate) return "";
+  const d = new Date(pubDate);
+  if (isNaN(d)) return "";
+  const h = Math.round((Date.now() - d) / 3600000);
+  if (h < 1)  return "< 1h ago";
+  if (h < 24) return h + "h ago";
+  const days = Math.round(h / 24);
+  return days < 30 ? days + "d ago" : d.toLocaleDateString("en-GB",{day:"numeric",month:"short"});
+}
+function fmtDate(iso) {
+  if (!iso) return "—";
+  try {
+    return new Date(iso).toLocaleString("en-GB",{day:"numeric",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit"});
+  } catch(e) { return iso; }
+}
+
+const U = {
+  high:   {dot:"#E74C3C",bg:"#FDECEA",tc:"#C0392B",label:"HIGH"},
+  medium: {dot:"#F39C12",bg:"#FEF6E4",tc:"#D68910",label:"MED"},
+  low:    {dot:"#27AE60",bg:"#EAF4EB",tc:"#1E8449",label:"LOW"},
+};
+
+// ── Atoms ────────────────────────────────────────────────────────────────────
+function UBadge({urgency}) {
+  const s = U[urgency]||U.low;
+  return h("span",{style:{display:"inline-flex",alignItems:"center",gap:3,padding:"2px 6px",
+    borderRadius:4,background:s.bg,color:s.tc,fontSize:9,fontWeight:700,
+    letterSpacing:"0.06em",fontFamily:"monospace",flexShrink:0}},
+    h("span",{style:{width:5,height:5,borderRadius:"50%",background:s.dot,display:"inline-block"}}),
+    s.label
+  );
+}
+function Tag({children,bg="#F1F5F9",color="#64748B"}) {
+  return h("span",{style:{fontSize:10,background:bg,color,padding:"2px 6px",
+    borderRadius:3,fontFamily:"monospace",whiteSpace:"nowrap"}},children);
+}
+function Shimmer({w="100%",ht=11}) {
+  return h("div",{style:{height:ht,borderRadius:4,width:w,
+    background:"linear-gradient(90deg,#f0f0f0 25%,#e4e4e4 50%,#f0f0f0 75%)",
+    backgroundSize:"200% 100%",animation:"shimmer 1.2s infinite"}});
+}
+function SkeletonRows() {
+  return h("div",{style:{display:"flex",flexDirection:"column",gap:10}},
+    [85,65,76].map((w,i)=>h("div",{key:i,style:{display:"flex",flexDirection:"column",gap:4}},
+      h(Shimmer,{w:w+"%",ht:11}),h(Shimmer,{w:"35%",ht:9})
+    ))
+  );
+}
+
+// shorthand
+function h(type, props, ...children) {
+  return React.createElement(type, props, ...children);
+}
+
+// ── News item ─────────────────────────────────────────────────────────────────
+function NewsItem({item, accentColor}) {
+  const age = timeAgo(item.pubDate);
+  return h("div",{style:{background:"rgba(255,255,255,0.88)",borderRadius:6,padding:"8px 10px",
+    borderLeft:"3px solid "+accentColor,display:"flex",flexDirection:"column",gap:4}},
+    h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:8}},
+      item.link
+        ? h("a",{href:item.link,target:"_blank",rel:"noopener noreferrer",
+            style:{fontSize:12,fontWeight:600,color:"#1a1a2e",lineHeight:1.4,textDecoration:"none",flex:1}},
+            item.title)
+        : h("span",{style:{fontSize:12,fontWeight:600,color:"#1a1a2e",lineHeight:1.4,flex:1}},item.title),
+      h(UBadge,{urgency:item.urgency})
+    ),
+    h("div",{style:{display:"flex",gap:5,flexWrap:"wrap",alignItems:"center"}},
+      item.source && h(Tag,{bg:"#F0F3FF",color:"#003399"},item.source),
+      age          && h(Tag,null,age)
+    )
+  );
+}
+
+// ── Feed card ─────────────────────────────────────────────────────────────────
+function FeedCard({id,label,icon,color,bg,border,items}) {
+  items = items||[];
+  const highs = items.filter(i=>i.urgency==="high").length;
+  return h("div",{style:{border:"1px solid "+border,borderRadius:10,background:bg,
+    overflow:"hidden",display:"flex",flexDirection:"column"}},
+    h("div",{style:{display:"flex",alignItems:"center",gap:7,padding:"10px 14px",
+      borderBottom:"1px solid "+border,background:"rgba(255,255,255,0.55)"}},
+      h("span",{style:{fontSize:14}},icon),
+      h("span",{style:{fontWeight:600,fontSize:13,color}},label),
+      h(Tag,{bg,color},items.length+" items"),
+      highs>0 && h(Tag,{bg:"#FDECEA",color:"#C0392B"},"⚠ "+highs+" high")
+    ),
+    h("div",{style:{padding:"11px 13px",display:"flex",flexDirection:"column",gap:7}},
+      items.length>0
+        ? items.map((item,i)=>h(NewsItem,{key:i,item,accentColor:color}))
+        : h("p",{style:{fontSize:12,color:"#aaa",fontStyle:"italic",margin:0}},
+            "No items in current data. The GitHub Action refreshes weekdays at 07:00.")
+    )
+  );
+}
+
+// ── Macro tile ────────────────────────────────────────────────────────────────
+function MacroTile({label,value,sub,note,trend}) {
+  const arrow      = {up:"↑",down:"↓",stable:"→"}[trend]||"";
+  const arrowColor = {up:"#16A085",down:"#C0392B",stable:"#94A3B8"}[trend]||"#94A3B8";
+  return h("div",{style:{flex:1,minWidth:130,background:"#fff",border:"1px solid #E2E8F0",
+    borderRadius:8,padding:"11px 13px"}},
+    h("div",{style:{fontSize:9,color:"#94A3B8",fontWeight:700,letterSpacing:"0.08em",
+      textTransform:"uppercase",fontFamily:"monospace",marginBottom:5}},label),
+    h("div",{style:{display:"flex",alignItems:"baseline",gap:4}},
+      h("span",{style:{fontSize:19,fontWeight:700,color:"#1a1a2e",lineHeight:1}},value||"—"),
+      arrow && h("span",{style:{color:arrowColor,fontWeight:700,fontSize:14}},arrow)
+    ),
+    sub  && h("div",{style:{fontSize:10.5,color:"#64748B",marginTop:3,lineHeight:1.4}},sub),
+    note && h("div",{style:{fontSize:10,color:"#94A3B8",marginTop:3,fontStyle:"italic",lineHeight:1.4}},note)
+  );
+}
+
+// ── App ───────────────────────────────────────────────────────────────────────
+function App() {
+  const [rawData,    setRawData]    = useState(null);
+  const [country,    setCountry]    = useState(null);
+  const [feedGroup,  setFeedGroup]  = useState("competition");
+  const [loading,    setLoading]    = useState(true);
+  const [error,      setError]      = useState(null);
+  const [lastLoad,   setLastLoad]   = useState(null);
+
+  useEffect(function() {
+    fetch("intelligence_data.json?_="+Date.now())
+      .then(function(r) {
+        if (!r.ok) throw new Error("HTTP "+r.status+" — run the GitHub Action first (Actions tab → Run workflow)");
+        return r.json();
+      })
+      .then(function(d) {
+        setRawData(d);
+        setCountry(d.countries[0]?d.countries[0].country:null);
+        setLastLoad(new Date());
+        setLoading(false);
+      })
+      .catch(function(e) { setError(e.message); setLoading(false); });
+  },[]);
+
+  if (loading) return h("div",{style:{display:"flex",alignItems:"center",justifyContent:"center",height:"100vh"}},
+    h("div",{style:{textAlign:"center"}},
+      h("div",{style:{fontSize:36,marginBottom:12}},"⏳"),
+      h("div",{style:{fontWeight:600,color:"#334155",fontSize:15}},"Loading intelligence data…")
+    )
+  );
+
+  if (error) return h("div",{style:{display:"flex",alignItems:"center",justifyContent:"center",
+    height:"100vh",padding:24}},
+    h("div",{style:{textAlign:"center",maxWidth:540}},
+      h("div",{style:{fontSize:36,marginBottom:12}},"⚠️"),
+      h("div",{style:{fontWeight:700,color:"#C0392B",fontSize:16,marginBottom:10}},"Data file not found"),
+      h("div",{style:{background:"#FDF2F2",border:"1px solid #FECACA",borderRadius:8,
+        padding:"12px 16px",fontSize:12,color:"#7F1D1D",fontFamily:"monospace",
+        textAlign:"left",marginBottom:16}},error),
+      h("div",{style:{fontSize:13,color:"#374151",lineHeight:2,textAlign:"left",
+        background:"#F8FAFC",borderRadius:8,padding:"16px 20px",border:"1px solid #E2E8F0"}},
+        h("strong",null,"To fix:"), h("br"),
+        "1. Open your GitHub repository", h("br"),
+        "2. Click the ", h("strong",null,"Actions"), " tab", h("br"),
+        "3. Click ", h("strong",null,"Fetch Intelligence Data & Deploy Dashboard"), h("br"),
+        "4. Click ", h("strong",null,"Run workflow"), " → ", h("strong",null,"Run workflow"), h("br"),
+        "5. Wait ~90 seconds, then reload this page"
+      )
+    )
+  );
+
+  const countryData  = rawData.countries.find(c=>c.country===country);
+  const competitors  = rawData.meta?rawData.meta.competitors:[];
+  const activeGroup  = FEED_GROUPS.find(g=>g.id===feedGroup)||FEED_GROUPS[0];
+  const activeFeedDefs = activeGroup.feeds;
+
+  const allHighs = countryData
+    ? ALL_FEEDS.reduce(function(acc,s){
+        return acc.concat((countryData.feeds[s.id]||[]).filter(i=>i.urgency==="high"));
+      },[])
+    : [];
+
+  const gdp       = countryData&&countryData.macro?countryData.macro.gdp:null;
+  const infl      = countryData&&countryData.macro?countryData.macro.inflation:null;
+  const rate      = countryData&&countryData.macro?countryData.macro.interestRate:null;
+  const gdpVal    = gdp  ? (+gdp.value).toFixed(1)+"%"  : null;
+  const inflVal   = infl ? (+infl.value).toFixed(1)+"%" : null;
+  const gdpTrend  = gdp  ? (+gdp.value>2?"up":+gdp.value>0?"stable":"down") : null;
+  const inflTrend = infl ? (+infl.value>5?"up":+infl.value>2?"stable":"down") : null;
+
+  return h("div",{style:{fontFamily:"'Aptos', 'Segoe UI', Calibri, system-ui, -apple-system, sans-serif",background:"#F7F8FA",minHeight:"100vh"}},
+
+    // ── Header ──
+    h("div",{style:{background:"#fff",borderBottom:"1px solid #E2E8F0",padding:"0 20px",
+      display:"flex",alignItems:"center",justifyContent:"space-between",height:58,
+      position:"sticky",top:0,zIndex:50,boxShadow:"0 1px 4px rgba(0,0,0,0.06)"}},
+      h("div",{style:{display:"flex",alignItems:"center",gap:11}},
+        h("div",{style:{background:"#003399",color:"#fff",fontWeight:700,fontSize:13,
+          padding:"4px 11px",borderRadius:5,flexShrink:0}},"TÜV SÜD"),
+        h("div",null,
+          h("div",{style:{fontSize:13,fontWeight:600,color:"#1a1a2e"}},"CEE & Europe — Competitive Intelligence"),
+          h("div",{style:{fontSize:10,color:"#94A3B8",fontFamily:"monospace"}},
+            "Data: "+fmtDate(rawData.generatedAt)+" · 15 markets · 10 feeds · No AI quota"
+          )
+        )
+      ),
+      h("div",{style:{display:"flex",alignItems:"center",gap:7}},
+        h(Tag,{bg:"#F0FDF4",color:"#15803D"},"🆓 Free"),
+        h(Tag,{bg:"#EFF3FF",color:"#003399"},"⚡ No quota"),
+        h("span",{style:{fontSize:10,color:"#94A3B8",fontFamily:"monospace",display:"none"/*hide on small*/}},
+          "Loaded "+((lastLoad)?lastLoad.toLocaleTimeString():"—"))
+      )
+    ),
+
+    h("div",{style:{padding:"16px 20px",maxWidth:1700,margin:"0 auto"}},
+
+      // ── Region + Country selector ──
+      h("div",{style:{marginBottom:16}},
+        REGIONS.map(function(region) {
+          return h("div",{key:region.label,style:{marginBottom:10}},
+            h("div",{style:{fontSize:9,fontWeight:700,color:"#94A3B8",letterSpacing:"0.08em",
+              textTransform:"uppercase",fontFamily:"monospace",marginBottom:6}},region.label),
+            h("div",{style:{display:"flex",gap:5,flexWrap:"wrap"}},
+              region.countries.map(function(c) {
+                const active = c===country;
+                const cd     = rawData.countries.find(d=>d.country===c);
+                const highs  = cd?cd.highCount||0:0;
+                return h("button",{key:c,onClick:function(){setCountry(c);},
+                  style:{padding:"6px 13px",borderRadius:7,cursor:"pointer",fontSize:12,
+                    display:"flex",alignItems:"center",gap:5,transition:"all 0.1s",
+                    border:active?"2px solid #003399":"1px solid #DDE1E7",
+                    background:active?"#003399":"#fff",
+                    color:active?"#fff":"#444",fontWeight:active?600:400,
+                    boxShadow:active?"0 2px 8px rgba(0,51,153,0.15)":"none"}},
+                  h("span",{style:{fontSize:14}},FLAGS[c]),
+                  h("span",null,c),
+                  highs>0 && h("span",{style:{fontSize:9,
+                    background:active?"rgba(255,255,255,0.22)":"#FDECEA",
+                    color:active?"#fff":"#C0392B",padding:"1px 5px",borderRadius:10,
+                    fontWeight:700,fontFamily:"monospace"}},"⚠ "+highs)
+                );
+              })
+            )
+          );
+        })
+      ),
+
+      // ── Country heading + alert bar ──
+      h("div",{style:{display:"flex",alignItems:"flex-start",justifyContent:"space-between",
+        gap:12,marginBottom:14,flexWrap:"wrap"}},
+        h("div",{style:{display:"flex",alignItems:"center",gap:10}},
+          h("span",{style:{fontSize:28}},FLAGS[country]),
+          h("div",null,
+            h("div",{style:{fontSize:20,fontWeight:700,color:"#1a1a2e"}},country),
+            h("div",{style:{fontSize:11,color:"#94A3B8"}},
+              "10 feeds · "+((rate)?rate.bank:"CB")+" · "+ACCRED[country]+" · "+CURRENCY[country]
+            )
+          )
+        ),
+        h("div",{style:{background:allHighs.length?"#FDF2F2":"#F0FDF4",
+          border:"1px solid "+(allHighs.length?"#FECACA":"#BBF7D0"),
+          borderRadius:8,padding:"8px 14px",display:"flex",alignItems:"center",
+          gap:8,flexGrow:1,maxWidth:620}},
+          h("span",{style:{fontSize:15}},allHighs.length?"⚠️":"✅"),
+          h("div",null,
+            h("div",{style:{fontWeight:700,fontSize:12,
+              color:allHighs.length?"#C0392B":"#15803D"}},
+              allHighs.length
+                ? allHighs.length+" high-signal item"+(allHighs.length>1?"s":"")+" in "+country
+                : "No high-priority signals in "+country
+            ),
+            allHighs.length>0 && h("div",{style:{fontSize:11,color:"#666",marginTop:2}},
+              allHighs.slice(0,3).map(i=>i.title).join(" · ") +
+              (allHighs.length>3?" · +"+(allHighs.length-3)+" more":"")
+            )
+          )
+        )
+      ),
+
+      // ── Macro strip ──
+      h("div",{style:{background:"#F8FAFC",border:"1px solid #E2E8F0",borderRadius:10,
+        overflow:"hidden",marginBottom:16}},
+        h("div",{style:{display:"flex",alignItems:"center",gap:8,padding:"9px 14px",
+          borderBottom:"1px solid #E2E8F0",background:"rgba(255,255,255,0.7)"}},
+          h("span",null,"📊"),
+          h("span",{style:{fontWeight:600,fontSize:13,color:"#334155"}},
+            "Macroeconomic Indicators — "+country),
+          h(Tag,null,"World Bank API"),
+          rate && h(Tag,null,rate.bank)
+        ),
+        h("div",{style:{padding:"12px 14px",display:"flex",gap:10,flexWrap:"wrap"}},
+          h(MacroTile,{label:"GDP Growth",value:gdpVal||"—",
+            sub:gdp?"World Bank · "+gdp.year:"No World Bank data yet",trend:gdpTrend}),
+          h(MacroTile,{label:"Inflation (CPI)",value:inflVal||"—",
+            sub:infl?"World Bank · "+infl.year:"No World Bank data yet",trend:inflTrend,
+            note:country==="Turkey"?"Elevated inflation environment":null}),
+          h(MacroTile,{label:"Policy Rate · "+((rate)?rate.bank:"CB"),
+            value:rate?rate.value:"—",sub:rate?rate.note:"",
+            trend:country==="Turkey"?"down":"stable"}),
+          h(MacroTile,{label:"Currency",value:CURRENCY[country],
+            sub:["Slovakia","France","Belgium","Italy","Spain","Austria","Slovenia"].includes(country)
+              ?"Eurozone member":"National currency"})
+        )
+      ),
+
+      // ── Feed group tabs ──
+      h("div",{style:{display:"flex",gap:4,marginBottom:14,flexWrap:"wrap"}},
+        FEED_GROUPS.map(function(group) {
+          const active = group.id===feedGroup;
+          // Count highs across this group's feeds
+          const groupHighs = countryData
+            ? group.feeds.reduce(function(n,f){
+                return n+(countryData.feeds[f.id]||[]).filter(i=>i.urgency==="high").length;
+              },0)
+            : 0;
+          return h("button",{key:group.id,onClick:function(){setFeedGroup(group.id);},
+            style:{padding:"8px 18px",borderRadius:8,cursor:"pointer",fontSize:13,
+              display:"flex",alignItems:"center",gap:6,fontWeight:active?700:500,
+              border:active?"2px solid #003399":"1px solid #DDE1E7",
+              background:active?"#003399":"#fff",
+              color:active?"#fff":"#555",
+              boxShadow:active?"0 2px 8px rgba(0,51,153,0.15)":"none",
+              transition:"all 0.1s"}},
+            h("span",null,group.icon),
+            h("span",null,group.label),
+            h("span",{style:{fontSize:10,fontFamily:"monospace",
+              background:active?"rgba(255,255,255,0.2)":"#F1F5F9",
+              color:active?"#fff":"#64748B",
+              padding:"1px 6px",borderRadius:10}},
+              group.feeds.length+" feeds"),
+            groupHighs>0 && h("span",{style:{fontSize:9,background:active?"rgba(255,100,100,0.3)":"#FDECEA",
+              color:active?"#fff":"#C0392B",padding:"1px 5px",borderRadius:10,
+              fontWeight:700,fontFamily:"monospace"}},"⚠ "+groupHighs)
+          );
+        })
+      ),
+
+      // ── Active feed cards ──
+      h("div",{style:{display:"grid",
+        gridTemplateColumns:"repeat(auto-fill,minmax(min(100%,420px),1fr))",
+        gap:13,marginBottom:16}},
+        activeFeedDefs.map(function(s) {
+          return h(FeedCard,Object.assign({key:s.id},s,{
+            items:countryData?countryData.feeds[s.id]||[]:[]
+          }));
+        })
+      ),
+
+      // ── Footer ──
+      h("div",{style:{background:"#fff",border:"1px solid #E2E8F0",borderRadius:10,
+        padding:"12px 16px",display:"flex",justifyContent:"space-between",
+        alignItems:"flex-start",flexWrap:"wrap",gap:12,marginBottom:14}},
+        h("div",null,
+          h("div",{style:{fontSize:9,fontWeight:700,color:"#94A3B8",letterSpacing:"0.08em",
+            textTransform:"uppercase",fontFamily:"monospace",marginBottom:6}},"Monitored Competitors"),
+          h("div",{style:{display:"flex",flexWrap:"wrap",gap:5}},
+            competitors.map(function(c) {
+              return h("span",{key:c,style:{padding:"3px 9px",borderRadius:5,background:"#EFF3FF",
+                color:"#003399",fontSize:11,fontWeight:500,border:"1px solid #C7D2FE"}},c);
+            })
+          )
+        ),
+        h("div",null,
+          h("div",{style:{fontSize:9,fontWeight:700,color:"#94A3B8",letterSpacing:"0.08em",
+            textTransform:"uppercase",fontFamily:"monospace",marginBottom:6}},"Accreditation Bodies"),
+          h("div",{style:{display:"flex",flexWrap:"wrap",gap:4,justifyContent:"flex-end"}},
+            Object.entries(ACCRED).map(function([c,b]) {
+              return h("span",{key:c,style:{padding:"2px 7px",borderRadius:5,background:"#F0FDF4",
+                color:"#15803D",fontSize:10,fontWeight:500,border:"1px solid #BBF7D0"}},
+                FLAGS[c]+" "+b);
+            })
+          )
+        )
+      ),
+
+      h("div",{style:{textAlign:"center",fontSize:10,color:"#CBD5E1",fontFamily:"monospace"}},
+        "TÜV SÜD Competitive Intelligence · 15 markets · Google News RSS · World Bank · GitHub Actions · "+new Date().getFullYear()
+      )
+    )
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
+</script>
+</body>
+</html>

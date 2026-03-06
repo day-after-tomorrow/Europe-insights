@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-06T07:41:10.142053+00:00",
+  "generatedAt": "2026-03-06T08:03:44.605332+00:00",
   "countries": [
     {
       "country": "Poland",
-      "fetchedAt": "2026-03-06T07:39:41.231817+00:00",
+      "fetchedAt": "2026-03-06T08:02:14.975979+00:00",
       "highCount": 3,
       "feeds": {
         "competitor": [],
@@ -228,7 +228,7 @@
     },
     {
       "country": "Czech Republic",
-      "fetchedAt": "2026-03-06T07:39:47.120334+00:00",
+      "fetchedAt": "2026-03-06T08:02:19.764554+00:00",
       "highCount": 0,
       "feeds": {
         "competitor": [],
@@ -343,16 +343,6 @@
             "pubDate": "Fri, 21 Nov 2025 08:00:00 GMT",
             "urgency": "low",
             "local": false
-          },
-          {
-            "title": "Brno se promění v centrum průmyslových inovací",
-            "titleEN": "Brno will turn into a center of industrial innovation",
-            "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbjFJLTlYajJ3MmJtUlZVbC1KaEFxVjQyckhiR1dYT1FHQjJCRjBZeFVzeVRibTIydWRpeVVHdWt1QzUyUmxaZ2FPbTVnUmF2dGo2RnBGR2dsX3d4UFJ5VGZHRUludmJDZ0FES0hxdnVIWTF1b25JTVR4bkloTG52S3RvUllIUF8wdkNWYTNkc3JHaEhqUWcwaA?oc=5",
-            "source": "Reflex.cz",
-            "pubDate": "Tue, 07 Oct 2025 07:00:00 GMT",
-            "urgency": "low",
-            "local": true,
-            "lang": "cs"
           }
         ],
         "emerging": [
@@ -433,7 +423,7 @@
     },
     {
       "country": "Slovakia",
-      "fetchedAt": "2026-03-06T07:39:51.167374+00:00",
+      "fetchedAt": "2026-03-06T08:02:23.447499+00:00",
       "highCount": 2,
       "feeds": {
         "competitor": [],
@@ -536,7 +526,7 @@
           {
             "title": "Slovak Premier Praises Chinese EV Battery Plant in Break With EU",
             "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNWTRkUlJWb3RGOTQ0SkE1eDhwNGJuTjVOMkZ6VHFWdWpmU0xiQVk5TXpubkwzYXlTV0JGNU44UjdiZHZyTENaSDl5dXJwTEpZbGVnaWdDUzBvbGc0cWFEUHhSNkR2R083VnFhUW16UXYxaUpXbkZSbmx1d3pSVThoV1FPbWl5czI1Qk42Ulp6ajViRlhhM2xEaHkwWHJ0Xy1lUzNTTUhLdkF4Qmg1S2xFYy1WaHRDdw?oc=5",
-            "source": "Bloomberg",
+            "source": "Bloomberg.com",
             "pubDate": "Tue, 28 Oct 2025 07:00:00 GMT",
             "urgency": "low",
             "local": false
@@ -550,26 +540,26 @@
             "local": false
           },
           {
+            "title": "Volvo Cars Plans to Build Polestar 7 at Kosice, Slovakia Plant",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVWpGQk03WEN0b0pISUZ0bDF2UXd3Zk9CLVZhYlRSU2NIMEZqVFZRUndjS0p0YUNWd01nRUgtUTBIS21vMkdDU3EyTm5JM2dzbk1UTG9zbHZqX2VhVmlBWnBWZGV3UmoxbFpDNXFwWERnSFZlYW5ONW14Q1BxeDluanFaenJmME1UZVNFVVB3OUFodUVfdjZTYy1fcTZFSTNl0gGmAUFVX3lxTFBPZmJrbnZmendydW1rbFVBbks3TDRVREVkNEkxM1c5ZWdEQ3A4QmdNSEtKRjlYX2pEQm1DWmdvdWJZeU4wWGlXUmZXVmQxcTlDRTlhLXpFSjFlZDNHcUt5V0tXMWhtR2tWZnZuU0w5dzJTd0NydF9hNW53d1JuMjhMODV6UTB5MndOVDlEbUlrcG5hUXZCTW9lZEFSOUJmZGx6Q2xsMEE?oc=5",
+            "source": "CleanTechnica",
+            "pubDate": "Fri, 04 Jul 2025 07:00:00 GMT",
+            "urgency": "low",
+            "local": false
+          },
+          {
+            "title": "Slovakia's First Battery Factory Officially Begins, Gotion Redefines the Logic of Europe Energy",
+            "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPYUZWcWFkZk1TRjBmdHNWZVJmazdkdlNnR204WThfbC1QSS1vMTQ5RUlUQ041ZF9aN1VVSlZuZDlmbjY3cXIyaTRKajM4dTMtYWI3aU1xRjkyaDF4dmx3cEJubklZVERyZUMzMmZVOHc2ZDJDSVNTdWV2eHRYOE1MSmhxeTlTNEFzcVQ1MlpDZGo3dHV0b3d4S3RYeTVILTROeWQtTE1JMWxiSmJiTTExaG9VTlNLMVRQdmRmX0RvQzh6cjVMTzEyRWlGTHhzbHNDamVTSGF5UFE4cVJRWDUwZ3Z3aw?oc=5",
+            "source": "PR Newswire",
+            "pubDate": "Tue, 04 Nov 2025 08:00:00 GMT",
+            "urgency": "low",
+            "local": false
+          },
+          {
             "title": "Gotion kicks off factory construction in Slovakia",
             "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQSnNhOEdfdlR6eHRlZHQ0ZkViOHJDOTM1Z0x3R0FXR3JwTC0wbGx5NDBLWXk2WG83Q1BoVUlRZmllM3BUQ2w0SmZtTTlHcGx6dFR6MGVWSWJGSGlvdTJpX1dnMWE4RUhKWEY0azJ1MFRFUDJ1UVdsMkVFSk1pX2wzSXRtd0pFLWRTOWFMRll3R3Q?oc=5",
             "source": "electrive.com",
             "pubDate": "Fri, 31 Oct 2025 07:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
-            "title": "Volvo Cars pushes back large-scale production at new Slovak plant to early 2027",
-            "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOZWVHWXRQM3ZIZXBwdHdPYjh3WUt4NUFZam5EYUVYRVBLYkZJSlRkcGY1d21hSFZRZ2tEeUxLT1pMclg4a1VHaVEtdlRGRGt6dE03YVhpX0hLeXdhNFE1WnNHV01oMWFmazZHbnhUcGZVSl8tRXQ3R2lXT3gzZWtHZmxFeTRIMUNneC0ycTZHdkd0VTFIbFZDeFY5Q25OT3M3VFFxS1o0WUZjMjYwWWl6dzNNeVgtdmVyUlNzdQ?oc=5",
-            "source": "Reuters",
-            "pubDate": "Thu, 03 Jul 2025 07:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
-            "title": "CSG’s ZVS holding and EURENCO sign agreement to build new artillery charge production plant in Slovakia",
-            "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxORFk4X29qZVJxUExqMXdzTXB3MkVNdHhfV21Kb3BzMGdzUTl4MFBSQUF4Rl9aMG15ZUtna0h1Uzg5RkhBZ1VwQTVTU2pZT2lET3lQZXl6LW10cmVWQ0lzbkFhaFo1ZWRDOVdkZTltR3VCOGdET3ZJTzFqVHlKUnJvNldURUJPX0tfU19LMC1kRkVSUHVWcVdFajJ4LUFlcGdKNGhyRVpRZHhxbW1QQmFjajB6YjQ5MlRhczNqS1JzYlB4NWdNQnpXUlY3WQ?oc=5",
-            "source": "Defence Industry Europe",
-            "pubDate": "Wed, 04 Mar 2026 16:38:56 GMT",
             "urgency": "low",
             "local": false
           }
@@ -595,7 +585,7 @@
     },
     {
       "country": "Hungary",
-      "fetchedAt": "2026-03-06T07:39:58.881668+00:00",
+      "fetchedAt": "2026-03-06T08:02:27.810615+00:00",
       "highCount": 2,
       "feeds": {
         "competitor": [],
@@ -850,7 +840,7 @@
     },
     {
       "country": "Romania",
-      "fetchedAt": "2026-03-06T07:40:04.702837+00:00",
+      "fetchedAt": "2026-03-06T08:02:32.891261+00:00",
       "highCount": 0,
       "feeds": {
         "competitor": [],
@@ -970,16 +960,6 @@
             "lang": "ro"
           },
           {
-            "title": "Rheinmetall construiește o fabrică de pulberi la Victoria, Brașov - investiție de jumătate de miliard de euro",
-            "titleEN": "Rheinmetall is building a powder factory in Victoria, Brașov - investment of half a billion euros",
-            "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNZ3N0TzdKSEw4U2NBNGFwbWUzenpaTFFldTltcVBGUEhSTVRmY1VvWTRvajgxaW9Ield2OE05a01IcXhlZXZubnZKcUQxbmthbnBDUXp6TW9xTDhjQjZwMS11aUZZSXpoTmpKZjN4UXYxbC1JYl84UjBNS2M0QlVOV0ZFUHBzalp6aUlDY3Q2U1BlOGM1c2ZiNFMxN0ZhS2I3N2dpcVlIcTdmdWhTV0MtbGxCN3M5Z0hnMDBGVW12ZENlU0F2OS1sc0ZfUS13WXZJ?oc=5",
-            "source": "Forbes Romania",
-            "pubDate": "Mon, 03 Nov 2025 08:00:00 GMT",
-            "urgency": "medium",
-            "local": true,
-            "lang": "ro"
-          },
-          {
             "title": "Spotlight on Romania: The 600 MWh battery storage boom",
             "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSTNiMURHTFBRcjdnQW5PUW4zT1BUa3RxUGt3OFNJNTM3elQ5em53NllsaUJhWHJVVHdnNU1POHRzNENKemw0OXhSZVM1bjJiMV9qTmtzQXZKS25qTC1sNmRCRGFqdGFSOHFONnR2OU5XQml0VjFuTGxrNTNxYVVoc1JKbGVCdGVoZ05PTjRzWnBYR2Va?oc=5",
             "source": "ESS News",
@@ -1000,6 +980,14 @@
             "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFAxUFNtNURuOVhxQ1lKaGdfX001TkRjZDR3S3ZRN25hZXY4WTcwZExzb1JDVzIwZmpZeUFkSENMbzhWRWM0M3NsOVVMQi1NVUhwcDFLb2FSNlV1T01oX01rakREb1VQZF9sZDdLaDYwd3JpdWV00gF6QVVfeXFMTVRQNG1kbFl5UUtOU1doSWlWT1c1c0M1NDVhYmZWUVJZYW1NakV6V3NEdU5od3lFUndxR1hScUhkVHdmcTRMM1FPLU9sTkM2QWxRVmI5OGVQRG9tQ0FmcVJVTGI3S2szekg5eThPdkF1YWNVeXVheE5vanc?oc=5",
             "source": "Romania Insider",
             "pubDate": "Tue, 06 May 2025 07:00:00 GMT",
+            "urgency": "low",
+            "local": false
+          },
+          {
+            "title": "EUR 20bn for the Development of Romanian Nuclear Energy",
+            "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPVVpWYmJNTEV1aHJPM1Fzc2xnOXVPbVV1cUNBZnA0Vy1yVFpWQXhtbklkZTI5Tk9mMzZEdXg2dERwLTMtcGxtVU44QjdHcldOUnlPUjR0WUU1QVdHazBQNnFlQXAyT01mQU9sYVZ3N2djWElDWHdWOHhvZm92SkNBZHJ1dnVyRkl0TTlleTM0aEdoNGhqWExvaEZ6RQ?oc=5",
+            "source": "Energy Industry Review",
+            "pubDate": "Thu, 02 Oct 2025 07:00:00 GMT",
             "urgency": "low",
             "local": false
           }
@@ -1063,7 +1051,7 @@
     },
     {
       "country": "Turkey",
-      "fetchedAt": "2026-03-06T07:40:11.126052+00:00",
+      "fetchedAt": "2026-03-06T08:02:38.222847+00:00",
       "highCount": 1,
       "feeds": {
         "competitor": [],
@@ -1352,7 +1340,7 @@
     },
     {
       "country": "United Kingdom",
-      "fetchedAt": "2026-03-06T07:40:29.454005+00:00",
+      "fetchedAt": "2026-03-06T08:02:56.495303+00:00",
       "highCount": 2,
       "feeds": {
         "competitor": [
@@ -1651,14 +1639,6 @@
             "local": false
           },
           {
-            "title": "Trusted third-party AI assurance roadmap",
-            "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUFYtbWlpLUhvVWpCQld6UzQyR0dUY2hxc2wxdXZPZFFGV0NCLW5rbW9hbTU1MG43SGpNb3M0SXA0bHpEblpqNDFSdUhLNVR4NG5yLWlEbFAyMTQ0VXp5bUhadm5hUEY2UjROMnZhZUo1YjF6Tm5NalNSckNEMTI3SUNKM0FfTWI5NzktNjZnLXlEeUR4TThwbDJtTTh2Q1FEODJlQmR6WE1OR3RncDNNdzVXQ0drVl9fcUJqeW54eDRKUQ?oc=5",
-            "source": "GOV.UK",
-            "pubDate": "Wed, 03 Sep 2025 07:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
             "title": "UK approach to regulating AI in Life Sciences",
             "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTWdwdDRRTVVNSjVxYTN3eWpYYXA3RDZhYkVjalpORFgtMWU5ajlBVy1HMkxhT2taQ08yUmpvdFluTmU3dV92Ylpta2FCUW1yeXc3QTJ6TWtKdW5nNnpWZUxwYWIwUnBaQU1yRWVxNkFRNTNQSEN0M2hXaHNFSWhUekt3ckFmd08yMkc0R0ZWM2dxQXdsaXBPRGVmdXk3TE9paWtYNDlRV29oVnRoOFVCTQ?oc=5",
             "source": "Taylor Wessing",
@@ -1712,7 +1692,7 @@
     },
     {
       "country": "France",
-      "fetchedAt": "2026-03-06T07:40:35.436375+00:00",
+      "fetchedAt": "2026-03-06T08:03:01.253720+00:00",
       "highCount": 2,
       "feeds": {
         "competitor": [],
@@ -1937,7 +1917,7 @@
     },
     {
       "country": "Belgium",
-      "fetchedAt": "2026-03-06T07:40:40.365702+00:00",
+      "fetchedAt": "2026-03-06T08:03:20.009614+00:00",
       "highCount": 0,
       "feeds": {
         "competitor": [],
@@ -2070,10 +2050,10 @@
             "local": false
           },
           {
-            "title": "Belgium Construction Industry Report 2025: Commercial, Industrial, Infrastructure, Energy and Utilities, Institutional and Residential Outlook, Developments and Project Analytics 2020-2029 - ResearchAndMarkets.com",
-            "link": "https://news.google.com/rss/articles/CBMi_AJBVV95cUxNZl9nTHZsdjFncEVYNDV3MzZmSmE3N3F5bXBLRF9YNWhEVUJkUEJwUEtEalU0Mmh4Mjk0Q3VXNEwzdGY3YXlnSGh6MVJQalY0a05tbTI5aFdOVnVCaUpabTNueTJjT0RmREtoTDV4WHVLUkF3SDN0ZEQ3aVk0NFl0eWNKc21SVHZGcDBoOU5Ea2wzM2lxNktCWjRkRTJxQjB4MEJuTkVVVGlnYW4xRzRTM05la1dmY0FTZzkwY0hpNjg1R1dUdWt6UFhGam11SVc2U2RhOWF1V3dEMWs0dEhBLWhZb0J5dk5pWk5YZFFWUkV5dlZnTFJhSGh1ajNrTkh0R01LbU50MWtoVlRBa1NMSU1rdEh3UHhJd2NzeThVRzlWX0Q0WjBLSUpqUFJlbW9GaVZKWlY4ZjVwQXRDa25odlZZQnhDa3hsY1JFOW5XQWs1d21sdGxSRnlXdWZBU1pucm9lSlhfSlBqQ3VkZmxvbUVZbUFFcXJNVWpXNQ?oc=5",
-            "source": "Business Wire",
-            "pubDate": "Mon, 22 Sep 2025 07:00:00 GMT",
+            "title": "Belgium's Green Hydrogen Push: New Plant and Deals to Cut CO₂ Emissions",
+            "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQU20yakNmazNXWlNDYWdnd0RmeEJ0eC10cEVQVm0xdGROMFliOHpiZDNfQk9iQ0xFTGQ0MldSVGI5cUdkMXViclhVa3BIaHNGZTRWeTlZT090T25DLXdKdG1CSy1QYVlSTFZpYVBMNGl2NVA2SUVLaWtIOUVxZGc0TlBBaENyLVVQcGtsam1nWmEyaGRUWWFZTnQtQXVzc3o1Nm4yU0JQSmlldUhrUTRWMlpCYTVDdUdFa1NldnBB?oc=5",
+            "source": "Fuel Cells Works",
+            "pubDate": "Wed, 19 Feb 2025 08:00:00 GMT",
             "urgency": "low",
             "local": false
           }
@@ -2156,7 +2136,7 @@
     },
     {
       "country": "Italy",
-      "fetchedAt": "2026-03-06T07:40:45.262606+00:00",
+      "fetchedAt": "2026-03-06T08:03:23.772354+00:00",
       "highCount": 1,
       "feeds": {
         "competitor": [],
@@ -2438,7 +2418,7 @@
     },
     {
       "country": "Switzerland",
-      "fetchedAt": "2026-03-06T07:40:50.775320+00:00",
+      "fetchedAt": "2026-03-06T08:03:27.921593+00:00",
       "highCount": 1,
       "feeds": {
         "competitor": [],
@@ -2718,7 +2698,7 @@
     },
     {
       "country": "Spain",
-      "fetchedAt": "2026-03-06T07:40:55.401525+00:00",
+      "fetchedAt": "2026-03-06T08:03:32.118376+00:00",
       "highCount": 0,
       "feeds": {
         "competitor": [],
@@ -2913,10 +2893,10 @@
             "local": false
           },
           {
-            "title": "2,000,000 kW to Produce 300,000 Tonnes per Year: Europe's Largest Green Hydrogen Plant Will Be in Spain",
-            "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOSU12aVRUejFwMDB4YTFERFFfRmZvMUZxMm9GZ0VJcGJWTDVEVURpdzkxaWprSlNZVFdLZHpmMVNtYmdTM1psbkNpSUp6VU5mYThhY0hrdk1ZU0E3X2FBOHdpRV9lTEllSTRvWldyXzJhcU80NWxGbkNQMzl2a1pfcktNcTRNMV9vRnBnc3kyZnBMOHcyV2ZNOFJiVUlSMk1UOEpmTmp2SjByMVg3b2h2MW51aTgwNlpJR0FjbzN3LUFRejJYT1R1X3pyLWMzb18ydERRaEhVeTJOVnBKdzcyalJ5UkZtYTdTUE9Z?oc=5",
-            "source": "Fuel Cells Works",
-            "pubDate": "Mon, 15 Sep 2025 07:00:00 GMT",
+            "title": "Spain’s recovery and resilience plan",
+            "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQNHpfTWhtWUR4Y21Ed250Mk9KTFBxSFlzTXo5bTFWSWJlZ2RNYlFXalBGX29OXzBQVmhkYVhIYmNnaEZISHR0R29reFlXOHFxYktMaGNHbjNkTm9BUnVEbkpFR0c0Wl9Ea0Vuc0lpZEdkS3dRdkh2N2pOWENma25raVMwSmJJNkRKY0JqRkJHTjdxaDBRUXA5THlGR1drVFdtc0NVRGFxbmtwaUk?oc=5",
+            "source": "European Commission",
+            "pubDate": "Sat, 14 Feb 2026 16:45:41 GMT",
             "urgency": "low",
             "local": false
           }
@@ -3034,7 +3014,7 @@
     },
     {
       "country": "Austria",
-      "fetchedAt": "2026-03-06T07:41:01.362463+00:00",
+      "fetchedAt": "2026-03-06T08:03:36.812304+00:00",
       "highCount": 1,
       "feeds": {
         "competitor": [],
@@ -3246,7 +3226,7 @@
     },
     {
       "country": "Denmark",
-      "fetchedAt": "2026-03-06T07:41:05.705216+00:00",
+      "fetchedAt": "2026-03-06T08:03:40.910476+00:00",
       "highCount": 0,
       "feeds": {
         "competitor": [],
@@ -3467,7 +3447,7 @@
     },
     {
       "country": "Slovenia",
-      "fetchedAt": "2026-03-06T07:41:10.142002+00:00",
+      "fetchedAt": "2026-03-06T08:03:44.605244+00:00",
       "highCount": 1,
       "feeds": {
         "competitor": [],

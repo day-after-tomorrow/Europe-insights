@@ -1,0 +1,448 @@
+{
+  "generatedAt": "2026-03-07T08:02:45.390464+00:00",
+  "countries": [
+    {
+      "country": "Poland",
+      "fetchedAt": "2026-03-07T08:02:17.325118+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "NBP",
+          "value": "5.75%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    },
+    {
+      "country": "Czech Republic",
+      "fetchedAt": "2026-03-07T08:02:19.329247+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "CNB",
+          "value": "3.75%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    },
+    {
+      "country": "Slovakia",
+      "fetchedAt": "2026-03-07T08:02:21.334141+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "ECB",
+          "value": "4.50%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    },
+    {
+      "country": "Hungary",
+      "fetchedAt": "2026-03-07T08:02:23.339025+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "MNB",
+          "value": "6.50%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    },
+    {
+      "country": "Romania",
+      "fetchedAt": "2026-03-07T08:02:25.343584+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "BNR",
+          "value": "6.50%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    },
+    {
+      "country": "Turkey",
+      "fetchedAt": "2026-03-07T08:02:27.348048+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "CBRT",
+          "value": "42.50%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    },
+    {
+      "country": "United Kingdom",
+      "fetchedAt": "2026-03-07T08:02:29.353123+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "BoE",
+          "value": "4.75%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    },
+    {
+      "country": "France",
+      "fetchedAt": "2026-03-07T08:02:31.357400+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "ECB",
+          "value": "4.50%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    },
+    {
+      "country": "Belgium",
+      "fetchedAt": "2026-03-07T08:02:33.361636+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "ECB",
+          "value": "4.50%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    },
+    {
+      "country": "Italy",
+      "fetchedAt": "2026-03-07T08:02:35.366507+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "ECB",
+          "value": "4.50%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    },
+    {
+      "country": "Switzerland",
+      "fetchedAt": "2026-03-07T08:02:37.370714+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "SNB",
+          "value": "1.00%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    },
+    {
+      "country": "Spain",
+      "fetchedAt": "2026-03-07T08:02:39.375519+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "ECB",
+          "value": "4.50%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    },
+    {
+      "country": "Austria",
+      "fetchedAt": "2026-03-07T08:02:41.379752+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "ECB",
+          "value": "4.50%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    },
+    {
+      "country": "Denmark",
+      "fetchedAt": "2026-03-07T08:02:43.385578+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "DN",
+          "value": "3.35%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    },
+    {
+      "country": "Slovenia",
+      "fetchedAt": "2026-03-07T08:02:45.390411+00:00",
+      "highCount": 0,
+      "feeds": {
+        "competitor": [],
+        "ma": [],
+        "market": [],
+        "regulatory": [],
+        "tenders": [],
+        "standards": [],
+        "investments": [],
+        "emerging": [],
+        "esg": []
+      },
+      "macro": {
+        "gdp": null,
+        "inflation": null,
+        "interestRate": {
+          "bank": "ECB",
+          "value": "4.50%",
+          "note": "Official rate — update manually after central bank decisions"
+        }
+      }
+    }
+  ],
+  "meta": {
+    "competitors": [
+      "DEKRA",
+      "TUV Rheinland",
+      "SGS",
+      "Bureau Veritas",
+      "TUV Austria",
+      "TUV Nord",
+      "Eurofins",
+      "Intertek",
+      "Applus",
+      "Lloyds Register",
+      "DNV"
+    ],
+    "competitorsCore": [
+      "DEKRA",
+      "TUV Rheinland",
+      "SGS",
+      "Bureau Veritas",
+      "TUV Austria",
+      "TUV Nord",
+      "Eurofins",
+      "Intertek"
+    ],
+    "accredBodies": {
+      "Poland": "PCA",
+      "Czech Republic": "ČIA",
+      "Slovakia": "SNAS",
+      "Hungary": "NAH",
+      "Romania": "RENAR",
+      "Turkey": "TÜRKAK",
+      "United Kingdom": "UKAS",
+      "France": "COFRAC",
+      "Belgium": "BELAC",
+      "Italy": "ACCREDIA",
+      "Switzerland": "SAS",
+      "Spain": "ENAC",
+      "Austria": "Akkreditierung Austria",
+      "Denmark": "DANAK",
+      "Slovenia": "SA"
+    },
+    "currencies": {
+      "Poland": "PLN",
+      "Czech Republic": "CZK",
+      "Slovakia": "EUR",
+      "Hungary": "HUF",
+      "Romania": "RON",
+      "Turkey": "TRY",
+      "United Kingdom": "GBP",
+      "France": "EUR",
+      "Belgium": "EUR",
+      "Italy": "EUR",
+      "Switzerland": "CHF",
+      "Spain": "EUR",
+      "Austria": "EUR",
+      "Denmark": "DKK",
+      "Slovenia": "EUR"
+    },
+    "feedLabels": {
+      "competitor": "Competitor Moves",
+      "ma": "M&A Activity",
+      "market": "Market & Regulatory",
+      "regulatory": "EU Regulatory Watch",
+      "standards": "Accreditation & Standards",
+      "investments": "Investment & Nuclear Projects",
+      "emerging": "Emerging & ESG"
+    }
+  }
+}

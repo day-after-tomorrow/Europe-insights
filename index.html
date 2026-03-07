@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TÜV SÜD · Europe Intelligence</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <style>
+    :root {
+      --navy:#0B1F3A;--blue:#1A4C8B;--ink:#1C2B3A;--steel:#4A6080;
+      --mist:#8FA3B8;--fog:#C8D5E0;--ice:#EBF1F6;--paper:#F4F6F9;--white:#fff;
+      --red:#C0392B;--amber:#D4800A;--green:#1A7A50;
+      --f:'Aptos','Segoe UI',Calibri,system-ui,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--f);background:var(--paper);color:var(--ink);min-height:100vh}
+    a{color:inherit;text-decoration:none}a:hover{text-decoration:underline}
+    button,select{font-family:var(--f);cursor:pointer}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.35)}100%{transform:scale(1)}}
+    .fade{animation:fadeUp 0.25s ease both}
+    .pop{animation:pop 0.2s ease}
+
+    /* AI insight panel */
+    .ai-panel{
+      background:linear-gradient(135deg,#0B1F3A 0%,#1A4C8B 100%);
+      border-radius:10px;padding:16px 18px;color:#fff;
+      margin-top:16px;position:relative;overflow:hidden;
+    }
+    .ai-panel::before{
+      content:"";position:absolute;top:-30px;right:-30px;
+      width:120px;height:120px;border-radius:50%;
+      background:rgba(255,255,255,0.04);
+    }
+    .ai-panel .ai-label{
+      font-size:9px;font-weight:700;letter-spacing:0.1em;
+      text-transform:uppercase;color:rgba(255,255,255,0.5);
+      margin-bottom:8px;display:flex;align-items:center;gap:6px;
+    }
+    .ai-panel .ai-body{font-size:13px;line-height:1.6;color:rgba(255,255,255,0.9)}
+    .ai-panel .ai-loading{
+      display:flex;align-items:center;gap:8px;
+      font-size:12px;color:rgba(255,255,255,0.5);
+    }
+    .ai-spinner{
+      width:14px;height:14px;border:2px solid rgba(255,255,255,0.2);
+      border-top-color:rgba(255,255,255,0.7);border-radius:50%;
+      animation:spin 0.7s linear infinite;flex-shrink:0;
+    }
+  </style>
+</head>
+<body><div id="root"></div>
+<script>
+const {useState,useEffect,useCallback,useRef,useMemo}=React;
+function h(t,p,...c){return React.createElement(t,p,...c);}
+
+// ── Config ────────────────────────────────────────────────────────────────────
+const FLAGS={Poland:"🇵🇱","Czech Republic":"🇨🇿",Slovakia:"🇸🇰",Hungary:"🇭🇺",
+  Romania:"🇷🇴",Turkey:"🇹🇷","United Kingdom":"🇬🇧",France:"🇫🇷",
+  Belgium:"🇧🇪",Italy:"🇮🇹",Switzerland:"🇨🇭",Spain:"🇪🇸",
+  Austria:"🇦🇹",Denmark:"🇩🇰",Slovenia:"🇸🇮"};
+const CURRENCY={Poland:"PLN","Czech Republic":"CZK",Slovakia:"EUR",Hungary:"HUF",
+  Romania:"RON",Turkey:"TRY","United Kingdom":"GBP",France:"EUR",
+  Belgium:"EUR",Italy:"EUR",Switzerland:"CHF",Spain:"EUR",
+  Austria:"EUR",Denmark:"DKK",Slovenia:"EUR"};
+const ACCRED={Poland:"PCA","Czech Republic":"ČIA",Slovakia:"SNAS",Hungary:"NAH",
+  Romania:"RENAR",Turkey:"TÜRKAK","United Kingdom":"UKAS",France:"COFRAC",
+  Belgium:"BELAC",Italy:"ACCREDIA",Switzerland:"SAS",Spain:"ENAC",
+  Austria:"Akkreditierung Austria",Denmark:"DANAK",Slovenia:"SA"};
+const EUROZONE=new Set(["Slovakia","France","Belgium","Italy","Spain","Austria","Slovenia"]);
+const ALL_COUNTRIES=["Poland","Czech Republic","Slovakia","Hungary","Romania","Turkey",
+  "United Kingdom","France","Belgium","Italy","Switzerland","Spain","Austria","Denmark","Slovenia"];
+
+const FEED_GROUPS=[
+  {id:"competition",label:"Competition",icon:"⚔",feeds:[
+    {id:"competitor",label:"Competitor Moves",    icon:"⚔", c:"#8B1A1A",bg:"#FDF5F5",br:"#E8C8C8"},
+    {id:"ma",        label:"M&A Activity",        icon:"🤝",c:"#0F3460",bg:"#EEF4FA",br:"#B8CDE8"},
+  ]},
+  {id:"market",label:"Market",icon:"📋",feeds:[
+    {id:"market",    label:"Market & Regulatory",      icon:"📋",c:"#1A4C8B",bg:"#EEF4FA",br:"#B8CDE8"},
+    {id:"regulatory",label:"EU Regulatory Watch",      icon:"🌍",c:"#0F3460",bg:"#EAF2F8",br:"#A8C0D8"},
+    {id:"standards", label:"Accreditation & Standards",icon:"📐",c:"#4A1070",bg:"#F5EEFB",br:"#CCB0E8"},
+  ]},
+  {id:"growth",label:"Growth",icon:"🚀",feeds:[
+    {id:"investments",label:"Investment & Nuclear",icon:"⚛", c:"#7A4A08",bg:"#FDF8F0",br:"#E8D098"},
+    {id:"emerging",   label:"Emerging & ESG",     icon:"🌱",c:"#1A5C38",bg:"#EAF6EF",br:"#98D0B0"},
+  ]},
+];
+const ALL_FEEDS=FEED_GROUPS.flatMap(g=>g.feeds);
+const URGENCY={
+  high:  {dot:"#E74C3C",bg:"#FEF0EF",tc:"#C0392B",label:"HIGH"},
+  medium:{dot:"#E8900A",bg:"#FEF8F0",tc:"#B8680A",label:"MED"},
+  low:   {dot:"#27AE60",bg:"#F0FAF5",tc:"#1A7A50",label:"LOW"},
+};
+
+// ── Feedback storage (localStorage) ──────────────────────────────────────────
+// Stores: { [titleHash]: { vote: 1|-1, title, feedId, country, ts } }
+function hashTitle(t){
+  let h=0;for(let i=0;i<t.length;i++){h=((h<<5)-h)+t.charCodeAt(i);h|=0;}
+  return"f"+Math.abs(h).toString(36);
+}
+function loadFeedback(){
+  try{return JSON.parse(localStorage.getItem("tic_feedback")||"{}");}catch{return{};}
+}
+function saveFeedback(fb){
+  try{localStorage.setItem("tic_feedback",JSON.stringify(fb));}catch{}
+}
+function getFeedbackSummary(fb){
+  const ups=Object.values(fb).filter(v=>v.vote===1);
+  const downs=Object.values(fb).filter(v=>v.vote===-1);
+  return{ups,downs,total:ups.length+downs.length};
+}
+
+// ── Anthropic API call ────────────────────────────────────────────────────────
+async function callClaude(prompt){
+  const r=await fetch("https://api.anthropic.com/v1/messages",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+      model:"claude-sonnet-4-20250514",
+      max_tokens:1000,
+      messages:[{role:"user",content:prompt}],
+    }),
+  });
+  const d=await r.json();
+  return d.content?.find(b=>b.type==="text")?.text||"";
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function timeAgo(d){
+  if(!d)return"";const dt=new Date(d);if(isNaN(dt))return"";
+  const hrs=Math.round((Date.now()-dt)/3600000);
+  if(hrs<1)return"<1h";if(hrs<24)return hrs+"h ago";
+  const dy=Math.round(hrs/24);
+  return dy<30?dy+"d ago":dt.toLocaleDateString("en-GB",{day:"numeric",month:"short"});
+}
+function fmtDT(iso){
+  if(!iso)return"—";
+  try{return new Date(iso).toLocaleString("en-GB",{day:"numeric",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit"});}
+  catch{return iso;}
+}
+function buildBriefing(countries){
+  const all=[];
+  countries.forEach(cd=>{
+    ALL_FEEDS.forEach(f=>{
+      (cd.feeds[f.id]||[]).forEach(item=>{
+        all.push({...item,country:cd.country,feedLabel:f.label,feedId:f.id});
+      });
+    });
+  });
+  const sc={high:3,medium:2,low:1};
+  all.sort((a,b)=>(sc[b.urgency]||0)-(sc[a.urgency]||0)||new Date(b.pubDate)-new Date(a.pubDate));
+  const seen={c:{},f:{}};const top=[];
+  for(let i=0;i<all.length&&top.length<7;i++){
+    const x=all[i];
+    if((seen.c[x.country]||0)<2&&(seen.f[x.feedId]||0)<2){
+      top.push(x);seen.c[x.country]=(seen.c[x.country]||0)+1;seen.f[x.feedId]=(seen.f[x.feedId]||0)+1;
+    }
+  }
+  const heatmap=countries.map(cd=>({
+    country:cd.country,
+    highs:ALL_FEEDS.reduce((n,f)=>n+(cd.feeds[f.id]||[]).filter(i=>i.urgency==="high").length,0),
+    total:ALL_FEEDS.reduce((n,f)=>n+(cd.feeds[f.id]||[]).length,0),
+  })).sort((a,b)=>b.highs-a.highs);
+  const cc={};
+  all.filter(i=>i.feedId==="competitor"||i.feedId==="ma").forEach(item=>{
+    ["DEKRA","TUV Rheinland","SGS","Bureau Veritas","Eurofins","Intertek","DNV","Applus","Lloyds Register"].forEach(comp=>{
+      if(item.title.toLowerCase().includes(comp.toLowerCase()))cc[comp]=(cc[comp]||0)+1;
+    });
+  });
+  const compLeague=Object.entries(cc).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  return{top,heatmap,compLeague};
+}
+
+// ── Atoms ─────────────────────────────────────────────────────────────────────
+function UPill({urgency}){
+  const s=URGENCY[urgency]||URGENCY.low;
+  return h("span",{style:{display:"inline-flex",alignItems:"center",gap:3,padding:"2px 7px",
+    borderRadius:3,background:s.bg,color:s.tc,fontSize:9,fontWeight:700,
+    letterSpacing:"0.07em",fontFamily:"monospace",flexShrink:0}},
+    h("span",{style:{width:5,height:5,borderRadius:"50%",background:s.dot,display:"inline-block"}}),
+    s.label);
+}
+function SecLabel({children,mb=10}){
+  return h("div",{style:{fontSize:9,fontWeight:700,color:"var(--mist)",letterSpacing:"0.1em",
+    textTransform:"uppercase",marginBottom:mb,paddingBottom:7,borderBottom:"1px solid var(--ice)"}},children);
+}
+
+// ── Vote buttons ──────────────────────────────────────────────────────────────
+function VoteButtons({item,feedId,country,feedback,onVote}){
+  const key=hashTitle(item.title);
+  const current=feedback[key]?.vote||0;
+
+  return h("div",{style:{display:"flex",gap:3,alignItems:"center",flexShrink:0}},
+    // Upvote
+    h("button",{
+      title:"Useful — show me more like this",
+      onClick:e=>{e.preventDefault();e.stopPropagation();onVote(item,feedId,country,1);},
+      style:{
+        width:24,height:24,borderRadius:5,border:"1px solid",
+        display:"flex",alignItems:"center",justifyContent:"center",
+        fontSize:11,cursor:"pointer",transition:"all 0.15s",
+        background:current===1?"#E8F5E9":"var(--white)",
+        borderColor:current===1?"#27AE60":"var(--fog)",
+        color:current===1?"#1A7A50":"var(--mist)",
+      }
+    },"▲"),
+    // Downvote
+    h("button",{
+      title:"Not relevant — show me less like this",
+      onClick:e=>{e.preventDefault();e.stopPropagation();onVote(item,feedId,country,-1);},
+      style:{
+        width:24,height:24,borderRadius:5,border:"1px solid",
+        display:"flex",alignItems:"center",justifyContent:"center",
+        fontSize:11,cursor:"pointer",transition:"all 0.15s",
+        background:current===-1?"#FEF0EF":"var(--white)",
+        borderColor:current===-1?"#E74C3C":"var(--fog)",
+        color:current===-1?"var(--red)":"var(--mist)",
+      }
+    },"▼")
+  );
+}
+
+// ── AI Insight Panel ──────────────────────────────────────────────────────────
+function AIInsightPanel({feedback}){
+  const[insight,setInsight]=useState(null);
+  const[loading,setLoading]=useState(false);
+  const[lastCount,setLastCount]=useState(0);
+
+  const summary=getFeedbackSummary(feedback);
+
+  // Auto-trigger when we hit 3, 5, 10, 15... votes
+  useEffect(()=>{
+    const triggers=[3,5,10,15,20,25,30];
+    if(triggers.includes(summary.total)&&summary.total!==lastCount){
+      setLastCount(summary.total);
+      generateInsight();
+    }
+  },[summary.total]);
+
+  async function generateInsight(){
+    if(loading)return;
+    setLoading(true);
+    try{
+      const upTitles=summary.ups.slice(0,8).map(v=>`- "${v.title}" [${v.feedId}/${v.country}]`).join("\n");
+      const downTitles=summary.downs.slice(0,8).map(v=>`- "${v.title}" [${v.feedId}/${v.country}]`).join("\n");
+      const prompt=`You are an intelligence analyst assistant for TÜV SÜD, a Testing, Inspection and Certification (TIC) company. 
+
+A TÜV SÜD executive has been rating news items in their competitive intelligence dashboard.
+
+UPVOTED (found useful):
+${upTitles||"None yet"}
+
+DOWNVOTED (not relevant):
+${downTitles||"None yet"}
+
+Based on this feedback pattern, write 2-3 concise bullet points (max 20 words each) that:
+1. Identify what types of intelligence this person finds most valuable
+2. Suggest what to watch for in coming weeks
+
+Be specific, business-focused, and direct. No fluff. Format as plain bullet points starting with •`;
+
+      const text=await callClaude(prompt);
+      setInsight(text);
+    }catch(e){
+      setInsight("Unable to generate insight — check API connectivity.");
+    }
+    setLoading(false);
+  }
+
+  if(summary.total===0)return h("div",{style:{
+    background:"var(--ice)",border:"1px solid var(--fog)",borderRadius:8,
+    padding:"12px 16px",fontSize:12,color:"var(--mist)",display:"flex",alignItems:"center",gap:8,
+  }},
+    h("span",{style:{fontSize:16}},"🤖"),
+    h("span",null,"Rate articles with ▲▼ to train your personal AI intelligence filter. After 3 ratings, you'll receive AI insights tailored to your interests.")
+  );
+
+  return h("div",{className:"ai-panel"},
+    h("div",{className:"ai-label"},
+      h("span",{style:{fontSize:14}},"🤖"),
+      "AI Intelligence Filter · ",summary.total," ratings · ",summary.ups.length," useful · ",summary.downs.length," filtered out",
+      h("button",{
+        onClick:generateInsight,
+        disabled:loading,
+        style:{
+          marginLeft:"auto",fontSize:10,fontWeight:600,
+          background:"rgba(255,255,255,0.12)",color:"rgba(255,255,255,0.8)",
+          border:"1px solid rgba(255,255,255,0.2)",borderRadius:4,
+          padding:"2px 8px",cursor:"pointer",
+        }
+      },loading?"…":"↻ Refresh")
+    ),
+    loading
+      ?h("div",{className:"ai-loading"},h("div",{className:"ai-spinner"}),"Analysing your feedback pattern…")
+      :insight
+        ?h("div",{className:"ai-body"},insight)
+        :h("button",{
+            onClick:generateInsight,
+            style:{
+              background:"rgba(255,255,255,0.1)",color:"rgba(255,255,255,0.8)",
+              border:"1px solid rgba(255,255,255,0.2)",borderRadius:6,
+              padding:"7px 14px",fontSize:12,cursor:"pointer",
+            }
+          },"✨ Generate AI insight from my ratings")
+  );
+}
+
+// ── News item ─────────────────────────────────────────────────────────────────
+function NewsItem({item,accentColor,feedId,country,feedback,onVote}){
+  const age=timeAgo(item.pubDate);
+  // Display English translation for local items; fall back to original title
+  const displayTitle = item.local ? (item.titleEN || item.title) : item.title;
+  const key=hashTitle(item.title);
+  const vote=feedback[key]?.vote||0;
+
+  return h("div",{style:{
+    paddingBottom:10,marginBottom:10,borderBottom:"1px solid var(--ice)",
+    opacity:vote===-1?0.4:1,transition:"opacity 0.2s",
+  }},
+    h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:8,marginBottom:5}},
+      h("a",{href:item.link||"#",target:"_blank",rel:"noopener noreferrer",
+        style:{fontSize:12.5,fontWeight:500,color:"var(--ink)",lineHeight:1.5,flex:1,
+          borderLeft:"2px solid "+accentColor,paddingLeft:7}},
+        displayTitle),
+      h("div",{style:{display:"flex",gap:5,alignItems:"center",flexShrink:0}},
+        h(VoteButtons,{item,feedId,country,feedback,onVote}),
+        h(UPill,{urgency:item.urgency})
+      )
+    ),
+    h("div",{style:{display:"flex",gap:6,paddingLeft:9,alignItems:"center",flexWrap:"wrap"}},
+      // Job posting badge
+      item.isJobPosting&&h("span",{style:{
+        fontSize:9,fontWeight:700,fontFamily:"monospace",letterSpacing:"0.05em",
+        background:"#EEF4FA",color:"#0F3460",
+        border:"1px solid #B8CDE8",borderRadius:3,padding:"1px 5px",
+      }},"💼 JOB POSTING"),
+      // Local source badge (only for non-job local items)
+      item.local&&!item.isJobPosting&&h("span",{style:{
+        fontSize:9,fontWeight:700,fontFamily:"monospace",letterSpacing:"0.05em",
+        background:"#FFF8E7",color:"#A05A00",
+        border:"1px solid #F0D080",borderRadius:3,padding:"1px 5px",
+      }},"🌐 LOCAL"),
+      item.source&&h("span",{style:{fontSize:10,color:"var(--steel)",fontFamily:"monospace"}},item.source),
+      age&&h("span",{style:{fontSize:10,color:"var(--mist)",fontFamily:"monospace"}},age),
+      vote===1&&h("span",{style:{fontSize:9,color:"var(--green)",fontFamily:"monospace",fontWeight:700}},"✓ saved"),
+      vote===-1&&h("span",{style:{fontSize:9,color:"var(--red)",fontFamily:"monospace",fontWeight:700}},"✗ filtered")
+    )
+  );
+}
+
+// ── Feed card ─────────────────────────────────────────────────────────────────
+function FeedCard({id,label,icon,c,bg,br,items,country,feedback,onVote}){
+  items=items||[];
+  const highs=items.filter(i=>i.urgency==="high").length;
+  return h("div",{style:{background:bg,border:"1px solid "+br,borderRadius:10,overflow:"hidden"}},
+    h("div",{style:{display:"flex",alignItems:"center",justifyContent:"space-between",
+      padding:"10px 14px",borderBottom:"1px solid "+br,background:"rgba(255,255,255,0.6)"}},
+      h("div",{style:{display:"flex",alignItems:"center",gap:6}},
+        h("span",{style:{fontSize:13}},icon),
+        h("span",{style:{fontWeight:600,fontSize:13,color:c}}," "+label)
+      ),
+      h("div",{style:{display:"flex",gap:6,alignItems:"center"}},
+        h("span",{style:{fontSize:10,color:"var(--mist)",fontFamily:"monospace"}},items.length+" items"),
+        highs>0&&h("span",{style:{fontSize:9,fontWeight:700,fontFamily:"monospace",
+          color:"var(--red)",background:"#FEF0EF",padding:"2px 6px",borderRadius:3}},
+          "⚠ "+highs+" HIGH")
+      )
+    ),
+    h("div",{style:{padding:"12px 14px"}},
+      items.length>0
+        ?items.map((item,i)=>h(NewsItem,{key:i,item,accentColor:c,feedId:id,country,feedback,onVote}))
+        :h("p",{style:{fontSize:12,color:"var(--mist)",fontStyle:"italic",margin:0}},
+          "No items yet — live data loads after GitHub Action runs.")
+    )
+  );
+}
+
+// ── Macro tile ────────────────────────────────────────────────────────────────
+function MacroTile({label,value,sub,note,trend}){
+  const arr={up:"↑",down:"↓",stable:"→"}[trend]||"";
+  const ac={up:"var(--green)",down:"var(--red)",stable:"var(--mist)"}[trend]||"var(--mist)";
+  return h("div",{style:{flex:1,minWidth:120,background:"var(--white)",
+    border:"1px solid var(--fog)",borderRadius:8,padding:"12px 14px"}},
+    h("div",{style:{fontSize:9,color:"var(--mist)",fontWeight:700,letterSpacing:"0.09em",
+      textTransform:"uppercase",fontFamily:"monospace",marginBottom:4}},label),
+    h("div",{style:{display:"flex",alignItems:"baseline",gap:4}},
+      h("span",{style:{fontSize:20,fontWeight:700,color:"var(--ink)",lineHeight:1}},value||"—"),
+      arr&&h("span",{style:{color:ac,fontWeight:700,fontSize:14}},arr)
+    ),
+    sub&&h("div",{style:{fontSize:11,color:"var(--steel)",marginTop:3,lineHeight:1.4}},sub),
+    note&&h("div",{style:{fontSize:10,color:"var(--mist)",marginTop:2,fontStyle:"italic",lineHeight:1.4}},note)
+  );
+}
+
+// ── Macro comparison table ────────────────────────────────────────────────────
+const MACRO_META = {
+  inflation:{
+    label:"Inflation",
+    short:"HICP / CPI",
+    icon:"📈",
+    what:"How fast prices are rising across the economy. Measured as the annual % change in the consumer price index. High inflation erodes purchasing power and often triggers central bank rate hikes. EU countries use Eurostat's harmonised HICP; Turkey and Switzerland use OECD CPI.",
+    source:"World Bank (CPI annual %)",
+    goodLow:0, goodHigh:2.5,
+    warnHigh:5, alertHigh:10,
+    // colour logic: green ≤2.5%, amber 2.5–5%, red >5%
+    color(v){ return v<=2.5?"#1A7A50":v<=5?"#D4800A":"#C0392B"; },
+    bg(v)   { return v<=2.5?"#EDFAF4":v<=5?"#FFF8EE":"#FEF0EF"; },
+  },
+  gdp:{
+    label:"GDP Growth",
+    short:"Annual %",
+    icon:"🏭",
+    what:"How much the economy expanded or contracted over the past year, measured as real GDP growth (inflation-adjusted). Positive = expansion; negative = recession. Strong growth signals more industrial investment, new factory openings and certification demand.",
+    source:"World Bank (NY.GDP.MKTP.KD.ZG)",
+    goodLow:1.5, goodHigh:99,
+    warnLow:0,
+    color(v){ return v>=1.5?"#1A7A50":v>=0?"#D4800A":"#C0392B"; },
+    bg(v)   { return v>=1.5?"#EDFAF4":v>=0?"#FFF8EE":"#FEF0EF"; },
+  },
+  rate:{
+    label:"Policy Rate",
+    short:"Central bank",
+    icon:"🏦",
+    what:"The interest rate set by the country's central bank (or the ECB for Eurozone members). Higher rates slow borrowing and investment but cool inflation. For TIC companies, rate cuts signal cheaper capital for clients, which historically increases demand for certification of new equipment and factories.",
+    source:"Central bank official rates",
+    color(v){ return v>8?"#C0392B":v>4?"#D4800A":"#1A7A50"; },
+    bg(v)   { return v>8?"#FEF0EF":v>4?"#FFF8EE":"#EDFAF4"; },
+  },
+};
+
+function MacroBar({value,max,meta,small}){
+  if(value===null||value===undefined) return h("span",{style:{fontSize:11,color:"var(--fog)"}}, "n/a");
+  const v=parseFloat(value);
+  const pct=Math.min(100,Math.max(2,Math.abs(v)/max*100));
+  const negative=v<0;
+  const clr=meta.color(v);
+  const bg=meta.bg(v);
+  return h("div",{style:{display:"flex",alignItems:"center",gap:8,width:"100%"}},
+    // bar track
+    h("div",{style:{flex:1,height:small?5:6,background:"var(--ice)",borderRadius:3,overflow:"hidden",position:"relative"}},
+      h("div",{style:{
+        position:"absolute",
+        [negative?"right":"left"]:negative?"50%":"0",
+        width:pct/2+"%",
+        height:"100%",
+        background:clr,
+        borderRadius:3,
+        transition:"width 0.6s ease",
+        opacity:0.85,
+      }})
+    ),
+    // value label
+    h("span",{style:{
+      fontFamily:"monospace",fontSize:small?10:11,fontWeight:700,
+      color:clr,minWidth:38,textAlign:"right",letterSpacing:"0.02em",
+    }}, (v>0&&meta!==MACRO_META.gdp||v>0?"+":"")+v.toFixed(1)+"%")
+  );
+}
+
+function MacroTable({countries}){
+  const [open,setOpen]=useState(null); // which explainer is expanded
+  const [sort,setSort]=useState("country"); // country | inflation | gdp | rate
+
+  // build rows
+  const rows = countries.map(cd=>{
+    const inflV = cd.macro?.inflation?.value!=null ? parseFloat(cd.macro.inflation.value) : null;
+    const gdpV  = cd.macro?.gdp?.value!=null       ? parseFloat(cd.macro.gdp.value)       : null;
+    const rateV = cd.macro?.interestRate?.value     ? parseFloat(cd.macro.interestRate.value) : null;
+    const inflYear = cd.macro?.inflation?.year||"";
+    const gdpYear  = cd.macro?.gdp?.year||"";
+    return {country:cd.country, inflV, gdpV, rateV, inflYear, gdpYear,
+            bank: cd.macro?.interestRate?.bank||""};
+  });
+
+  const sorted = [...rows].sort((a,b)=>{
+    if(sort==="country") return a.country.localeCompare(b.country);
+    if(sort==="inflation") return (b.inflV??-99)-(a.inflV??-99);
+    if(sort==="gdp")       return (b.gdpV??-99)-(a.gdpV??-99);
+    if(sort==="rate")      return (b.rateV??-99)-(a.rateV??-99);
+    return 0;
+  });
+
+  const maxInfl = Math.max(10, ...rows.map(r=>Math.abs(r.inflV||0)));
+  const maxGdp  = Math.max(5,  ...rows.map(r=>Math.abs(r.gdpV||0)));
+  const maxRate = Math.max(10, ...rows.map(r=>Math.abs(r.rateV||0)));
+
+  const ColHead = ({id,label,icon,right})=>h("th",{
+    onClick:()=>setSort(id),
+    style:{padding:"8px 12px",fontFamily:"monospace",fontSize:9,fontWeight:700,
+      letterSpacing:"0.09em",textTransform:"uppercase",color:sort===id?"var(--blue)":"var(--mist)",
+      textAlign:right?"right":"left",cursor:"pointer",whiteSpace:"nowrap",
+      borderBottom:"2px solid "+(sort===id?"var(--blue)":"var(--fog)"),
+      background:"var(--paper)",userSelect:"none",
+    }},icon," ",label," ",sort===id?"▾":"");
+
+  const Explainer = ({id})=>{
+    const m=MACRO_META[id];
+    return h("div",{style:{
+      gridColumn:"1/-1",padding:"14px 16px",
+      background:"var(--navy)",color:"#fff",borderRadius:6,marginBottom:8,
+      fontSize:12.5,lineHeight:1.65,
+      animation:"fadeUp 0.2s ease both",
+    }},
+      h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:12}},
+        h("div",null,
+          h("div",{style:{fontWeight:700,fontSize:13,marginBottom:6}},m.icon+" "+m.label+" — what it means"),
+          h("div",{style:{color:"rgba(255,255,255,0.82)"}},m.what),
+          h("div",{style:{marginTop:8,fontSize:10.5,color:"rgba(255,255,255,0.45)",fontFamily:"monospace"}},
+            "Source: "+m.source)
+        ),
+        h("button",{onClick:()=>setOpen(null),style:{
+          background:"rgba(255,255,255,0.12)",border:"none",color:"#fff",
+          borderRadius:4,padding:"3px 8px",fontSize:11,cursor:"pointer",flexShrink:0,
+        }},"✕ close")
+      )
+    );
+  };
+
+  return h("div",{style:{marginBottom:28}},
+    // Header row with explainer triggers
+    h("div",{style:{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:12}},
+      h(SecLabel,{children:"Macroeconomic Snapshot — All 15 Markets"}),
+      h("div",{style:{display:"flex",gap:6}},
+        Object.entries(MACRO_META).map(([id,m])=>
+          h("button",{key:id,onClick:()=>setOpen(open===id?null:id),style:{
+            display:"inline-flex",alignItems:"center",gap:4,
+            fontSize:10,fontWeight:600,padding:"3px 9px",borderRadius:4,cursor:"pointer",
+            background:open===id?"var(--navy)":"var(--ice)",
+            color:open===id?"#fff":"var(--steel)",
+            border:"1px solid "+(open===id?"var(--navy)":"var(--fog)"),
+            transition:"all 0.15s",fontFamily:"monospace",letterSpacing:"0.04em",
+          }},m.icon," ",m.short," ",open===id?"▲":"▼")
+        )
+      )
+    ),
+
+    // Explainer panel (shown when a column header is clicked)
+    open && h(Explainer,{id:open}),
+
+    // Table
+    h("div",{style:{background:"var(--white)",border:"1px solid var(--fog)",borderRadius:8,overflow:"hidden"}},
+      h("table",{style:{width:"100%",borderCollapse:"collapse"}},
+        h("thead",null,
+          h("tr",null,
+            h(ColHead,{id:"country",label:"Country",icon:"",right:false}),
+            h(ColHead,{id:"inflation",label:"Inflation",icon:"📈",right:false}),
+            h(ColHead,{id:"gdp",label:"GDP Growth",icon:"🏭",right:false}),
+            h(ColHead,{id:"rate",label:"Policy Rate",icon:"🏦",right:false}),
+          )
+        ),
+        h("tbody",null,
+          sorted.map((row,i)=>
+            h("tr",{key:row.country,style:{
+              borderTop:"1px solid var(--ice)",
+              background:i%2===0?"var(--white)":"#FAFBFC",
+            }},
+              // Country
+              h("td",{style:{padding:"9px 12px",whiteSpace:"nowrap"}},
+                h("span",{style:{display:"flex",alignItems:"center",gap:6}},
+                  h("span",{style:{fontSize:14}},FLAGS[row.country]),
+                  h("span",{style:{fontSize:12,fontWeight:500,color:"var(--ink)"}},row.country)
+                )
+              ),
+              // Inflation
+              h("td",{style:{padding:"9px 12px 9px 8px",minWidth:160}},
+                row.inflV!==null
+                  ? h("div",null,
+                      h(MacroBar,{value:row.inflV,max:maxInfl,meta:MACRO_META.inflation}),
+                      row.inflYear&&h("div",{style:{fontSize:9,color:"var(--fog)",fontFamily:"monospace",marginTop:2}},row.inflYear)
+                    )
+                  : h("span",{style:{fontSize:11,color:"var(--fog)"}}, "pending")
+              ),
+              // GDP
+              h("td",{style:{padding:"9px 12px 9px 8px",minWidth:160}},
+                row.gdpV!==null
+                  ? h("div",null,
+                      h(MacroBar,{value:row.gdpV,max:maxGdp,meta:MACRO_META.gdp}),
+                      row.gdpYear&&h("div",{style:{fontSize:9,color:"var(--fog)",fontFamily:"monospace",marginTop:2}},row.gdpYear)
+                    )
+                  : h("span",{style:{fontSize:11,color:"var(--fog)"}}, "pending")
+              ),
+              // Policy rate
+              h("td",{style:{padding:"9px 12px 9px 8px",minWidth:160}},
+                row.rateV!==null
+                  ? h("div",null,
+                      h(MacroBar,{value:row.rateV,max:maxRate,meta:MACRO_META.rate}),
+                      row.bank&&h("div",{style:{fontSize:9,color:"var(--fog)",fontFamily:"monospace",marginTop:2}},row.bank)
+                    )
+                  : h("span",{style:{fontSize:11,color:"var(--fog)"}}, "n/a")
+              ),
+            )
+          )
+        )
+      )
+    ),
+    // Legend
+    h("div",{style:{display:"flex",gap:16,marginTop:8,flexWrap:"wrap"}},
+      [["#1A7A50","#EDFAF4","Low / healthy"],["#D4800A","#FFF8EE","Elevated"],["#C0392B","#FEF0EF","High / concern"]]
+        .map(([clr,bg,label])=>h("div",{key:label,style:{display:"flex",alignItems:"center",gap:5}},
+          h("div",{style:{width:10,height:10,borderRadius:2,background:bg,border:"1.5px solid "+clr}}),
+          h("span",{style:{fontSize:10,color:"var(--steel)"}},label)
+        ))
+    )
+  );
+}
+
+// ── Europe Overview ───────────────────────────────────────────────────────────
+function EuropeView({data,onCountry,feedback,onVote}){
+  const{top,heatmap,compLeague}=buildBriefing(data.countries);
+  const totalHighs=data.countries.reduce((n,c)=>n+c.highCount,0);
+  const activeMarkets=data.countries.filter(c=>c.highCount>0).length;
+  const competitors=data.meta?.competitors||[];
+
+  return h("div",{className:"fade",style:{maxWidth:1100,margin:"0 auto",padding:"24px 24px 48px"}},
+
+    // AI panel at top of Europe view
+    h(AIInsightPanel,{feedback}),
+    h("div",{style:{height:20}}),
+
+    // Stats row
+    h("div",{style:{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(160px,1fr))",gap:10,marginBottom:24}},
+      [{label:"High-Priority Signals",value:totalHighs,c:totalHighs>5?"var(--red)":"var(--blue)"},
+       {label:"Active Markets",value:activeMarkets+" / "+data.countries.length,c:"var(--blue)"},
+       {label:"Competitors Tracked",value:competitors.length,c:"var(--steel)"},
+       {label:"Last Updated",value:fmtDT(data.generatedAt).split(",")[0],c:"var(--steel)"},
+      ].map((s,i)=>h("div",{key:i,style:{background:"var(--white)",border:"1px solid var(--fog)",
+        borderRadius:8,padding:"14px 16px"}},
+        h("div",{style:{fontSize:9,color:"var(--mist)",fontFamily:"monospace",letterSpacing:"0.09em",
+          textTransform:"uppercase",marginBottom:5}},s.label),
+        h("div",{style:{fontSize:22,fontWeight:700,color:s.c,lineHeight:1,marginBottom:3}},s.value)
+      ))
+    ),
+
+    // Macro comparison table
+    h(MacroTable,{countries:data.countries}),
+
+    // Two-col layout
+    h("div",{style:{display:"grid",gridTemplateColumns:"1fr 260px",gap:20,alignItems:"start"}},
+
+      // Briefing list
+      h("div",null,
+        h(SecLabel,{children:"CEO Briefing — Top Signals This Week",mb:12}),
+        top.map((item,i)=>{
+          const s=URGENCY[item.urgency]||URGENCY.low;
+          const key=hashTitle(item.title);
+          const vote=feedback[key]?.vote||0;
+          return h("div",{key:i,className:"fade",style:{
+            animationDelay:i*0.04+"s",
+            background:"var(--white)",border:"1px solid var(--fog)",
+            borderLeft:"3px solid "+s.dot,borderRadius:7,
+            padding:"13px 15px",marginBottom:8,
+            opacity:vote===-1?0.35:1,transition:"opacity 0.2s",
+          }},
+            h("div",{style:{display:"flex",gap:10,alignItems:"flex-start",justifyContent:"space-between"}},
+              h("div",{style:{display:"flex",gap:9,flex:1,alignItems:"flex-start"}},
+                h("span",{style:{fontFamily:"monospace",fontSize:11,color:"var(--fog)",
+                  flexShrink:0,marginTop:2,minWidth:18}},String(i+1).padStart(2,"0")),
+                h("div",{style:{flex:1}},
+                  h("a",{href:item.link||"#",target:"_blank",
+                    style:{fontSize:13.5,fontWeight:500,color:"var(--ink)",lineHeight:1.45,display:"block",marginBottom:6}},
+                    item.title),
+                  h("div",{style:{display:"flex",gap:6,alignItems:"center",flexWrap:"wrap"}},
+                    h("span",{onClick:()=>onCountry(item.country),style:{
+                      display:"inline-flex",alignItems:"center",gap:4,fontSize:11,
+                      color:"var(--blue)",fontWeight:500,cursor:"pointer"}},
+                      h("span",{style:{fontSize:11}},FLAGS[item.country])," ",item.country),
+                    h("span",{style:{color:"var(--fog)"}}," / "),
+                    h("span",{style:{fontSize:11,color:"var(--steel)"}},item.feedLabel),
+                    item.source&&h("span",{style:{fontFamily:"monospace",fontSize:10,color:"var(--mist)"}}," · "+item.source),
+                    item.pubDate&&h("span",{style:{fontFamily:"monospace",fontSize:10,color:"var(--fog)"}}," · "+timeAgo(item.pubDate))
+                  )
+                )
+              ),
+              h("div",{style:{display:"flex",flexDirection:"column",gap:5,alignItems:"flex-end",flexShrink:0}},
+                h(VoteButtons,{item,feedId:item.feedId,country:item.country,feedback,onVote}),
+                h(UPill,{urgency:item.urgency})
+              )
+            )
+          );
+        })
+      ),
+
+      // Sidebar
+      h("div",{style:{display:"flex",flexDirection:"column",gap:16}},
+        h("div",{style:{background:"var(--white)",border:"1px solid var(--fog)",borderRadius:8,padding:"14px 16px"}},
+          h(SecLabel,{children:"Market Activity"}),
+          h("div",{style:{display:"flex",flexDirection:"column",gap:6}},
+            heatmap.filter(m=>m.total>0).slice(0,10).map((m,i)=>{
+              const maxH=heatmap[0]?.highs||1;
+              return h("div",{key:i,onClick:()=>onCountry(m.country),style:{cursor:"pointer"}},
+                h("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3}},
+                  h("span",{style:{display:"flex",alignItems:"center",gap:5,fontSize:12,color:"var(--ink)",fontWeight:500}},
+                    h("span",{style:{fontSize:12}},FLAGS[m.country])," ",m.country),
+                  h("span",{style:{fontFamily:"monospace",fontSize:10,
+                    color:m.highs>0?"var(--red)":"var(--mist)"}},
+                    m.highs>0?"⚠ "+m.highs:m.total+" items")
+                ),
+                m.total>0&&h("div",{style:{height:3,background:"var(--ice)",borderRadius:2}},
+                  h("div",{style:{height:3,borderRadius:2,
+                    width:Math.round((m.highs/Math.max(1,maxH))*100)+"%",
+                    background:m.highs>2?"var(--red)":m.highs>0?"var(--amber)":"var(--fog)",
+                    transition:"width 0.3s ease"}})
+                )
+              );
+            })
+          )
+        ),
+        compLeague.length>0&&h("div",{style:{background:"var(--white)",border:"1px solid var(--fog)",borderRadius:8,padding:"14px 16px"}},
+          h(SecLabel,{children:"Most Active Competitors"}),
+          h("div",{style:{display:"flex",flexDirection:"column",gap:8}},
+            compLeague.map(([name,count],i)=>{
+              const max=compLeague[0][1];
+              return h("div",{key:i},
+                h("div",{style:{display:"flex",justifyContent:"space-between",marginBottom:3}},
+                  h("span",{style:{fontSize:12,color:"var(--ink)"}},name),
+                  h("span",{style:{fontFamily:"monospace",fontSize:10,color:"var(--steel)"}},
+                    count+" mention"+(count>1?"s":""))
+                ),
+                h("div",{style:{height:3,background:"var(--ice)",borderRadius:2}},
+                  h("div",{style:{height:3,borderRadius:2,
+                    width:Math.round((count/max)*100)+"%",
+                    background:"var(--blue)",transition:"width 0.3s ease"}})
+                )
+              );
+            })
+          )
+        )
+      )
+    )
+  );
+}
+
+// ── Country view ──────────────────────────────────────────────────────────────
+function CountryView({data,countryName,feedback,onVote}){
+  const[fg,setFg]=useState("competition");
+  const cd=data.countries.find(c=>c.country===countryName);
+  if(!cd)return h("div",{style:{maxWidth:1100,margin:"0 auto",padding:"40px 24px"}},
+    h("div",{style:{background:"var(--white)",border:"1px solid var(--fog)",borderRadius:10,
+      padding:"32px",textAlign:"center",color:"var(--mist)"}},
+      h("div",{style:{fontSize:32,marginBottom:12}},FLAGS[countryName]||"🌍"),
+      h("div",{style:{fontSize:16,fontWeight:600,color:"var(--steel)",marginBottom:8}},countryName),
+      h("div",{style:{fontSize:13,color:"var(--mist)",marginBottom:16}},
+        "No data yet for this country."),
+      h("div",{style:{fontSize:11,fontFamily:"monospace",color:"var(--fog)",
+        background:"var(--paper)",padding:"8px 12px",borderRadius:6,display:"inline-block"}},
+        "This country's data hasn't been fetched yet. Trigger the GitHub Action (Actions → fetch-and-deploy → Run workflow) to populate all 15 markets.")
+    )
+  );
+
+  const allHighs=ALL_FEEDS.reduce((acc,f)=>acc.concat((cd.feeds[f.id]||[]).filter(i=>i.urgency==="high")),[]);
+  const gdp=cd.macro?.gdp;const infl=cd.macro?.inflation;const rate=cd.macro?.interestRate;
+  const gdpTrend=gdp?(+gdp.value>2?"up":+gdp.value>0?"stable":"down"):null;
+  const inflTrend=infl?(+infl.value>5?"up":+infl.value>2?"stable":"down"):null;
+  const ag=FEED_GROUPS.find(g=>g.id===fg)||FEED_GROUPS[0];
+
+  return h("div",{className:"fade",style:{maxWidth:1100,margin:"0 auto",padding:"20px 24px 48px"}},
+
+    allHighs.length>0&&h("div",{style:{
+      background:"#FEF0EF",border:"1px solid #E8C8C8",borderRadius:7,
+      padding:"10px 14px",display:"flex",gap:10,marginBottom:18,
+    }},
+      h("span",{style:{fontSize:13,flexShrink:0,marginTop:1}},"⚠️"),
+      h("div",null,
+        h("div",{style:{fontWeight:700,fontSize:12.5,color:"var(--red)",marginBottom:2}},
+          allHighs.length+" high-priority signal"+(allHighs.length>1?"s":"")+" in "+countryName),
+        h("div",{style:{fontSize:11.5,color:"var(--steel)",lineHeight:1.5}},
+          allHighs.slice(0,3).map(i=>i.title).join(" · ")+
+          (allHighs.length>3?" · +"+(allHighs.length-3)+" more":""))
+      )
+    ),
+
+    // Macro
+    h("div",{style:{marginBottom:18}},
+      h(SecLabel,{children:"Macroeconomic Indicators · "+countryName}),
+      h("div",{style:{display:"flex",gap:10,flexWrap:"wrap"}},
+        h(MacroTile,{label:"GDP Growth",
+          value:gdp?(+gdp.value).toFixed(1)+"%":"—",
+          sub:gdp?(gdp.source||"World Bank")+" · "+gdp.year+" (latest available)":"Pending",
+          trend:gdpTrend,
+          note:"World Bank data — typically published with 12–18 month lag. Shows latest available year."}),
+        h(MacroTile,{label:"Inflation (HICP/CPI)",
+          value:infl?(+infl.value).toFixed(1)+"%":"—",
+          sub:infl?(infl.source||"World Bank")+" · "+infl.year+" (latest available)":"Pending",
+          trend:inflTrend,
+          note:countryName==="Turkey"?"Elevated inflation environment":null}),
+        h(MacroTile,{label:"Policy Rate"+(rate?" · "+rate.bank:""),
+          value:rate?rate.value:"—",
+          sub:rate?rate.note:"",trend:countryName==="Turkey"?"down":"stable"}),
+        h(MacroTile,{label:"Currency",
+          value:CURRENCY[countryName]||"—",
+          sub:EUROZONE.has(countryName)?"Eurozone member":"National currency"})
+      )
+    ),
+
+    // Feed group tabs
+    h("div",{style:{display:"flex",gap:6,marginBottom:14,flexWrap:"wrap"}},
+      FEED_GROUPS.map(group=>{
+        const active=group.id===fg;
+        const gH=group.feeds.reduce((n,f)=>n+(cd.feeds[f.id]||[]).filter(i=>i.urgency==="high").length,0);
+        return h("button",{key:group.id,onClick:()=>setFg(group.id),style:{
+          padding:"7px 16px",borderRadius:6,fontSize:12.5,fontWeight:active?600:400,
+          border:active?"1.5px solid var(--navy)":"1px solid var(--fog)",
+          background:active?"var(--navy)":"var(--white)",
+          color:active?"var(--white)":"var(--steel)",
+          display:"flex",alignItems:"center",gap:6,transition:"all 0.12s",
+        }},
+          h("span",null,group.icon)," ",group.label,
+          gH>0&&h("span",{style:{fontFamily:"monospace",fontSize:9,
+            background:active?"rgba(255,100,100,0.2)":"#FEF0EF",
+            color:active?"#ffaaaa":"var(--red)",
+            padding:"1px 5px",borderRadius:3,fontWeight:700}},"⚠ "+gH)
+        );
+      })
+    ),
+
+    h("div",{style:{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(min(100%,380px),1fr))",gap:12}},
+      ag.feeds.map(s=>h(FeedCard,{key:s.id,...s,items:cd.feeds[s.id]||[],
+        country:countryName,feedback,onVote}))
+    )
+  );
+}
+
+// ── App ───────────────────────────────────────────────────────────────────────
+function App(){
+  const[rawData,setRawData]=useState(null);
+  const[view,setView]=useState("europe");
+  const[loading,setLoading]=useState(true);
+  const[error,setError]=useState(null);
+  const[dropOpen,setDropOpen]=useState(false);
+  const[feedback,setFeedback]=useState(()=>loadFeedback());
+  const dropRef=useRef(null);
+
+  useEffect(()=>{
+    fetch("intelligence_data.json?_="+Date.now())
+      .then(r=>{if(!r.ok)throw new Error("HTTP "+r.status+" — run the GitHub Action first (Actions → Run workflow)");return r.json();})
+      .then(d=>{setRawData(d);setLoading(false);})
+      .catch(e=>{setError(e.message);setLoading(false);});
+  },[]);
+
+  useEffect(()=>{
+    if(!dropOpen)return;
+    const fn=e=>{if(dropRef.current&&!dropRef.current.contains(e.target))setDropOpen(false);};
+    document.addEventListener("mousedown",fn);
+    return()=>document.removeEventListener("mousedown",fn);
+  },[dropOpen]);
+
+  const handleVote=useCallback((item,feedId,country,direction)=>{
+    const key=hashTitle(item.title);
+    setFeedback(prev=>{
+      const next={...prev};
+      if(next[key]?.vote===direction){
+        // toggle off
+        delete next[key];
+      } else {
+        next[key]={vote:direction,title:item.title,feedId,country,ts:Date.now()};
+      }
+      saveFeedback(next);
+      return next;
+    });
+  },[]);
+
+  if(loading)return h("div",{style:{display:"flex",alignItems:"center",justifyContent:"center",
+    height:"100vh",flexDirection:"column",gap:12,color:"var(--steel)"}},
+    h("div",{style:{width:28,height:28,border:"3px solid var(--fog)",borderTopColor:"var(--blue)",
+      borderRadius:"50%",animation:"spin 0.8s linear infinite"}}),
+    h("div",{style:{fontSize:14,fontWeight:500}},"Loading intelligence data…")
+  );
+
+  if(error)return h("div",{style:{display:"flex",alignItems:"center",justifyContent:"center",
+    height:"100vh",padding:24}},
+    h("div",{style:{textAlign:"center",maxWidth:520}},
+      h("div",{style:{fontSize:36,marginBottom:12}},"⚠️"),
+      h("div",{style:{fontWeight:700,color:"var(--red)",fontSize:16,marginBottom:10}},"Data file not found"),
+      h("div",{style:{background:"#FEF0EF",border:"1px solid #E8C8C8",borderRadius:8,
+        padding:"12px 16px",fontSize:12,color:"#7F1D1D",fontFamily:"monospace",
+        textAlign:"left",marginBottom:16,wordBreak:"break-all"}},error),
+      h("div",{style:{fontSize:13,color:"var(--steel)",lineHeight:2,textAlign:"left",
+        background:"var(--white)",borderRadius:8,padding:"16px 20px",border:"1px solid var(--fog)"}},
+        h("strong",null,"To fix:"),h("br"),
+        "1. Open your GitHub repository",h("br"),
+        "2. Click the ",h("strong",null,"Actions")," tab",h("br"),
+        "3. Click ",h("strong",null,"Fetch Intelligence Data & Deploy Dashboard"),h("br"),
+        "4. Click ",h("strong",null,"Run workflow")," → ",h("strong",null,"Run workflow"),h("br"),
+        "5. Wait ~90 seconds, then reload this page"
+      )
+    )
+  );
+
+  const isEurope=view==="europe";
+  const competitors=rawData.meta?.competitors||[];
+  const fbSummary=getFeedbackSummary(feedback);
+
+  const countryOptions=ALL_COUNTRIES.map(c=>{
+    const cd=rawData.countries.find(d=>d.country===c);
+    return{name:c,highs:cd?cd.highCount||0:0};
+  });
+
+  return h("div",{style:{minHeight:"100vh",background:"var(--paper)"}},
+
+    // ── HEADER ──
+    h("header",{style:{
+      background:"var(--white)",borderBottom:"1px solid var(--fog)",
+      padding:"0 24px",height:54,
+      display:"flex",alignItems:"center",justifyContent:"space-between",
+      position:"sticky",top:0,zIndex:100,
+      boxShadow:"0 1px 3px rgba(0,0,0,0.06)",
+    }},
+      h("div",{style:{display:"flex",alignItems:"center",gap:14}},
+        h("div",{onClick:()=>setView("europe"),style:{background:"var(--navy)",color:"var(--white)",
+          fontWeight:700,fontSize:12,padding:"4px 10px",borderRadius:4,
+          letterSpacing:"0.04em",cursor:"pointer",flexShrink:0}},"TÜV SÜD"),
+        h("div",{style:{width:1,height:18,background:"var(--fog)"}}),
+        h("div",{style:{fontSize:14,fontWeight:600,color:"var(--navy)"}},
+          "Europe — Market & Competitive Intelligence")
+      ),
+      h("div",{style:{display:"flex",alignItems:"center",gap:10}},
+
+        // AI feedback indicator
+        fbSummary.total>0&&h("div",{style:{
+          display:"flex",alignItems:"center",gap:5,
+          background:"linear-gradient(135deg,#0B1F3A,#1A4C8B)",
+          color:"rgba(255,255,255,0.9)",
+          borderRadius:6,padding:"4px 10px",fontSize:11,fontWeight:500,
+        }},
+          h("span",null,"🤖"),
+          h("span",null,fbSummary.total+" ratings")
+        ),
+
+        // Europe button
+        h("button",{onClick:()=>setView("europe"),style:{
+          display:"flex",alignItems:"center",gap:6,
+          padding:"6px 14px",borderRadius:6,fontSize:12.5,fontWeight:600,
+          border:isEurope?"1.5px solid var(--navy)":"1px solid var(--fog)",
+          background:isEurope?"var(--navy)":"var(--white)",
+          color:isEurope?"var(--white)":"var(--steel)",
+          cursor:"pointer",transition:"all 0.12s",flexShrink:0,
+        }},"🌍  Europe Overview"),
+
+        // Country dropdown
+        h("div",{ref:dropRef,style:{position:"relative"}},
+          h("button",{onClick:()=>setDropOpen(o=>!o),style:{
+            display:"flex",alignItems:"center",gap:8,
+            padding:"6px 12px",borderRadius:6,fontSize:12.5,
+            border:!isEurope?"1.5px solid var(--navy)":"1px solid var(--fog)",
+            background:!isEurope?"#EEF4FA":"var(--white)",
+            color:!isEurope?"var(--navy)":"var(--steel)",
+            fontWeight:!isEurope?600:400,cursor:"pointer",
+            transition:"all 0.12s",minWidth:190,justifyContent:"space-between",
+          }},
+            h("span",{style:{display:"flex",alignItems:"center",gap:6}},
+              isEurope
+                ?h("span",{style:{color:"var(--mist)",fontSize:12}},"Select a country…")
+                :h("span",null,h("span",{style:{fontSize:14}},FLAGS[view]||"🌍")," ",view)
+            ),
+            h("span",{style:{fontSize:10,color:"var(--mist)",marginLeft:4}},dropOpen?"▲":"▼")
+          ),
+          dropOpen&&h("div",{style:{
+            position:"absolute",top:"calc(100% + 6px)",right:0,
+            background:"var(--white)",border:"1px solid var(--fog)",
+            borderRadius:8,boxShadow:"0 8px 24px rgba(0,0,0,0.12)",
+            minWidth:220,zIndex:200,maxHeight:380,overflowY:"auto",overflow:"hidden",
+          }},
+            h("div",{style:{padding:"6px 0"}},
+              h("div",{onClick:()=>{setView("europe");setDropOpen(false);},style:{
+                display:"flex",alignItems:"center",gap:8,
+                padding:"8px 14px",cursor:"pointer",fontSize:13,
+                background:isEurope?"var(--ice)":"transparent",
+                color:isEurope?"var(--navy)":"var(--ink)",
+                fontWeight:isEurope?600:400,
+                borderBottom:"1px solid var(--ice)",
+              }},
+                h("span",null,"🌍"),
+                h("span",{style:{flex:1}},"Europe Overview"),
+                isEurope&&h("span",{style:{fontSize:10,color:"var(--blue)"}},"●")
+              ),
+              countryOptions.map(opt=>
+                h("div",{key:opt.name,onClick:()=>{setView(opt.name);setDropOpen(false);},style:{
+                  display:"flex",alignItems:"center",gap:8,
+                  padding:"7px 14px",cursor:"pointer",fontSize:12.5,
+                  background:view===opt.name?"var(--ice)":"transparent",
+                  color:view===opt.name?"var(--navy)":"var(--ink)",
+                  fontWeight:view===opt.name?600:400,
+                }},
+                  h("span",{style:{fontSize:13}},FLAGS[opt.name]||"🌍"),
+                  h("span",{style:{flex:1}},opt.name),
+                  opt.highs>0&&h("span",{style:{fontSize:9,fontWeight:700,fontFamily:"monospace",
+                    background:"#FEF0EF",color:"var(--red)",padding:"1px 5px",borderRadius:3}},
+                    "⚠ "+opt.highs)
+                )
+              )
+            )
+          )
+        ),
+
+        h("div",{style:{fontFamily:"monospace",fontSize:10,color:"var(--mist)",display:"flex",flexDirection:"column",alignItems:"flex-end"}},
+          h("span",null,"Updated"),
+          h("span",{style:{color:"var(--steel)"}},fmtDT(rawData.generatedAt).split(",")[0])
+        )
+      )
+    ),
+
+    // ── PAGE TITLE BAR ──
+    h("div",{style:{background:"var(--white)",borderBottom:"1px solid var(--fog)",
+      padding:"12px 24px",display:"flex",alignItems:"center",justifyContent:"space-between"}},
+      isEurope
+        ?h("div",null,
+            h("h1",{style:{fontSize:20,fontWeight:700,color:"var(--navy)",marginBottom:2}},"Europe Overview"),
+            h("div",{style:{fontFamily:"monospace",fontSize:10,color:"var(--mist)"}},
+              rawData.countries.length+" markets · 7 feeds · "+competitors.length+" competitors"))
+        :h("div",{style:{display:"flex",alignItems:"center",gap:12}},
+            h("button",{onClick:()=>setView("europe"),style:{
+              display:"flex",alignItems:"center",gap:5,fontSize:11.5,color:"var(--blue)",fontWeight:500,
+              background:"var(--ice)",border:"1px solid var(--fog)",
+              borderRadius:5,padding:"4px 10px",cursor:"pointer",marginRight:4,
+            }},"← Europe"),
+            h("span",{style:{fontSize:26}},FLAGS[view]||"🌍"),
+            h("div",null,
+              h("h1",{style:{fontSize:20,fontWeight:700,color:"var(--navy)",marginBottom:2}},view),
+              h("div",{style:{fontFamily:"monospace",fontSize:10,color:"var(--mist)"}},
+                "7 feeds · "+(ACCRED[view]||"—")+" · "+(CURRENCY[view]||"—"))))
+    ),
+
+    // ── CONTENT ──
+    isEurope
+      ?h(EuropeView,{data:rawData,onCountry:setView,feedback,onVote:handleVote})
+      :h(CountryView,{data:rawData,countryName:view,feedback,onVote:handleVote}),
+
+    // ── FOOTER ──
+    h("footer",{style:{borderTop:"1px solid var(--fog)",padding:"14px 24px",
+      display:"flex",justifyContent:"space-between",alignItems:"center",
+      flexWrap:"wrap",gap:10,background:"var(--white)",marginTop:24}},
+      h("div",{style:{display:"flex",flexWrap:"wrap",gap:5}},
+        competitors.map(c=>h("span",{key:c,style:{padding:"2px 8px",borderRadius:3,
+          background:"var(--ice)",color:"var(--steel)",fontSize:10,fontFamily:"monospace",
+          border:"1px solid var(--fog)"}}," "+c))),
+      h("div",{style:{fontFamily:"monospace",fontSize:9,color:"var(--mist)"}},
+        "TÜV SÜD · Europe Market & Competitive Intelligence · "+new Date().getFullYear())
+    )
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
+</script>
+</body>
+</html>

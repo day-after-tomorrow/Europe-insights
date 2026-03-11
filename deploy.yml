@@ -1,0 +1,103 @@
+name: Fetch Intelligence Data & Deploy Dashboard
+
+on:
+  schedule:
+    - cron: "0 7 * * 1-5"   # Every weekday at 07:00 UTC
+  workflow_dispatch:          # Manual trigger from GitHub UI
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  fetch-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Python setup ──────────────────────────────────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests feedparser tenacity
+
+      # ── 3. Restore previous data for rolling 30-day history ─────────────────
+      # NOTE: GitHub Actions cache expires after 7 days of inactivity.
+      # If the cache expires (e.g. after a holiday), the script starts fresh —
+      # no data loss occurs, but historical items older than the last run will
+      # be lost. To guarantee permanent history, consider committing the JSON
+      # back to the repo (requires contents: write permission).
+      - name: Restore Previous Intelligence Data
+        id: cache-data-restore
+        uses: actions/cache/restore@v4
+        with:
+          path: intelligence_data.json
+          key: tic-data-${{ github.run_id }}
+          restore-keys: |
+            tic-data-
+
+      # ── 4. Fetch fresh intelligence data ─────────────────────────────────────
+      - name: Fetch intelligence data
+        id: fetch
+        run: python fetch_intelligence.py --output intelligence_data.json
+
+      # ── 5. Fail loudly if data file was not produced ──────────────────────────
+      # Prevents silently deploying a broken dashboard with no data.
+      - name: Verify data file exists
+        run: |
+          if [ ! -f intelligence_data.json ]; then
+            echo "❌ intelligence_data.json was not created — aborting deployment"
+            exit 1
+          fi
+          echo "✅ Data file present ($(wc -c < intelligence_data.json) bytes)"
+
+      # ── 6. Save updated data to cache ────────────────────────────────────────
+      - name: Save Updated Intelligence Data
+        uses: actions/cache/save@v4
+        with:
+          path: intelligence_data.json
+          key: tic-data-${{ github.run_id }}
+
+      # ── 7. Assemble deployment artefact ──────────────────────────────────────
+      - name: Prepare Deployment Artifact
+        run: |
+          mkdir public
+          cp index.html public/
+          cp intelligence_data.json public/
+
+      # ── 8. Upload & deploy to GitHub Pages ───────────────────────────────────
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # ── 9. Notify on failure ─────────────────────────────────────────────────
+      # Uncomment and configure to receive alerts when the workflow fails.
+      # Options: GitHub's built-in email notifications (Settings → Notifications),
+      # or add a Slack/Teams step here using a webhook secret.
+      #
+      # - name: Notify on failure
+      #   if: failure()
+      #   uses: slackapi/slack-github-action@v1
+      #   with:
+      #     payload: '{"text":"⚠️ TIC fetch failed on ${{ github.run_id }}"}'
+      #   env:
+      #     SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

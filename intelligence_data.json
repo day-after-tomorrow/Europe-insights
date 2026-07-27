@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-24T09:14:13.346750+00:00",
+  "generatedAt": "2026-07-27T10:35:59.992231+00:00",
   "countries": [
     {
       "country": "Poland",
-      "fetchedAt": "2026-07-24T09:13:12.393940+00:00",
-      "highCount": 2,
+      "fetchedAt": "2026-07-27T10:31:01.883630+00:00",
+      "highCount": 3,
       "feeds": {
         "competitor": [
           {
@@ -74,7 +74,7 @@
             "title": "Miliony euro dla firm. Jak RED III zmienia rynek i kto na tym skorzysta?",
             "titleEN": "Millions of euros for companies. How does RED III change the market and who will benefit from it?",
             "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNTjlnSTVGLXFnSVk2c1VnY2JOQXZDX29QV0pad0RZcWFYSWM5ZDl3OXV2SWplOUtrM1dibDUtVlVYeUxFbmQ5QUp6VmhNRjN2Y3NJTDVwWEhodWhSOExpdHpsUjZ3ZTItR0lDZjE3TWpPMFpIc1BnNjdmTkl3R0FUSFk2eUoxbkNBZ0VLWUVKSks2cFNMMUNaRjFCTkgxekh1eXFINXRKcnBfZ0ZjWWpaUTA4c2NTVUhoUlYxenIxeWFpT3dPMjZz?oc=5",
-            "source": "Portal.Faktura.pl",
+            "source": "Faktura.pl",
             "pubDate": "Fri, 14 Feb 2025 08:00:00 GMT",
             "urgency": "low",
             "local": true,
@@ -99,6 +99,14 @@
             "local": false
           },
           {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
             "title": "The Future of the TIC Sector: Opportunity in Transformation",
             "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTUhlU2VBME56bTlvcTFCTnFRRWoyejBCSEluLWJ6dVhHNUFXc3hRaW02czNhOWtydXNiMEhZWW9UWXhsUl9hX25VSWZaS1ZxZGZGbVVlN0dwYzdLY085OTF1VFdzamlsR29nRkQ1RzdaNExRblhWY1AyanpmTEFfNzFfRHMyTXZ6MDZkbGFVdW9Zd0E?oc=5",
             "source": "Investec",
@@ -119,6 +127,14 @@
           }
         ],
         "investments": [
+          {
+            "title": "First 'Made in Europe' BESS factory opens in Bulgaria, Lyten closes Northvolt Poland acquisition",
+            "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNT2x4OHJ4T0pXNklpcTZoX1FaSHc5bHlNckd0LXRsMF9kMTJWaklCM1VCc0NpbnhERjlfUTViUlBqdG1yUk9iUTJ2aEpxLXN3M2FfWTVLQm5QUEsyOF9wRFdRckhKSUUzWVhhUjFPRFNYaTMxV2xVVC1lZHVJWUlNTmdITEN6Vlh5UjJULWx2YkpWQnNXLUhwWmVQRnJQU0VyM0w2am9oRFdBUUxXSWtnZm9SUUJfampfY0FqOWM5UHlOQ2RV?oc=5",
+            "source": "Energy-Storage.News",
+            "pubDate": "Mon, 20 Oct 2025 07:00:00 GMT",
+            "urgency": "high",
+            "local": false
+          },
           {
             "title": "Major battery materials plant in Poland to go ahead after Canadian firm buys project rights",
             "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOb2o2Ym5KeF90SGo2MG1rSGpTcVZoazNwd1RPQWt6RWUtektBY2lmWm9vbXNSOFBUMk53M2s0WThGVDhmT1diWGpKejZjWk5aZ1Zqc0p6SndKT3A3Qk5uOXdrTzZjVTVxVUpid3RrTWtubE92T2VONF9FUnI3VzFHQ0pfcDlkcTJJVHJZZVJkMlhMOW5Ldmc?oc=5",
@@ -148,24 +164,6 @@
             "lang": "pl"
           },
           {
-            "title": "PGE’s 900MWh BESS will be first to use LG’s ESS batteries produced in Poland",
-            "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPOTFxbkFPcHNFZVNWaUVhd0licC1tMWtXOTIyaHhNalJOTHJYRFZ3YzNMOEE5ckhfYnlqRlh5ZjRMU2NYVk82ci1xUTBpTEFOMzBHWjItY18xZDBGc3FSalhFa2xlZUlYLVAyQVUxLXJmNGJUV0d0bXdrZFluWVJiX0QwZTZEYkFXRUZxSDZlZEJ2U1FiMnBWYzhERHhGRkZTVWVwZVRrVnV2R2M?oc=5",
-            "source": "Energy-Storage.News",
-            "pubDate": "Tue, 25 Mar 2025 07:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
-            "title": "Zielony Okręg Przemysłowy Kaszubia. Nowe fabryki i bezpieczeństwo Bałtyku",
-            "titleEN": "Green Industrial District of Kashubia. New factories and the security of the Baltic Sea",
-            "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOQVg0eEpZMUZtVWY5QzF6TUwxTUxJOVljUW9zdUx5bGxVVHFiMzN4ak1MQ1FkTk5qT0hUWVR5NzR4NkxOcnRRVkFUQ1V4TnBjTXZlakpzTHFHd1NHdFZST0hGcm9Jd19DYjE4bHYydFBWSEJYWldtSnRzQUUxMU9lSjhTWklCN3FpeV9BYWUwNmNxSER6YUdpVWFoTGZGcTNPVzJrYVVoT2xnb0F2S181bzhjeUdtcFNqdHJrcmhuQ0oxQl9wYjBrdEI5dlZhNDdJYVZiX0tsVGRILXpI?oc=5",
-            "source": "Portal Obronny",
-            "pubDate": "Thu, 20 Nov 2025 08:00:00 GMT",
-            "urgency": "low",
-            "local": true,
-            "lang": "pl"
-          },
-          {
             "title": "Foxconn wchodzi do gry. Tajwański gigant może przejąć polską działkę po Intelu",
             "titleEN": "Foxconn enters the game. The Taiwanese giant may take over the Polish plot of land after Intel",
             "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNemlkaGhSUXNxNHNRSngtY3hqaXgtMFB6WG9lZ09uN3hRVFliTkNNcEQ2cjBlN0tTLWJ3VUo1Q244cXZjRmVjd0NwZHNtTjRzMVAxaE5ybk9ycThVbFMxcFE3UFd0LW41VHE0U1ljT0Y2TnU1c29hdmQyNVA0TGhvTkFzMmJJSXhxWnJzODY4X0N2UDVWRVE?oc=5",
@@ -184,6 +182,16 @@
             "urgency": "low",
             "local": true,
             "lang": "pl"
+          },
+          {
+            "title": "Kupili domy dla ciszy. Teraz u ich bram może stanąć największa strefa przemysłowa w Polsce",
+            "titleEN": "They bought houses for silence. Now the largest industrial zone in Poland may stand at their gates",
+            "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNNDdyOUUtTW1wc2JISnFPRHNWXzZNV2hWVTA0X2g5UHZfaHJVdlpJTGtRMGdYUnV3UElTZVRIT0t4Q2ZQeHFyQVUwQ3l2bTE4S0xhbExaX3RfaVpVR0xZbktZd3RlNGpNUFFqLVlzNXVCVE5uZEZqR3BVd3Joa1dZdThyaWdzdERqdTRiaU5iLTEyQ1BKWTB6LU9CcExweV9hSFA0aFVwQkJGUzN3bDVFelFnRVpvd1lCdlNXQ09sMzl0VFdOZzRaOGdnaU5DRTN3ZXlLb1JHV2JHU1I2REo5Y1ctV1JGeDhyaWZTZmY4cnNJbG5hVENoeA?oc=5",
+            "source": "Oborniki Nasze Miasto",
+            "pubDate": "Wed, 29 Apr 2026 07:00:00 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "pl"
           }
         ],
         "emerging": [
@@ -199,16 +207,8 @@
         "esg": []
       },
       "macro": {
-        "gdp": {
-          "value": 3.57,
-          "year": "2025",
-          "source": "World Bank"
-        },
-        "inflation": {
-          "value": 3.81,
-          "year": "2025",
-          "source": "World Bank"
-        },
+        "gdp": null,
+        "inflation": null,
         "interestRate": {
           "bank": "NBP",
           "value": "5.75%",
@@ -218,7 +218,7 @@
     },
     {
       "country": "Czech Republic",
-      "fetchedAt": "2026-07-24T09:13:17.603588+00:00",
+      "fetchedAt": "2026-07-27T10:31:36.451664+00:00",
       "highCount": 0,
       "feeds": {
         "competitor": [],
@@ -253,6 +253,14 @@
             "local": false
           },
           {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
             "title": "The Future of the TIC Sector: Opportunity in Transformation",
             "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTUhlU2VBME56bTlvcTFCTnFRRWoyejBCSEluLWJ6dVhHNUFXc3hRaW02czNhOWtydXNiMEhZWW9UWXhsUl9hX25VSWZaS1ZxZGZGbVVlN0dwYzdLY085OTF1VFdzamlsR29nRkQ1RzdaNExRblhWY1AyanpmTEFfNzFfRHMyTXZ6MDZkbGFVdW9Zd0E?oc=5",
             "source": "Investec",
@@ -273,11 +281,11 @@
             "local": false
           },
           {
-            "title": "Vydání osvědčení o registraci investice pro projekt továrny na ekologické charm v průmyslovém klastru Cong Khanh 1 v provincii Ha Tinh",
-            "titleEN": "Issuance of Investment Registration Certificate for Eco Charm Factory Project in Cong Khanh Industrial Cluster 1, Ha Tinh Province",
-            "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZU9Nc1Bkb3BTdVRaQlRhNlJweHhNVGNWMGRPc25yQUNRQXhWR0R6UFRKMWprMlBSOTZvSElzbFJ5UmtYSnJiSEV0cmo4Y1N3Vmw4aUdocWMySW1qU0VMWU0xYjA5c3RndGRzbm9xckhaMTJQWW14cVlRRkxQV3hLZElUTk5RYW1uTlFDdTZERmY2VG5FRTlVVUl6VHMzRnNmTmwyMlZ2eHpDbWwzbjBfVzZQV3U3OXA3QVE?oc=5",
+            "title": "Investice do infrastruktury průmyslových parků: Vytváření čistých pozemků pro přilákání velkých projektů.",
+            "titleEN": "Investing in industrial park infrastructure: Creating clean land to attract large projects.",
+            "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNakpLY1JfTG40THpjUWVYX3R0Wmw5UjltWFZNNGlMZU5LNlpmYnNZQ0xQZU90Vk42YS1jOUJ2RGFSZDAwVDlCWnBsS1FIMzFRelBzSUhCdGJpOTFvSGFiZmRfWUxGUFNwaEw2LXNzYU9leW5rNWlvUXVlYVNtTHF1TUxpek1YNFBxNlBhZDZ5TWVnUGxiRng4RmVLcklSb0NxRVRxYw?oc=5",
             "source": "Vietnam.vn",
-            "pubDate": "Wed, 15 Jul 2026 08:02:30 GMT",
+            "pubDate": "Fri, 24 Jul 2026 23:08:21 GMT",
             "urgency": "medium",
             "local": true,
             "lang": "cs"
@@ -293,26 +301,20 @@
             "lang": "cs"
           },
           {
+            "title": "Tchaj-wan v Ústí postaví chemické logistické centrum pro Evropu. Připravuje se i další investice",
+            "titleEN": "Taiwan will build a chemical logistics center for Europe in Ústí. Another investment is also being prepared",
+            "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNXzk1R1Y1QlVNN2sxVkdWeEV5cUVFU2dDVWRvNDhKMlYwanJucUQ3OGFIRGZYRUdzSlREaURyeEFSX2EyNDhuWEpfRDBwc1FmelFIUWxwOW9VZnhfbEpfUmdLR21mX0tUdmpxVDNMMTlxYUEweXlpZmV0amtGVF9VV1RVYTZiUGxCek9aNUtrd2JQWTlwY1RPYmp5LTY5Ukc2SEhoRkZrZTNTakJ2N0tkZVBvUV9xa1dfZzc2T2wtQkg4R1MyUkpaei0tM25KN0hjamc?oc=5",
+            "source": "E15.cz",
+            "pubDate": "Thu, 21 May 2026 07:00:00 GMT",
+            "urgency": "medium",
+            "local": true,
+            "lang": "cs"
+          },
+          {
             "title": "Czech Republic Seeks To Extend Lifetime Of Dukovany Nuclear Plants By 20 Years",
             "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQOC1QNnBIRmJQdExYSU1UR2NWTzh0Y1pjejRwOGFtQVF2S1FmN1dMdjhPWVpteVJ1cXl6NXFOVTB4dmVpLU96UTdnQ2Y5YWdTRC1scmJ5Q1lVcDRZbzJETXN1dEdGZzE1ZElSWXlORFBJQkNZNHk1WjdLSnYxMUNodWNyUF9hVy01YU90RS1oV1dTQmp0R2JZaU5YYkpwWmNDTFpmNnBQTlUya0Q2WFBqSjF0NFAtUQ?oc=5",
             "source": "NucNet",
             "pubDate": "Fri, 10 Apr 2026 08:21:02 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
-            "title": "Czech Republic Extends Dukovany Nuclear Plant Lifespan by 20 Years",
-            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQd19QRmU3bEczSHdrRlZQSUpSMFVhYmg4LXlJMUpnVWdjel9IQ2tTVk1YNEYwWmZ4SHNiTjdma1UzOVhJcExKdVd1b3JpRzEzTzVUNjctT2JLWHh3SlZrdzB5dXhQeWlRbG43U0ZOclJZTHdfRVN0TURvVm80dXpyVlhZNW16dWVIZEpuSW00ODU3aVJfY2JHel9RN1dQS3RU?oc=5",
-            "source": "Global Banking & Finance Review",
-            "pubDate": "Thu, 09 Apr 2026 07:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
-            "title": "Support For Nuclear Reaches Record 85% In Czech Republic",
-            "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOT3FMNmhFMEtIbm1jYXJ4cmkxVVNHUjdWRTk0eFRqTy1xU2lhUHNfUXFkLWhQdk1uUjlWeU04MUNDeEdlaDZhVHRIbXdoTnZpbWdLYVJrY18xa24zWDd3LUdaUldrLVpoR1d2cklNTHNMTnhaZmhnSUh3VllLRGRwZlVFZTBtVVVESWN0Ui1iYVhfY3JfbW5B?oc=5",
-            "source": "NucNet",
-            "pubDate": "Thu, 21 May 2026 08:10:43 GMT",
             "urgency": "low",
             "local": false
           },
@@ -325,11 +327,21 @@
             "local": false
           },
           {
-            "title": "Slavnostní otevření továrny specializující se na výrobu komunikačních zařízení a elektronických součástek v průmyslové zóně č. 05 v provincii Hung Yen.",
-            "titleEN": "The grand opening of a factory specializing in the production of communication equipment and electronic components in Industrial Zone No. 05 in Hung Yen Province.",
-            "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQRXh1NXZickpqeTI5VENKd000dTdvT3NBdEFBdUlKUWpYM2RGWm5NcXNybVpNbGh2V3hUdTNXa0E3WWVUR2YwUzEzYmstdjNXZ3lubThOeTRKN0lPR3hxM1BUNVlJM2x0NXI0MDRqVW5Uc29SUHpoMzRwMHctT3BGcjdlSG9QVXYxOWVUTEczMmxWQ29oUDBBMERsNjRLVnZnZGYxWGRjUFV6SGNGRmpSa0d6WXNHV3ZORWFMVWs5aFFOTDFFWVFHUExjX0hBTFhyYmRMbGxkRk9fZERrMTJMRUhSUEtpQQ?oc=5",
-            "source": "Vietnam.vn",
-            "pubDate": "Wed, 22 Jul 2026 21:37:34 GMT",
+            "title": "Do Evropy se dostane novější čipová technologie. Intel spustí v Irsku výrobu na 3nm procesu a rozšíří kapacitu",
+            "titleEN": "Newer chip technology will reach Europe. Intel to start production on 3nm process in Ireland and expand capacity",
+            "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOVHpreVNKVnk4MTZPaXBVVDBJa1lCYXhTZnp5aHRCRjlqZ0VkU1k5dnp2SzdiS09WbnktVHZDRmlIUGlwQXdLSXA5NzRzMGdrYl9Wc1NWVzlKUE5HQ3c5c0hqaWFTTGlZdy10VTcwd0ZfN0FiVmVsS0RxSVhNeXd4V0x6eXd5d1J5b0tTQ3k5VmNtTFFjTkxWRFpOUTFIT1FMbmNsbzdiMElVMGZCaVFhT0hoUVN1Q2RNWmp0S1dObF8zbVVaUXhNZ0xWTEVLTjZEbU9IUQ?oc=5",
+            "source": "Cnews.cz",
+            "pubDate": "Sat, 18 Jul 2026 05:00:00 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "cs"
+          },
+          {
+            "title": "V zóně u Kolína vyroste další výrobní závod. Vytvoří přes 200 nových pozic",
+            "titleEN": "Another production plant will be built in the zone near Kolín. It will create over 200 new positions",
+            "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOWFdRY0k1VWFLVHlLTEw1NGx1czFfclNGbjk0REM5MG9zRDFjMWl6d0ZxX3NtMnEyVm5SWnVlRGV6c2NzckUtRUJkM19vNFo5NXpwNExLdW9NalVaVVF4eU1zTFgxTGtLaWM4NVV2Sk5pSlA3X3Z5VlVhdC1GZjdIMVhaLVBzYmNmekhHS0pleEctZzd2YUdpOG43WVZWT3BVdDJCWnYyT2dMOGdnLUE?oc=5",
+            "source": "Kolínský deník",
+            "pubDate": "Wed, 10 Jun 2026 07:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "cs"
@@ -348,16 +360,8 @@
         "esg": []
       },
       "macro": {
-        "gdp": {
-          "value": 2.58,
-          "year": "2025",
-          "source": "World Bank"
-        },
-        "inflation": {
-          "value": 2.46,
-          "year": "2025",
-          "source": "World Bank"
-        },
+        "gdp": null,
+        "inflation": null,
         "interestRate": {
           "bank": "CNB",
           "value": "3.75%",
@@ -367,7 +371,7 @@
     },
     {
       "country": "Slovakia",
-      "fetchedAt": "2026-07-24T09:13:21.863833+00:00",
+      "fetchedAt": "2026-07-27T10:32:11.063063+00:00",
       "highCount": 1,
       "feeds": {
         "competitor": [],
@@ -391,6 +395,14 @@
             "local": false
           },
           {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
             "title": "The Future of the TIC Sector: Opportunity in Transformation",
             "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTUhlU2VBME56bTlvcTFCTnFRRWoyejBCSEluLWJ6dVhHNUFXc3hRaW02czNhOWtydXNiMEhZWW9UWXhsUl9hX25VSWZaS1ZxZGZGbVVlN0dwYzdLY085OTF1VFdzamlsR29nRkQ1RzdaNExRblhWY1AyanpmTEFfNzFfRHMyTXZ6MDZkbGFVdW9Zd0E?oc=5",
             "source": "Investec",
@@ -408,14 +420,6 @@
             "source": "PR Newswire",
             "pubDate": "Tue, 04 Nov 2025 08:00:00 GMT",
             "urgency": "high",
-            "local": false
-          },
-          {
-            "title": "Gotion High-Tech launches Slovakia's first battery gigafactory",
-            "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPREQ2Q2RMcFBmdDdYMjE5UFFwRHBfUHpxd0NOUV8tcVhpVHR6T3JkRVBRM2JDVWdPakpoOW9HLWR1czF4cmRTdWJmRl9WU1FsVVE0M2hzMm5qUnZFMDRUMk1zYzUtc0pQZVRHVzVtemd4dGhiRXpJZGttbDd1bFdaMTB3bFQ5ZFM2cVZJQkZGQllSXzVSX2tyMU5uNUx6aU5rcmR3YlJNTmYtcUVRUmptdGVB?oc=5",
-            "source": "Gasgoo",
-            "pubDate": "Fri, 31 Oct 2025 07:00:00 GMT",
-            "urgency": "medium",
             "local": false
           },
           {
@@ -473,22 +477,24 @@
             "urgency": "low",
             "local": true,
             "lang": "sk"
+          },
+          {
+            "title": "Pri Šuranoch má vyrásť NOVÁ BATERKÁREŇ. Investícia zasiahne aj okolité obce, TAKTO znie proces výstavby",
+            "titleEN": "A NEW BATERKÁREŇ is to be built near Šurany. The investment will also affect the surrounding villages, THIS is what the construction process sounds like",
+            "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSHpSUGhUN2I3UUdpY0k4Z2l3OGJEbUxmOWRKQ2gzU200ZzlkVC1rUks1QUZ6amRmNjctN0t5LW9iVlBleHIxR3lySnc5Y2ppbEdueE84aVUzRTRwcFhLNzA1NktndzFGUkdBb3VZT2p3VW9WMXl6blY2ZDZsMWdxQUZkVDdlOEkxNV83QlJ3bi0tTDJYZnM0NlFHM2ZXeGU0T01aeVRkZVoxbkp2X2R3bzQ3dWZVbHdJTDFhYg?oc=5",
+            "source": "kanal1.sk",
+            "pubDate": "Sat, 04 Apr 2026 15:51:58 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "sk"
           }
         ],
         "emerging": [],
         "esg": []
       },
       "macro": {
-        "gdp": {
-          "value": 0.81,
-          "year": "2025",
-          "source": "World Bank"
-        },
-        "inflation": {
-          "value": 4.0,
-          "year": "2025",
-          "source": "World Bank"
-        },
+        "gdp": null,
+        "inflation": null,
         "interestRate": {
           "bank": "ECB",
           "value": "4.50%",
@@ -498,8 +504,8 @@
     },
     {
       "country": "Hungary",
-      "fetchedAt": "2026-07-24T09:13:27.574821+00:00",
-      "highCount": 2,
+      "fetchedAt": "2026-07-27T10:32:45.371542+00:00",
+      "highCount": 1,
       "feeds": {
         "competitor": [],
         "ma": [],
@@ -518,6 +524,14 @@
             "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPa3Q5SThzb1FTYU13ellOUGtZOVVFTU9wY3M5d01vNTBWMFRSWVlQNW9TeHZ2ZUQtVkN6TVdvRTlSTktTbnZTcGpoWVpfanJPSnpROXhXb0xERzcwaEY3ZzljTU9vOG81SndYdHoxd0l0dkJzZjFZNG1nWXV2dGRmQVA4Qy1mNHNpQ0Radlg1YjU5VkpNU0NvS3NSZmVhcndHZ2U1YV93?oc=5",
             "source": "EY",
             "pubDate": "Fri, 25 Jul 2025 07:00:00 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
             "urgency": "medium",
             "local": false
           },
@@ -551,21 +565,11 @@
         ],
         "investments": [
           {
-            "title": "Egy japán vállalat megkezdi második gyárának építését a Vinh Phuc tartománybeli Thang Long Ipari Parkban, amelynek kapacitása évi 5 millió termék.",
-            "titleEN": "A Japanese company is starting construction of its second factory in Thang Long Industrial Park, Vinh Phuc province, with a capacity of 5 million products per year.",
-            "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOMExfMmtqaklWTmtZbkFZNDFjR0NPWjVIaDBzbzRrcTZjTnE5ZE9jaXdqVkRHVm55ZVRVLTVLaUZJNUg0ZEl0ajJJczh5Sy1rczd0UU83NXgyVlhsQzk3dkJ6RVFnR21jc1NnQ1JJWTJKbjZKeElsdC1SaTgyTXdnUFRNU3pKY24xRlUzRW9ySmczU3Z4cUVxLTVURGxRNVVyWlpFckFiYy1LaVFmZFhwZFNlWkZhX0s1M2I5SUJiMUNRbDR1VGhycw?oc=5",
+            "title": "További három ipari klaszterprojekt építése várhatóan szeptember 2. körül megkezdődik Hai Phongban.",
+            "titleEN": "Construction of three more industrial cluster projects is expected to begin around September 2 in Hai Phong.",
+            "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQeVhrbUhhQ2pZSjJCQVZ4X1g4WHFJVlUza194alU0aWVGMzNhS3drUUJ0b2dJR3I3b2tDVTc1SXlESmhOaS1HNHQ1Zmh2cTlMdFR1UEJNVTJMSURTRmIyNG5VdmlTY29kendvaXlyS2FOSnFlcjNsMWdwZ2VmYjQ2V1dvOFF6ZTkwTzFpZjUwakNTd24teXM5Zg?oc=5",
             "source": "Vietnam.vn",
-            "pubDate": "Tue, 21 Jul 2026 13:35:42 GMT",
-            "urgency": "high",
-            "local": true,
-            "lang": "hu"
-          },
-          {
-            "title": "A gazdaság fejlesztése külföldi befektetésekkel Lam Dongban.",
-            "titleEN": "Developing the economy with foreign investment in Lam Dong.",
-            "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNV1BXQXZjOU5EODVYdGxmYWZrQkRJdzIyQUhaTjJLcnlqTWZITXpuWjhfWU9aSWxuN3ZlWWEzQUx2WERQSWh2dkRZQk0tUkliWTVWemFHc0V3U0JpN0tHc0ZabVZiZmFDTFU3UnQzNlcxbEIxMTllRTYxZGh2QTZXaWxZNERfWTg?oc=5",
-            "source": "Vietnam.vn",
-            "pubDate": "Wed, 15 Jul 2026 21:35:35 GMT",
+            "pubDate": "Sun, 26 Jul 2026 23:55:42 GMT",
             "urgency": "high",
             "local": true,
             "lang": "hu"
@@ -595,14 +599,6 @@
             "local": false
           },
           {
-            "title": "Hungary’s bet on EV battery boom hits bumps in the road",
-            "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObW5mY29ZR1lwMHdoM09BNFZlVVRSXzFJUkFqdk9OR05FSFh4Z1lIc0ZaSEtobThzMmNfWFJDZWkzWGJNTjdLYkxzU3AwVVVDRDhPU1BHenZCbm80cmtHVnlUMVEweTNHRUFwUENjdldNWE43TjYzOGFYc2lST2xEaUFYUlgzYWlfX2RHN3NWSUcwaW9ZYUFCenRwcjRvTjc0YUE?oc=5",
-            "source": "Climate Home News",
-            "pubDate": "Thu, 14 Aug 2025 07:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
             "title": "China vs. Korea: Who Is Winning the Battery Battle in Hungary?",
             "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZVprQ0puS0t1ejFnN1NwYTRnbnJ6dER6OHFBcm9OdGphdkRtMG5kWmVsY25ObzZlMVczTEVMY1NZMmpjRENnZEprSU9fV1dFYS1kMzRFbzlwWUZ2SEZ3Wk9CTUNPbjVaNHphNDFnYUNBbGplNEpVa2l0bVFGcEF0QzdMSzN1OUtNN2VqMUNtdzV4MlF6b0Zj?oc=5",
             "source": "The Diplomat – Asia-Pacific",
@@ -611,11 +607,29 @@
             "local": false
           },
           {
-            "title": "Quang Ninh megnyitja kapuit, hogy fogadja a dél-koreai high-tech befektetéseket.",
-            "titleEN": "Quang Ninh opens its doors to receive South Korean high-tech investments.",
-            "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNQW5fZE9Mczh5MjZIb2JlaUJnZzhzNGROOGlJT1pxdG9yRlFuLXhxYkZSNkpkRFh2UzBRRlRDSVp2UWdEek9uS0R1enlyQU9sYW4xZk84dmNqbTNSem1HdGZuQWNmUFdOXzVZZ0VEMDRRRV9kSlROYm95NXZFX2c0MWZUajhvSnAweV9RdA?oc=5",
+            "title": "Hungary’s bet on EV battery boom hits bumps in the road",
+            "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObW5mY29ZR1lwMHdoM09BNFZlVVRSXzFJUkFqdk9OR05FSFh4Z1lIc0ZaSEtobThzMmNfWFJDZWkzWGJNTjdLYkxzU3AwVVVDRDhPU1BHenZCbm80cmtHVnlUMVEweTNHRUFwUENjdldNWE43TjYzOGFYc2lST2xEaUFYUlgzYWlfX2RHN3NWSUcwaW9ZYUFCenRwcjRvTjc0YUE?oc=5",
+            "source": "Climate Home News",
+            "pubDate": "Thu, 14 Aug 2025 07:00:00 GMT",
+            "urgency": "low",
+            "local": false
+          },
+          {
+            "title": "Befektetés az ipari parkok infrastruktúrájába: Tiszta földterületek létrehozása a nagyszabású projektek vonzása érdekében.",
+            "titleEN": "Investing in industrial park infrastructure: Creating clean land to attract large-scale projects.",
+            "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPYTNJSGxHQW8wRkhEaHoxVzkwOHc3aFVlbmJrTlVnXzhOeVBQMEpQaEt3MXNkM25PMlg2eFd2eWdtUWhCWGtIcGVpT245X3VaTU5jTG84NWtIWVE2XzNTbkJPVW9FYlYzTFJ6WmxBRTdJcDUtb0ZEbDJuQVRIdTk2N0NnUko4YzRsOHhCWlZ3SUFKcGlsME9WdGxIN2ZQamZiMC1qdQ?oc=5",
             "source": "Vietnam.vn",
-            "pubDate": "Tue, 21 Jul 2026 14:54:34 GMT",
+            "pubDate": "Sat, 25 Jul 2026 00:53:28 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "hu"
+          },
+          {
+            "title": "Khanh Hoa: 7 projekt, több mint 5560 milliárd VND értékű befektetéssel a Van Phong Gazdasági Övezetben.",
+            "titleEN": "Khanh Hoa: 7 projects with more than VND 5,560 billion investment in Van Phong Economic Zone.",
+            "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxORUpHdTZCemp0Mmtodk5fZ3EwbU5fOVF2RFBWT2J2bXFiUGstSGpvQXdJNDEyU1dFcmlBSG90VUlla0JVdE1BX19zd3dzUHppSU1aV0xWWWRiaE5YM1YyelkwWWxGMGRDSWFPUVJPOGQ0c3pHUkpuY3pONlpzV05JM25vUUE5aFAwaFhBOGI4VV9uRnU3dlBTQXh0aFFvR0k?oc=5",
+            "source": "Vietnam.vn",
+            "pubDate": "Sat, 25 Jul 2026 16:30:14 GMT",
             "urgency": "low",
             "local": true,
             "lang": "hu"
@@ -625,16 +639,8 @@
         "esg": []
       },
       "macro": {
-        "gdp": {
-          "value": 0.51,
-          "year": "2025",
-          "source": "World Bank"
-        },
-        "inflation": {
-          "value": 4.41,
-          "year": "2025",
-          "source": "World Bank"
-        },
+        "gdp": null,
+        "inflation": null,
         "interestRate": {
           "bank": "MNB",
           "value": "6.50%",
@@ -644,25 +650,15 @@
     },
     {
       "country": "Romania",
-      "fetchedAt": "2026-07-24T09:13:31.819395+00:00",
+      "fetchedAt": "2026-07-27T10:33:03.222528+00:00",
       "highCount": 0,
       "feeds": {
         "competitor": [
           {
-            "title": "TÜV Austria își extinde prezența în Republica Moldova: Standarde internaționale pentru creșterea competitivității economice /P/",
-            "titleEN": "TÜV Austria expands its presence in the Republic of Moldova: International standards for increasing economic competitiveness /P/",
-            "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPLVctXzA0U1h1R19La19GOG1IRFc0VVJfZlkzdDlDUmt2RnllLXdVcldNUTJReURCdDZLSHc4NEU1cUdDU1BBOFVVeGQ1TFI2UzlJS1V2bzV2VGNJWXBWZWFCZmNuTWFza2ttcm9FWUhPUUViX1phUldHNHctaWZXNkg0RExTNG1ZeHp4SjJlNUtSOTllTWxfengyOEtjX3Jza0Q3NkpDMTJzUHF1cjV5LW5tb0c5dFEzRV9qOEZJQUYtWnN3XzgtYjJMcVRORjNEMklfOHdaTWhlMExQS1BNeGV3Y1Y5XzF4Q0FRX2NB?oc=5",
-            "source": "TV8.md",
-            "pubDate": "Thu, 21 May 2026 07:00:00 GMT",
-            "urgency": "low",
-            "local": true,
-            "lang": "ro"
-          },
-          {
-            "title": "TÜV Austria își extinde prezența în Moldova: standarde internaționale pentru competitivitate",
-            "titleEN": "TÜV Austria expands its presence in Moldova: international standards for competitiveness",
-            "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQeXpsMXpZemVQeDFPcUg1TGlPbUhFQ3pLZjkyeUVFNnIweTdXSGppaTBXV1F5eHZJckRLbVlYb1ZNblFtV1NCT1I2ck1oVkVHTDF4YVJLTUxZOGJsTUtNOHk5Z1NvMnpVbjk3YjNoaGJua0xrWC1OdWVmaGphYXJJU2EtOHphQXNZUUN4MlRORjNnbm0zYjk0WnVzSzY5M25qT0pqMXFR?oc=5",
-            "source": "ipn.md",
+            "title": "TÜV Austria își extinde prezența în Republica Moldova: standarde internaționale pentru creșterea competitivității economice",
+            "titleEN": "TÜV Austria expands its presence in the Republic of Moldova: international standards for increasing economic competitiveness",
+            "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOV291SGZaV3pyUmM3bVY2a2MwdGw1OHJqQW5lT2V3VjUycFN3cUVRXzEwVDlrNk1hZ25mcnBWa0RoV2RyT3pzUGl6WnhBMXp1UVZjRFJoNXNaSkYyakZmd3VTbmExTFpTVE9jVjk0bHZDbXM3bEJzQ1lDT2Z4bmhFQ1JGLWFDNnlwZzZrb0JnWWZZbVR3Y2k2NDNCVzlpMUM4QldVem1obDd2OTZ6bHR0dlplQmpPVTRQN2djTG9FQWI2eFYwSjR6YjUwcnRFWVdjSk90Y3JaRXpZWE95X2NTb1N0N24?oc=5",
+            "source": "diez.md",
             "pubDate": "Thu, 21 May 2026 07:00:00 GMT",
             "urgency": "low",
             "local": true,
@@ -689,6 +685,14 @@
             "local": false
           },
           {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
             "title": "The Future of the TIC Sector: Opportunity in Transformation",
             "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTUhlU2VBME56bTlvcTFCTnFRRWoyejBCSEluLWJ6dVhHNUFXc3hRaW02czNhOWtydXNiMEhZWW9UWXhsUl9hX25VSWZaS1ZxZGZGbVVlN0dwYzdLY085OTF1VFdzamlsR29nRkQ1RzdaNExRblhWY1AyanpmTEFfNzFfRHMyTXZ6MDZkbGFVdW9Zd0E?oc=5",
             "source": "Investec",
@@ -711,11 +715,11 @@
             "lang": "ro"
           },
           {
-            "title": "Sibiu intră pe harta resurselor critice ale Europei: mină „eco” de magneziu la Rășinari și fabrică la Săliște, într-o investiție privată de 250 de milioane de euro",
-            "titleEN": "Sibiu enters the map of Europe's critical resources: \"eco\" magnesium mine in Rășinari and factory in Săliște, in a private investment of 250 million euros",
-            "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNenRrRDQ0T245X0xsT2JKQXUyRE5GM3dwUU1oOXRUM3hobzlSSjNDRXpRQjhRSzJSN3JfYW5Oa09SNGdRZ3ZKd205a1duS0F2ZVd4eUlFX0hTUEE2dkQtMUhEMDA1V2VMM1c2SnR6Tlk5bzF6YWFHZE03eXdnVTcwalI4RVJrcEhPUzhoemNrd21NLUNYTUxTc2xuWTJDOUZyQTVoMmozczFHUmdsejFxdHFYb08xYTZmU0JCNEI3eGF0dE1zVy11eUtNd3BzN1BBVEtPQjRRNE03Y3J3a05jX0VERmV4cDI5Q3BzTjNWdDhTZkZkTldBb0RyaVVKY1o4dVdqVk45MjAzaVU?oc=5",
-            "source": "tribuna.ro",
-            "pubDate": "Thu, 16 Apr 2026 07:00:00 GMT",
+            "title": "Colos chinez, investiție majoră în apropiere de Oradea. Fabrică de 35 milioane euro, în Parcul Industrial Tileagd",
+            "titleEN": "Chinese colossus, major investment near Oradea. 35 million euro factory, in the Tileagd Industrial Park",
+            "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOX1FjVFA1c1R0WXdOcHh2TFFBaVZFVndGcW1QWVVuVGV2UE1yaldRQWpPRTNLeFA3NTZKSFhHVjNkMEhabGp3Sm5XNFVtSTc2TGZFb2hDY25nUml4dzNrMWhTamh6YkRsNGtvNTJuSnRTajVLY0pHbDZyQmRzTVpvdGoxZW1uYjM2ekxVMlBRN05MM0F4WDk4R1RHalI1YnFMX19qVk9INS1hZ1ZyUjJETVRJdG9meFg5aGhzNzQ4LTlxenBJUHdFeW4zUWhFNUlfVE5jNTF1WUJLOGM?oc=5",
+            "source": "Observatorul Bihorean",
+            "pubDate": "Mon, 22 Sep 2025 07:00:00 GMT",
             "urgency": "medium",
             "local": true,
             "lang": "ro"
@@ -749,7 +753,7 @@
             "titleEN": "The contract for the new high-tech factory in Miroslava was awarded: 12.4 million lei",
             "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU1gzRGxfUGNRd3hWd21USERwLVNKTUw1ODFPQ0ZnNFBPbnFRNnI0ZU9uWm9tUEtrMVMtcG1MNjdFU2ZPV3pwdGhCd1ZzRG1Rc2xPc0FidEhBQ1FVTDVkRjlDZEVVY05qZkM5ZmY2VXRSX0NiZjJ0YU03THU4M1Bxa1M1N2VVNllTaU5EZkx4cnkzUVBQcjBTT3RaS1FMVkl1Y2VHNUUtY21FXzg?oc=5",
             "source": "Apix.ro",
-            "pubDate": "Wed, 15 Jul 2026 00:14:07 GMT",
+            "pubDate": "Wed, 15 Jul 2026 07:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "ro"
@@ -807,7 +811,7 @@
     },
     {
       "country": "Turkey",
-      "fetchedAt": "2026-07-24T09:13:36.813649+00:00",
+      "fetchedAt": "2026-07-27T10:33:14.539686+00:00",
       "highCount": 0,
       "feeds": {
         "competitor": [
@@ -842,6 +846,14 @@
             "local": false
           },
           {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
             "title": "The Future of the TIC Sector: Opportunity in Transformation",
             "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTUhlU2VBME56bTlvcTFCTnFRRWoyejBCSEluLWJ6dVhHNUFXc3hRaW02czNhOWtydXNiMEhZWW9UWXhsUl9hX25VSWZaS1ZxZGZGbVVlN0dwYzdLY085OTF1VFdzamlsR29nRkQ1RzdaNExRblhWY1AyanpmTEFfNzFfRHMyTXZ6MDZkbGFVdW9Zd0E?oc=5",
             "source": "Investec",
@@ -851,16 +863,7 @@
           }
         ],
         "tenders": [],
-        "standards": [
-          {
-            "title": "Turkey Digital Sound Level Meter - Market Analysis, Forecast, Size, Trends and Insights",
-            "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZUdDcHBjelBNR2FUbFRYeDRnZE9lT0o2UDc4ckNBVENEN2I2RkN2elI5a1pPbnhQSUxJRk1EQzdFS09pMXFkUGtEYXI3X0pfWERSRXNIRldnSmtvMy1HZXFkVWxVRXBIWmhtMEIyZzFpMHBvOVAydUp4NXAya29aTnJBN2t0WG9WeWpuRTBOM1ZZNlV5MmlzMUhKYjV6UTNDUWgyd25oZm9YUHJJUGNwRmt0VQ?oc=5",
-            "source": "IndexBox",
-            "pubDate": "Thu, 23 Jul 2026 07:25:13 GMT",
-            "urgency": "low",
-            "local": false
-          }
-        ],
+        "standards": [],
         "investments": [
           {
             "title": "Fabrika Kurma Vaadiyle Türkiye’deki Büyük Yatırım Teşvikinden Yararlanan Ama Yatırım Yapmayan BYD, Kullandığı Teşvikleri Faiziyle Geri Ödeyecek",
@@ -919,11 +922,11 @@
             "lang": "tr"
           },
           {
-            "title": "Bakanlıktan BYD açıklaması: Yükümlülükleri ve teminatları geçerli haberi",
-            "titleEN": "BYD statement from the Ministry: Its obligations and guarantees are valid.",
-            "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTDNJb051YzQzRDJpZnZXNzFIcmIxRWRuMGNfYmxPa1U0cW41OHg4dFZHSTVuRlFGN3VnMlZRbm0xbHNsbDVTQVNwNktTelNsYUM5bjJUeWtiVTY0cS1tYW1YZ2N1clFxM2tUWVdFQWo1cFNTc1BBNElFaUhoSXBCaWdINjAySFJ4WjYyUlRVak5EYjZDVm1odGNDUzZCVGQ4djBPZmtSQi1kczNnMlRv?oc=5",
-            "source": "Borsanın Gündemi",
-            "pubDate": "Wed, 10 Jun 2026 07:00:00 GMT",
+            "title": "TÜRKİYE’DEN SURİYE’YE DEV YATIRIM “5,6 MİLYON METREKARELİK KAMOUNA SANAYİ BÖLGESİ İÇİN PROTOKOL İMZALANDI“",
+            "titleEN": "GIANT INVESTMENT FROM TURKEY TO SYRIA \"PROTOCOL WAS SIGNED FOR THE KAMOUNA INDUSTRIAL ZONE OF 5.6 MILLION SQUARE METERS\"",
+            "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPQnBHa21xbVItOVc1aTlya1JoSEF6dmtWbHJDellHdV9ObkRhQ3VqQ3lJQjNsS3JzUFVJaWZuLVdRQXNhRVJuUmpseEd1NjAzNDlGYWtsc2VVeElVX09kdnRZWWFkYVExSVlRazdfXzZ2NXcwbmxVcW1SS05sREhhT24xcWV2VVNVYjlCRnpFbk1GYmZwcjNHb0FpWTlwYVdBcHY5WTR3S3lFM2Q3THVfSkoxRFRwNVdXa0hKWUt2Vjg4cWMxbVhBNE5QWjQxc21MZDNSUnZVVVFWeS1meUUyZ193?oc=5",
+            "source": "Şantiye Dergisi",
+            "pubDate": "Fri, 27 Feb 2026 15:43:31 GMT",
             "urgency": "low",
             "local": true,
             "lang": "tr"
@@ -961,7 +964,7 @@
     },
     {
       "country": "United Kingdom",
-      "fetchedAt": "2026-07-24T09:13:40.190526+00:00",
+      "fetchedAt": "2026-07-27T10:33:17.408697+00:00",
       "highCount": 0,
       "feeds": {
         "competitor": [
@@ -994,6 +997,14 @@
             "local": false
           },
           {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
             "title": "The Future of the TIC Sector: Opportunity in Transformation",
             "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTUhlU2VBME56bTlvcTFCTnFRRWoyejBCSEluLWJ6dVhHNUFXc3hRaW02czNhOWtydXNiMEhZWW9UWXhsUl9hX25VSWZaS1ZxZGZGbVVlN0dwYzdLY085OTF1VFdzamlsR29nRkQ1RzdaNExRblhWY1AyanpmTEFfNzFfRHMyTXZ6MDZkbGFVdW9Zd0E?oc=5",
             "source": "Investec",
@@ -1021,10 +1032,10 @@
             "local": false
           },
           {
-            "title": "WRAS marks five years as an independent certification body",
-            "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOeTFucFpZSEtZUVNGdVRwSmlkRVAxS0VOR05rZ2Vjd3FLRjNyYWxCaE15YWtiUm5nLWRmemF0c3ZteFBJcFNFdktIN1FaR0dRWlVZNWZuWU4xY0hLNWpWenBSVnZVX19Fb296a1JrRU0tYWlQeFlQLVlnclQzZE54M3labVBiNllQdmFzRDYxYllDN0pNM1lzbjlwVFRCMU1qc3BIVg?oc=5",
-            "source": "Water Magazine",
-            "pubDate": "Thu, 04 Jun 2026 07:00:00 GMT",
+            "title": "South East Water unveils expanded laboratory",
+            "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOeDNHOXo2ZG1Ra3doMTZNdkZzOVNPQmVyR3ZtOGZtRDdGajFhTnJCQWszQndoME8xNHViMFVlTVFXOFlNeDJWOTFjQ0hneWZzUENGaUdpRDkwWEZ1R1MyWGJUaWRMc1Z0YnB5bVUwUXBPVGt6dms0VEtNdnFvaWlSWW8ycnVUaUppOUI2QzRMQXpFd3lrRlpwdXpxOWsxWFBMSHc?oc=5",
+            "source": "Smart Water Magazine",
+            "pubDate": "Wed, 18 Jun 2025 07:00:00 GMT",
             "urgency": "medium",
             "local": false
           },
@@ -1037,18 +1048,18 @@
             "local": false
           },
           {
-            "title": "MSL celebrates 25 years of scientific and regulatory excellence",
-            "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPRC1jNFM2c0dKT1l5QXB5cmlaOXJ3VWdFLUUyQVN1TktULTZuc2htNmdvRm1CcWZ2bjVROEtXZ2ZmWVZPbF9VcXRwbUlzWGg4UUVqa0JKaXAxUTRmV0dUME10OUx4RUttYUV2Szc4NHJ0bjVydnJBOUcxUGpWSHctSWhLNG11OThWb3otdVNLNHZsdw?oc=5",
-            "source": "Cleanroom Technology",
-            "pubDate": "Mon, 08 Jun 2026 07:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
             "title": "Rishi Sunak visits Northallerton lab leading the way in crime technology",
             "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQRWxkT3ZYS2ZkWWJIR2s4TWZkRi1TRjlpUlNtNG8wZ041dUVwTDNtQU96Rlk5ZC1IRW80eHZEalU3MVhjenYtM0VUOHpBaVVkX242cjYxdVlWcVBYYXowVnhMb2NmU0tZaHM1dE1nSXAzS0dRT043aDF1UTJCNEdMQmNFdm5TMzFOZ3VRcDdKSUFLdmx6UFZYMWJVTHB0SDBieTRoZHF5WmlzejNLY29GRkJ0TUo?oc=5",
             "source": "Darlington & Stockton Times",
             "pubDate": "Wed, 15 Jul 2026 05:00:00 GMT",
+            "urgency": "low",
+            "local": false
+          },
+          {
+            "title": "MSL celebrates 25 years of scientific and regulatory excellence",
+            "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPRC1jNFM2c0dKT1l5QXB5cmlaOXJ3VWdFLUUyQVN1TktULTZuc2htNmdvRm1CcWZ2bjVROEtXZ2ZmWVZPbF9VcXRwbUlzWGg4UUVqa0JKaXAxUTRmV0dUME10OUx4RUttYUV2Szc4NHJ0bjVydnJBOUcxUGpWSHctSWhLNG11OThWb3otdVNLNHZsdw?oc=5",
+            "source": "Cleanroom Technology",
+            "pubDate": "Mon, 08 Jun 2026 07:00:00 GMT",
             "urgency": "low",
             "local": false
           }
@@ -1103,23 +1114,63 @@
             "local": false
           },
           {
-            "title": "UK to give £380m grant to Tata battery factory in Somerset | Automotive industry",
-            "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNHkzVTFnRXVCRXpGcmxZZi1NWDVVbTY4VnM5bUY3RzVERGhNZTdOTGR4WWhCWVhEZi1nbW4xQW1zNjh2alptOWRDZ3Rnc19uWWFiZjRNLUFqbkx0TUtVNktOUlpsV1FDZk40NkdiTU1NNDVucTFxWkRUdzBHWDBRY05sTjNXWXFkeEtJYUVfN1gxSVgxRjNZRlY4cXItQ0tJZjJYRDg1WE9sMkdIcURZ?oc=5",
-            "source": "The Guardian",
-            "pubDate": "Thu, 09 Apr 2026 07:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
             "title": "Agratas gigafactory project secures £380m in UK government funding",
             "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQc2V1X3RNc0N4V05ncG96UVNBaWl6QWZpR1c3clRHUDlnbHVDalhWSi0xa2xxVDVIWG9raUlZYTBnTXZVa195X2REYndpMHVOQ1A2WGI0aS1XbWhodWFCb3ZaUzVuUDJLaURQZHZKRTliYVA4RF9nSWRQZDlWSGU5YS02NXZzSzN4Rk1EdUlLdlp1VGxMc1hZaF9vbWNnWnVPdnU2TFFrNTg?oc=5",
             "source": "BusinessGreen",
             "pubDate": "Thu, 09 Apr 2026 07:00:00 GMT",
             "urgency": "low",
             "local": false
+          },
+          {
+            "title": "UK to give £380m grant to Tata battery factory in Somerset | Automotive industry",
+            "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNNHkzVTFnRXVCRXpGcmxZZi1NWDVVbTY4VnM5bUY3RzVERGhNZTdOTGR4WWhCWVhEZi1nbW4xQW1zNjh2alptOWRDZ3Rnc19uWWFiZjRNLUFqbkx0TUtVNktOUlpsV1FDZk40NkdiTU1NNDVucTFxWkRUdzBHWDBRY05sTjNXWXFkeEtJYUVfN1gxSVgxRjNZRlY4cXItQ0tJZjJYRDg1WE9sMkdIcURZ?oc=5",
+            "source": "The Guardian",
+            "pubDate": "Thu, 09 Apr 2026 07:00:00 GMT",
+            "urgency": "low",
+            "local": false
           }
         ],
         "emerging": [
+          {
+            "title": "Environmental, social and governance | UK Regulatory Outlook January 2026",
+            "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPLXA3S1hUZUdXdmNzTmpNVW1DVVZhV0Fvb2g0NEZlVWc2WkZ1ZkREbTRwVXRRUk9fcUo1aURUdm4walRmREM5c0l3Vk4zbl9WUTBNbHV2REN0cHlRRUk3MHZxTDRoazNqMHF2aWJiVjB5eGI4UFJoZGE5X0F6T2N1NEJyWU52dVJzQ1VZVzBwM3JDM2lzQjNvclgxWVdtOEoxZjNpQQ?oc=5",
+            "source": "Osborne Clarke",
+            "pubDate": "Tue, 13 Jan 2026 08:00:00 GMT",
+            "urgency": "low",
+            "local": false
+          },
+          {
+            "title": "EU Digital Product Passport Rules Set to Transform Global Supply Chains by 2027",
+            "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPVkpSVlBDWnFyT19WdWlpN1kzYlRqcTBudmh1MzYzTlhueXNWLUpmTFIxbVpPT1hPTGRUUXV2cGFzVk5ZNDA2VGs4QkNnUzYxaUljOUM4ZE91RkdHblJWRTdVRlJRYW1MZ1JUdjhMX2o5cmxWZ3psSHlxN2E2TjR1ZzBseTU2Vmp1NTVOVTVtejVCMVF1SlI0Vm1yUnJoZkc1M1E?oc=5",
+            "source": "ESG News",
+            "pubDate": "Tue, 24 Feb 2026 08:00:00 GMT",
+            "urgency": "low",
+            "local": false
+          },
+          {
+            "title": "ESG Knowledge Update | December 2025",
+            "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5oSzVYejNMSXlMN096UTJIdVQ0UVdnMVpfTW5YcWJ1SVVsZHhESjdkWk9HNHpLbHFiYTdMX1p0Ny1RX1llaGNxVm9ZTDdnZEl1ZWVwY05iUTJUX3ViSVRPNzJYMnhkRjQtMHRlT0RzSHV6MVhMN1BOVDBEOUxPZw?oc=5",
+            "source": "Osborne Clarke",
+            "pubDate": "Mon, 22 Dec 2025 08:00:00 GMT",
+            "urgency": "low",
+            "local": false
+          },
+          {
+            "title": "2025 ESG Regulatory Outlook: Resilience through Strategic Reporting and Risk Management",
+            "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNVnVib3JBZ04wdWJQcVhnVndpX0FDUVR6YkI4WVFHXy1kTEpSZDRfaVRZQ1F1RkIxT19MQW1IRXVLQllPOV9ZTEUzdmxkRnVEcDZ5cmVxR3E2SzBCUUpWNXhYSFllMTl2VkJMZzFrdkRuZzVsNzB0Ujg0WGNGS1RjU09qbkVUQ2hLcnpQOHNRbGJFZkxkdUJOTXN0QmM2S1YyUDROR2tGV1VsUVYwX0tBc3FpRmFKNnUxS2F0V3R1XzZ0ZENt?oc=5",
+            "source": "Oracle Blogs",
+            "pubDate": "Wed, 29 Jan 2025 08:00:00 GMT",
+            "urgency": "low",
+            "local": false
+          },
+          {
+            "title": "Fairglow Raises €3 Million to Decarbonize Beauty Supply Chain",
+            "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNajlxTk9pRTNGV015Q3M4bEVQVVU2MDEzTE9UMlZ5cVBIZjRIZFltNU1pa09tZXVoa3haZVdjRmRmZFVtTU5iVnB1a2E5RmxxUEs1NUFkQlhBT1FnaER4TEozR2ZZaFk4UFBmaGpZOHE1ZEZJT1FfZlNtN21Lb21rM0FpZnNWYTJ0bWN6b2xHaE4?oc=5",
+            "source": "ESG Today",
+            "pubDate": "Mon, 30 Mar 2026 07:00:00 GMT",
+            "urgency": "low",
+            "local": false
+          },
           {
             "title": "AI and geopolitics creating ‘perfect storm’ for cyber attacks",
             "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNTnBjN24wcXJKak1ER3N6VUlKRDU2RGszUDRNUGRLelFQaVpMUXJpZGtlemlLWmtHbk9rRWIxemxacU5iTndHWDVWTF9aQ3lwVVhEbE1rVTZZRGVhbndvWFp6SGZGOGFTdUtSZWRqTl9rZzh5WXZ2ZGpHS2ZnaTdHYlBQWWRPaS14RUJYc25WREJYcFV5SjJjRHNraWVvbk1BdmVOelYzMEd6REE?oc=5",
@@ -1133,46 +1184,6 @@
             "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPRjFRcW4tSUxQcjhibUJBTGdNSzhxZDdzR0NxZHo1cGw2REl6eU9xZnNHb1RvZXJjblJkcUdBdEd1WEVIU0NTUVJ1YlYwM0hTSEZvOUplczlnSnRaWS1WeWpFV2V1Mnhxd3ZHNl9mbVJUMjlBVXJBWGRZZjkyRFlzLV9EUkYwQURqdGJFUU9GZ1d2SlVMa3NpYVVlVjJzUQ?oc=5",
             "source": "Osborne Clarke",
             "pubDate": "Wed, 21 Jan 2026 08:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
-            "title": "Environmental, social and governance | UK Regulatory Outlook January 2026",
-            "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPLXA3S1hUZUdXdmNzTmpNVW1DVVZhV0Fvb2g0NEZlVWc2WkZ1ZkREbTRwVXRRUk9fcUo1aURUdm4walRmREM5c0l3Vk4zbl9WUTBNbHV2REN0cHlRRUk3MHZxTDRoazNqMHF2aWJiVjB5eGI4UFJoZGE5X0F6T2N1NEJyWU52dVJzQ1VZVzBwM3JDM2lzQjNvclgxWVdtOEoxZjNpQQ?oc=5",
-            "source": "Osborne Clarke",
-            "pubDate": "Tue, 13 Jan 2026 08:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
-            "title": "Fairglow Raises €3 Million to Decarbonize Beauty Supply Chain",
-            "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNajlxTk9pRTNGV015Q3M4bEVQVVU2MDEzTE9UMlZ5cVBIZjRIZFltNU1pa09tZXVoa3haZVdjRmRmZFVtTU5iVnB1a2E5RmxxUEs1NUFkQlhBT1FnaER4TEozR2ZZaFk4UFBmaGpZOHE1ZEZJT1FfZlNtN21Lb21rM0FpZnNWYTJ0bWN6b2xHaE4?oc=5",
-            "source": "ESG Today",
-            "pubDate": "Mon, 30 Mar 2026 07:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
-            "title": "EU Digital Product Passport Rules Set to Transform Global Supply Chains by 2027",
-            "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPVkpSVlBDWnFyT19WdWlpN1kzYlRqcTBudmh1MzYzTlhueXNWLUpmTFIxbVpPT1hPTGRUUXV2cGFzVk5ZNDA2VGs4QkNnUzYxaUljOUM4ZE91RkdHblJWRTdVRlJRYW1MZ1JUdjhMX2o5cmxWZ3psSHlxN2E2TjR1ZzBseTU2Vmp1NTVOVTVtejVCMVF1SlI0Vm1yUnJoZkc1M1E?oc=5",
-            "source": "ESG News",
-            "pubDate": "Tue, 24 Feb 2026 08:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
-            "title": "Circular methods could unlock €30 million in value for TowerCos economy",
-            "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPb3NtaElKLTVmWDJxUmZ2cEN2SjRnZjVFNmlZMnEzTWVpSUdCWGVhaTE1bVkwd0NKYWpkUEdMcjgweGg3ZXRkV2JLRnlBdDM2S285UXM2WTdQbkVJdkdaSHlWalZvdVBqb0FlSGY3X0hJM1ZmVlE4bWRvV3hkcGtldldwUFZIdlJsVUlDWUhOZFFscFpuVXpuOWdlMm5Ya2pVUFMyakJlbEVlVWNy0gGyAUFVX3lxTE1Fa0wwczZOaFM3eDFiZHFDTDBUR1JxMFpldkI2SjJBcXdxalpzX1dHVWdWXzRLdmNpRXlsTlZlZjRyUzV6eDVRa0RNcVZjejZNRk92aWRBZ0NORTlXYTNkRlFDS3dHZU9MUGgzSEN3Y1RtanBDVEJxTGdxeUtFbXM2TWpDZ2dLZ3M5QzFsMVRyMndqZjRiYjNvZHo4eUR5RUVjZzNlNW5fTU13Sk9qS0NjdkE?oc=5",
-            "source": "Consultancy.uk",
-            "pubDate": "Tue, 04 Nov 2025 08:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
-            "title": "2025 ESG Regulatory Outlook: Resilience through Strategic Reporting and Risk Management",
-            "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNVnVib3JBZ04wdWJQcVhnVndpX0FDUVR6YkI4WVFHXy1kTEpSZDRfaVRZQ1F1RkIxT19MQW1IRXVLQllPOV9ZTEUzdmxkRnVEcDZ5cmVxR3E2SzBCUUpWNXhYSFllMTl2VkJMZzFrdkRuZzVsNzB0Ujg0WGNGS1RjU09qbkVUQ2hLcnpQOHNRbGJFZkxkdUJOTXN0QmM2S1YyUDROR2tGV1VsUVYwX0tBc3FpRmFKNnUxS2F0V3R1XzZ0ZENt?oc=5",
-            "source": "Oracle Blogs",
-            "pubDate": "Wed, 29 Jan 2025 08:00:00 GMT",
             "urgency": "low",
             "local": false
           }
@@ -1199,7 +1210,7 @@
     },
     {
       "country": "France",
-      "fetchedAt": "2026-07-24T09:13:44.950370+00:00",
+      "fetchedAt": "2026-07-27T10:33:31.015788+00:00",
       "highCount": 1,
       "feeds": {
         "competitor": [
@@ -1261,7 +1272,7 @@
             "titleEN": "Remote Testing, Inspection and Certification (TIC) Market TRENDS",
             "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQ0xtYjEzczZYWkxzVVFHYkZncExyZXA4M0NlZkktMDRBX2pqWmpMOUpHT3NzTUtPLU1tbXZHZHpYb01DdTRDajk5eDRYLXBxYjl4cWQ0eTIzakJkMXRVa0k5VkE5bll1clNsN3pYbGdyV3Z4R3gxRG5CV3k0NnF5czh3aExZSGQ1V3FXZmc5ZEJXMW9oYm9OemszYUlBalJLLU9PWF9tTQ?oc=5",
             "source": "Fortune Business Insights",
-            "pubDate": "Mon, 29 Jun 2026 07:00:00 GMT",
+            "pubDate": "Mon, 06 Jul 2026 07:00:00 GMT",
             "urgency": "medium",
             "local": true,
             "lang": "fr"
@@ -1287,21 +1298,21 @@
             "lang": "fr"
           },
           {
-            "title": "Taille du marché de l’aérospatiale commerciale, part | Rapport de croissance 2034",
-            "titleEN": "Commercial Aerospace Market Size, Share | Growth Report 2034",
-            "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNcUp0WUItejFrLVl2N2tUOHpqdEQyNkZEMkxuRWM3NHdfU29VeWlfbzRzMks2SFVLd2JKaGl0alZTYktYS2RRbUlTOWZwNW4yc21HREhWY2FVaTNuQlFlanVrTVkzT2pndC0zc3pSVW55Rnh6Ukp5ME92a0lSd2V1azJfSQ?oc=5",
-            "source": "Fortune Business Insights",
-            "pubDate": "Mon, 06 Jul 2026 07:00:00 GMT",
+            "title": "Critère environnemental et marché public : les impacts des lois Climat et Industrie verte",
+            "titleEN": "Environmental criteria and public procurement: the impacts of the Climate and Green Industry laws",
+            "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOOHU3bXA1dzlBOENkNEVxYTBFYk5iVmp0MFV4VmQ4T1BqN0hUSXRUY1NJOXhqaDhkd2RWME53RE1JaUF1YmRsSm5XTnBwOG05NFlTZDBPZGRCVGZ3RVE0WF8yR2ZvSDFPRU1JU3VHcDltT3N6UmRMcFJxS2RXM1VCcW5XUUpmajN1MDJIaTlBSUlQYnNiX0F5WFNuemxmcEpfYXBETVFGVnZWWG9ZSXpJelZ0a0tpTzVScXpCcklxaWZjTnFhS213eWd6ckpYNUU?oc=5",
+            "source": "Lefebvre Dalloz Compétences",
+            "pubDate": "Mon, 29 Dec 2025 08:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "fr"
           },
           {
-            "title": "Taille, part et croissance du marché des TIC automobiles | Prévisions [2034]",
-            "titleEN": "Automotive ICT Market Size, Share and Growth | Forecast [2034]",
-            "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBSTnBIOGRtRURJdkJkNmpqT21qMGtfQzl1c2piQ0JKUTY3QnlyVXJ4NGJaTXkyNGRRUlNTRmhJTDc1Y3kzWXBVM2hsSXhlZU9YRWJTWDJBS0NIRHN5ZU9ubHRzQXVWSHczVkxLVEEtUkI5ZnphSFpsc19vNA?oc=5",
-            "source": "Fortune Business Insights",
-            "pubDate": "Mon, 15 Jun 2026 07:00:00 GMT",
+            "title": "Immobilier bas carbone : la filière en ordre de marche",
+            "titleEN": "Low carbon real estate: the sector in working order",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNOGtWSnFPOG9xRjBhdXc0Vmotc3g5WG5oeUs2aDQ2V1pEaWNZVnVZYXdudEtRRHUwUEJSNWVjdFhaLWJVRzJvUjlYcVRUOG5JSHdHZmMxMW5Qam1ZWVBWODR0ZUYzRUc4dGdBbGx0VUJrdWcwU0dZNG1FTHBITGNDM01NXzVEOFpsOExoWmVVQktnMXYyd3FPdHJkZTBHU3NJ?oc=5",
+            "source": "Les Echos",
+            "pubDate": "Mon, 10 Nov 2025 08:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "fr"
@@ -1321,6 +1332,14 @@
             "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPa3Q5SThzb1FTYU13ellOUGtZOVVFTU9wY3M5d01vNTBWMFRSWVlQNW9TeHZ2ZUQtVkN6TVdvRTlSTktTbnZTcGpoWVpfanJPSnpROXhXb0xERzcwaEY3ZzljTU9vOG81SndYdHoxd0l0dkJzZjFZNG1nWXV2dGRmQVA4Qy1mNHNpQ0Radlg1YjU5VkpNU0NvS3NSZmVhcndHZ2U1YV93?oc=5",
             "source": "EY",
             "pubDate": "Fri, 25 Jul 2025 07:00:00 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
             "urgency": "medium",
             "local": false
           },
@@ -1350,6 +1369,14 @@
             "pubDate": "Wed, 03 Jun 2026 07:00:00 GMT",
             "urgency": "low",
             "local": false
+          },
+          {
+            "title": "European Union Pressure Calibration Equipment - Market Analysis, Forecast, Size, Trends and Insights",
+            "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPdy15b25PODd4STdkaURWT0hNVTVtUkRwVGVjcUdlaHhQVTJfVWE2VVpDUlQzTW8tUmhhaUMwcFZCN0Z6eVlPM0s3T0xEdjZ3OHdiSFMzbzFyVTcweFRzdjh5blRDallhSEVyVGhKZ0pOaHk0dkI0Vm1ndE5rd3VQQlA3ci1BbFlkQXVVZmVuc2o0b291T04ydnVsdktHX0xILVc1M2w5VWtwN2Y1NEFGYi1Md0RvUmd1SllKLXNmXzkwTUlt?oc=5",
+            "source": "IndexBox",
+            "pubDate": "Sun, 26 Jul 2026 18:17:27 GMT",
+            "urgency": "low",
+            "local": false
           }
         ],
         "investments": [
@@ -1360,6 +1387,16 @@
             "source": "DCmag",
             "pubDate": "Sun, 31 May 2026 07:00:00 GMT",
             "urgency": "high",
+            "local": true,
+            "lang": "fr"
+          },
+          {
+            "title": "L’investissement passe de 50 à 75 millions d’euros : à Baule, le projet d’usine de production de légumineuses d’Intact prend une ampleur inédite",
+            "titleEN": "The investment increases from 50 to 75 million euros: in Baule, the Intact pulse production factory project takes on an unprecedented scale",
+            "link": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxONUhxMmVCX3V3MkpNZGlQTzFwUElIeFlDY25nbmgxS3FtbzVibUVGbHZRMi0zOHZFdURZME81aHVwMGpPVXJaRldSQzRSOVJNcXhGVUxrRWdjUExYeDFLWnNiNWpwdnlrYXZab3BYSy00TVVjSTRhVGs1ZW1SbUlGVnRxMFRnX0lZWnNBZGRpbk54R3hwTHQ5OEF5b01JOERHbEpJSDhBNnZ3OGtmc0o5Y3pEc0MtM2djdERpZGJNOERhOWhad0tyOXYwb3dTbVNqclFsMkNZUEJQbk8wVlpHRWllb2Jlc2gyZGYxYUlHM3BmYS1IWENUVlBHUVlISWJ6Snd1Rm1DX2xneUdRek01bVo2eDZCb3N4YXdpWE85R0NZWkxzcFdWbWNURlg3SkVrWU1YSFJ4YUZqMHF0cFdCbjliWThYUzQ4MGtVUjZEVjBIVTQ?oc=5",
+            "source": "L'Usine Nouvelle",
+            "pubDate": "Sun, 26 Jul 2026 15:00:00 GMT",
+            "urgency": "medium",
             "local": true,
             "lang": "fr"
           },
@@ -1398,24 +1435,6 @@
             "pubDate": "Thu, 05 Jun 2025 07:00:00 GMT",
             "urgency": "low",
             "local": false
-          },
-          {
-            "title": "Slovenia And France Sign Declaration As EDF Competes With Westinghouse For Krško Nuclear Project",
-            "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNSXlXZko0eGtTc2lzNmZ3dGxfdjJRWWlxT1NqV2g5SHladHJzMU41N1FYdzcxb0djSUNUZ0hRNm0zTklmTHd1UFBVU0I3YzV1M0djODRMQzc1RncyTzBJNmozNi0xYjhhOGF6Q3YxbEJ3RFMzUkVJcGh5ajYtREo0S3NFRWJ4Zk83N1V2dE02VWNfS1R6bndKMDBFa3pEQS1uNGxiLUdPaHF2NVczLU5LN2pDc2tZYm04LXpseEljZG82Z040X09zS21TQTRzMlk?oc=5",
-            "source": "NucNet",
-            "pubDate": "Thu, 23 Oct 2025 09:35:13 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
-            "title": "Industrie : ces sites qui vont ouvrir ou monter en puissance en France en 2026",
-            "titleEN": "Industry: these sites which will open or ramp up in France in 2026",
-            "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNUHp5Z2JpRnlobUZfVjEtcXNJZ0pVYmVqRTUxR2pOOGZwNEpIZmNONlljX19CeDhabmN5VnJsVDh4VnUzSWpVcUhxNlRXUzdQdGlmbExoRzB5OGk1M2h3eEJMeW9FMXZacm4yM0Z1cGxxZWxzeDZZX1JQSWQteGMyamVub0c0Zy1MRl9VZ2J2NEV4emkxWGlaeXhpTmVRVEVndDRkXzhGcDRiSmRwYU1NcUJmMXlNWF8zMnVpNjF1MkxVbXN0c1hldV9kQ05LT3NyR1hzajRqS01UdkxSRDQzaGQ2SmwzVlRU?oc=5",
-            "source": "L'Usine Nouvelle",
-            "pubDate": "Sun, 04 Jan 2026 08:00:00 GMT",
-            "urgency": "low",
-            "local": true,
-            "lang": "fr"
           },
           {
             "title": "Emmanuel Macron veut investir 72 milliards d'euros dans l'industrie : voici les projets retenus en Lorraine",
@@ -1468,6 +1487,26 @@
             "pubDate": "Tue, 22 Jul 2025 07:00:00 GMT",
             "urgency": "low",
             "local": false
+          },
+          {
+            "title": "Mines et durabilité : le Maroc à l’avant-garde d’un cadre africain ESG",
+            "titleEN": "Mining and sustainability: Morocco at the forefront of an African ESG framework",
+            "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOdXZ5bUlfZkNwYnFBWmxzSnZZMmxTMGxucnFNYjJCVHgxQVlSUzEzR0lNdHMwX1VoUUZqcGZjZWNMOVlVMlBxQ3VHOXd1cnA4N2N1MlNBcFNnNXgyaUJsc0JHeHRFT3h0cmJZaWY3MUM1Q2hHNjMzRTRfOGtkaTFGci1YRWJfdmQ0RlBOTUVpUjBzRms?oc=5",
+            "source": "Industrie du Maroc",
+            "pubDate": "Tue, 09 Sep 2025 07:00:00 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "fr"
+          },
+          {
+            "title": "Transition énergétique : Le Maroc affirme son ambition de devenir un hub régional",
+            "titleEN": "Energy transition: Morocco affirms its ambition to become a regional hub",
+            "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNXzI4elh5bHpEXzMxLURDdjFJNHlUcUt3NERqUk9GTnFZWnp6eVZZS3NWejMyVHFnUGVqZVV4R1NYaDFZdlpfRlIzMlhHMjF1Q2ZPdGNQZjRKU2h1VzBUUU1rY2FhTUthLVlIaUswMURMMmJQSUp2UC1WNVZKb2NIdGs4WFNJa2lNWDV6S0JEV2dRVGJDOVVSYmtUbVp4dTJ3SU1TMQ?oc=5",
+            "source": "Industrie du Maroc",
+            "pubDate": "Wed, 07 May 2025 07:00:00 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "fr"
           }
         ],
         "esg": []
@@ -1492,7 +1531,7 @@
     },
     {
       "country": "Belgium",
-      "fetchedAt": "2026-07-24T09:13:48.677630+00:00",
+      "fetchedAt": "2026-07-27T10:34:04.844681+00:00",
       "highCount": 0,
       "feeds": {
         "competitor": [
@@ -1544,7 +1583,7 @@
             "titleEN": "Remote Testing, Inspection and Certification (TIC) Market TRENDS",
             "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQ0xtYjEzczZYWkxzVVFHYkZncExyZXA4M0NlZkktMDRBX2pqWmpMOUpHT3NzTUtPLU1tbXZHZHpYb01DdTRDajk5eDRYLXBxYjl4cWQ0eTIzakJkMXRVa0k5VkE5bll1clNsN3pYbGdyV3Z4R3gxRG5CV3k0NnF5czh3aExZSGQ1V3FXZmc5ZEJXMW9oYm9OemszYUlBalJLLU9PWF9tTQ?oc=5",
             "source": "Fortune Business Insights",
-            "pubDate": "Mon, 29 Jun 2026 07:00:00 GMT",
+            "pubDate": "Mon, 06 Jul 2026 07:00:00 GMT",
             "urgency": "medium",
             "local": true,
             "lang": "fr"
@@ -1560,31 +1599,31 @@
             "lang": "fr"
           },
           {
+            "title": "Le ministère de l'Industrie et du Commerce propose des solutions pour exploiter le marché halal.",
+            "titleEN": "The Ministry of Industry and Trade offers solutions to exploit the halal market.",
+            "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOHBuZVYwNFNpdXAybGtPb0RQcERQaUh6VUtRWFZBekVtSmx0YWI5elROVFhseWpWMGw2VFM0Q0ZqQnVsclRkWjJEVGY1bXF6UXdvQWt3SG9rU25TWDFob25rNHdMaloxd3BMX0dSNlZQN3lQV2h1UFNLc2Jvd3EzUDMwbjc3SnhvRnNsejF3?oc=5",
+            "source": "Vietnam.vn",
+            "pubDate": "Thu, 23 Jul 2026 12:12:48 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "fr"
+          },
+          {
+            "title": "Législation européenne sur les matières premières critiques",
+            "titleEN": "European legislation on critical raw materials",
+            "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNYV9GS2JETS1lQWxXZmI3YjN6aS1Bcm1oV1I3SUx6SVJCQWszMTlQM1BRSVp5LTRsdkEzS1o2cnVrMWpMcmJmeDA4OHkwdm5Obkh4VWI0aVpQNHo4bHV1VG55QXdreU1ZZlMzNnI5Z3hlYmUtNmxLVGFZbWwtUlB4ZkJPRE1sRXVfOVZiSzFTWE1XNldWZVhSNC00NnNNN1lHTDRpeUloWDVBY1lEY3pmeHc2Y1JrdTdo?oc=5",
+            "source": "European Commission",
+            "pubDate": "Sat, 15 Nov 2025 21:22:47 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "fr"
+          },
+          {
             "title": "Le Vietnam veut accélérer sa percée sur le marché halal mondial",
             "titleEN": "Vietnam wants to accelerate its breakthrough into the global halal market",
             "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbktsOWkwN1lPaFhOUFkxR1NXREtFM3hPa0VaZTk0T2paTXdoUHNKUDdTWnNpUFQ4dXRoX0c3ZjdqRTJ2WVJOa1JXc1dsTzg2LWlBLXpoR0lLZ19PZFNCWWp2UzgzTUR1WklrQVM3RnhyWGsyUEhYbkd1cGI1R0VzQzB1cFMtc1J4aU9PZG1nZlZiVjlRWjhST2JsYlVCeTg?oc=5",
             "source": "lecourrier.vn",
             "pubDate": "Tue, 09 Jun 2026 07:00:00 GMT",
-            "urgency": "low",
-            "local": true,
-            "lang": "fr"
-          },
-          {
-            "title": "Taille, part et croissance du marché des TIC automobiles | Prévisions [2034]",
-            "titleEN": "Automotive ICT Market Size, Share and Growth | Forecast [2034]",
-            "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBSTnBIOGRtRURJdkJkNmpqT21qMGtfQzl1c2piQ0JKUTY3QnlyVXJ4NGJaTXkyNGRRUlNTRmhJTDc1Y3kzWXBVM2hsSXhlZU9YRWJTWDJBS0NIRHN5ZU9ubHRzQXVWSHczVkxLVEEtUkI5ZnphSFpsc19vNA?oc=5",
-            "source": "Fortune Business Insights",
-            "pubDate": "Mon, 15 Jun 2026 07:00:00 GMT",
-            "urgency": "low",
-            "local": true,
-            "lang": "fr"
-          },
-          {
-            "title": "Cyber Resilience Act (CRA) : ce qui change pour les entreprises et comment s’y préparer",
-            "titleEN": "Cyber ​​Resilience Act (CRA): what’s changing for businesses and how to prepare",
-            "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQRExsZi1XUE5yXzBfLXh4bmpaZUIwdWtGb2dNM1FXX09YUG5hbHU4dk80bFhMMjdPSXNPMHZQcWgtVWNFb2NGVTVDQkNzaFVDbmZBVGtfRXhnMUZxWVp0RG9TQzRqc3ZrVWU0V0lWWERfV09RQlJFdjloZlctTG13dXlqUFBtSW9ORzBIN1R4R0RHcnFnWVdKREtXLTBuLVI0aWJJQW9FV1hlSjE0YzhtMzlXUGltaXNMOF9ORlhtbVcxM2x6YlVPbQ?oc=5",
-            "source": "Direction générale des Entreprises",
-            "pubDate": "Thu, 12 Mar 2026 07:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "fr"
@@ -1604,6 +1643,14 @@
             "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPa3Q5SThzb1FTYU13ellOUGtZOVVFTU9wY3M5d01vNTBWMFRSWVlQNW9TeHZ2ZUQtVkN6TVdvRTlSTktTbnZTcGpoWVpfanJPSnpROXhXb0xERzcwaEY3ZzljTU9vOG81SndYdHoxd0l0dkJzZjFZNG1nWXV2dGRmQVA4Qy1mNHNpQ0Radlg1YjU5VkpNU0NvS3NSZmVhcndHZ2U1YV93?oc=5",
             "source": "EY",
             "pubDate": "Fri, 25 Jul 2025 07:00:00 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
             "urgency": "medium",
             "local": false
           },
@@ -1629,6 +1676,16 @@
         ],
         "investments": [
           {
+            "title": "L’investissement passe de 50 à 75 millions d’euros : à Baule, le projet d’usine de production de légumineuses d’Intact prend une ampleur inédite",
+            "titleEN": "The investment increases from 50 to 75 million euros: in Baule, the Intact pulse production factory project takes on an unprecedented scale",
+            "link": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxONUhxMmVCX3V3MkpNZGlQTzFwUElIeFlDY25nbmgxS3FtbzVibUVGbHZRMi0zOHZFdURZME81aHVwMGpPVXJaRldSQzRSOVJNcXhGVUxrRWdjUExYeDFLWnNiNWpwdnlrYXZab3BYSy00TVVjSTRhVGs1ZW1SbUlGVnRxMFRnX0lZWnNBZGRpbk54R3hwTHQ5OEF5b01JOERHbEpJSDhBNnZ3OGtmc0o5Y3pEc0MtM2djdERpZGJNOERhOWhad0tyOXYwb3dTbVNqclFsMkNZUEJQbk8wVlpHRWllb2Jlc2gyZGYxYUlHM3BmYS1IWENUVlBHUVlISWJ6Snd1Rm1DX2xneUdRek01bVo2eDZCb3N4YXdpWE85R0NZWkxzcFdWbWNURlg3SkVrWU1YSFJ4YUZqMHF0cFdCbjliWThYUzQ4MGtVUjZEVjBIVTQ?oc=5",
+            "source": "L'Usine Nouvelle",
+            "pubDate": "Sun, 26 Jul 2026 15:00:00 GMT",
+            "urgency": "medium",
+            "local": true,
+            "lang": "fr"
+          },
+          {
             "title": "Hauts-de-France : ces grands projets d’investissement qui marqueront l’année 2026",
             "titleEN": "Hauts-de-France: these major investment projects which will mark the year 2026",
             "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOERYdGdHU0dUa0ZVTkd6Vm9DcHR6dUFNVWtwWXhXVTJOUl82aE5IQmEwUVQwWkl0cF8wcXhrVnhnZ285NFBlSVlldWVNU2pwV05uT0ZYbmwyTDkzRDFxck1vR3NobGVQQWtwTXY3LWwzS282ZmFsWUlqaTBIeXRycldkUlY1UnRrd1BGR2NDTHltR0g4NXZ2ZTR3ejM4SDA5QUlFblE3eFc2QVVsVVhUOThhQkozV3hCSmZpVDY4YVQxV29uNkVTZ3VGR1lKQQ?oc=5",
@@ -1645,32 +1702,6 @@
             "source": "Afrimag",
             "pubDate": "Mon, 18 May 2026 07:00:00 GMT",
             "urgency": "medium",
-            "local": true,
-            "lang": "fr"
-          },
-          {
-            "title": "Framatome Wins Key Contracts As Belgium Prepares For Nuclear Extensions",
-            "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPWmNraEpOc2xhQk1JQlYxSTFlVTFQbEkxc2ZqQ1JGMkNPWVUybUNLSkx6ZEZ4V3hPdkUwU05yTHhhdlpEUGgtbmZtM0s0MUtMeThPRnU3OVQyS1JaNlNXUE9xT0RWYXNVS2J1U1VzYi1MTXpWaE04bGdNaFJGQ3ZpaXJGY2RVRVdxLTJRN1NJMmEyMlY5RlliUUVNSFMzWEd0Y0VUZk9iMjRNcmdzU2hCcFcwUGE4Ujg?oc=5",
-            "source": "NucNet",
-            "pubDate": "Sat, 05 Jul 2025 07:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
-            "title": "Belgium Down To Four Nuclear Reactors After Shutdown Of Doel-1",
-            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNYy1rbVdCc1FkSGdtbXJ1UkNPcXRHM0ltcGd0aHNjNXhycTk3Vl9OaUhKZHQ4VzVpYkdiLWF5WFdyUW5vNzN3RHZJTGludXdVR3Ytc1RrcUpZUi1KRWxpaDRaY09ZYzh0TmppYm9BNXpqYXNCQndESW9LaTVnRmVseDBVZjRScGR1bjM3bWZzWnoyUk1SYmpsZW1nWk9BOFF0?oc=5",
-            "source": "NucNet",
-            "pubDate": "Mon, 17 Feb 2025 08:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
-            "title": "Usines de batteries, datacenters, sites chimiques... Où en sont les projets industriels «Choose France»",
-            "titleEN": "Battery factories, data centers, chemical sites... Where are the “Choose France” industrial projects?",
-            "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxOb1JmenJEMnFhMzBEcU0yRTZPaXJVN1BxNmVoUVpsWG5RVmJ4SjB1N1Y4UDJ2Sm1JZXg2bE16WlRTVzJDRGtoQnNCLUZveWRTOFEzSGNvZHlnOWVTbG5GWmRKaTE2V0dtTjBobjl4NVprRmZYaGE3em84ajZoQ1NmckZ3SHB2b2lPX1FzY2stREM0aFBDajFUdGxPemxGbnpJQnpONzVpTDktcG4tLXQ5R0lIT3JYbDJwLTNCaWhWeDVCOUowU1Y5N1lPdHJDdDRFZUNkaERWWG1jblgtVjhCaURDa0ZvX05vWi1YRlFKYy0xaW9xZFdlWVVxUzVUVGNSSG9BRUg4Q242NTg?oc=5",
-            "source": "L'Usine Nouvelle",
-            "pubDate": "Thu, 28 May 2026 07:00:00 GMT",
-            "urgency": "low",
             "local": true,
             "lang": "fr"
           },
@@ -1711,21 +1742,33 @@
             "pubDate": "Tue, 13 Jan 2026 08:00:00 GMT",
             "urgency": "low",
             "local": false
+          },
+          {
+            "title": "Mines et durabilité : le Maroc à l’avant-garde d’un cadre africain ESG",
+            "titleEN": "Mining and sustainability: Morocco at the forefront of an African ESG framework",
+            "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOdXZ5bUlfZkNwYnFBWmxzSnZZMmxTMGxucnFNYjJCVHgxQVlSUzEzR0lNdHMwX1VoUUZqcGZjZWNMOVlVMlBxQ3VHOXd1cnA4N2N1MlNBcFNnNXgyaUJsc0JHeHRFT3h0cmJZaWY3MUM1Q2hHNjMzRTRfOGtkaTFGci1YRWJfdmQ0RlBOTUVpUjBzRms?oc=5",
+            "source": "Industrie du Maroc",
+            "pubDate": "Tue, 09 Sep 2025 07:00:00 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "fr"
+          },
+          {
+            "title": "Transition énergétique : Le Maroc affirme son ambition de devenir un hub régional",
+            "titleEN": "Energy transition: Morocco affirms its ambition to become a regional hub",
+            "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNXzI4elh5bHpEXzMxLURDdjFJNHlUcUt3NERqUk9GTnFZWnp6eVZZS3NWejMyVHFnUGVqZVV4R1NYaDFZdlpfRlIzMlhHMjF1Q2ZPdGNQZjRKU2h1VzBUUU1rY2FhTUthLVlIaUswMURMMmJQSUp2UC1WNVZKb2NIdGs4WFNJa2lNWDV6S0JEV2dRVGJDOVVSYmtUbVp4dTJ3SU1TMQ?oc=5",
+            "source": "Industrie du Maroc",
+            "pubDate": "Wed, 07 May 2025 07:00:00 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "fr"
           }
         ],
         "esg": []
       },
       "macro": {
-        "gdp": {
-          "value": 0.98,
-          "year": "2025",
-          "source": "World Bank"
-        },
-        "inflation": {
-          "value": 2.47,
-          "year": "2025",
-          "source": "World Bank"
-        },
+        "gdp": null,
+        "inflation": null,
         "interestRate": {
           "bank": "ECB",
           "value": "4.50%",
@@ -1735,10 +1778,20 @@
     },
     {
       "country": "Italy",
-      "fetchedAt": "2026-07-24T09:13:53.867377+00:00",
+      "fetchedAt": "2026-07-27T10:34:39.480824+00:00",
       "highCount": 1,
       "feeds": {
         "competitor": [
+          {
+            "title": "Così TÜV Rheinland certifica i TV QLED di Samsung. Visita ai laboratori di Colonia",
+            "titleEN": "This is how TÜV Rheinland certifies Samsung QLED TVs. Visit to the Cologne laboratories",
+            "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNaUZVOVRWOGVhS0dIbW9fV1M5X01oVGJhOHpqT2I1ejB4aER2MjRPeV95cG1CZExjLWQ4ZEZiYkk1STRCcE93REJpMzNIeDFDTzZWbk1DYURLSUhZMnBBZlBCUEpYWFdVNk9WQ1FCLUh5RkVTUEZkbThXNG51NkxEdFFXVmhrdmFKUmNJdlVUaEJmd3M3RjRSM3h2ekNmM01iRHVGaXczYlo3Ym15SjhaR2NYUUZyZkE?oc=5",
+            "source": "DDay.it",
+            "pubDate": "Thu, 18 Sep 2025 07:00:00 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "it"
+          },
           {
             "title": "Sicurezza Antincendio: il laboratorio di resistenza al fuoco di Istituto Giordano compie 40 anni",
             "titleEN": "Fire Safety: the Istituto Giordano fire resistance laboratory turns 40",
@@ -1763,7 +1816,7 @@
             "title": "Accreditamento SECO per tipo: Laboratorio di prova STS",
             "titleEN": "SECO accreditation by type: STS testing laboratory",
             "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE51VUVYLTB2R0hHR0xEbFB0Q0NEZGtLa3ZRSGt5X2h1NkhPUmt5b04xdmVJWUxOWHYwYVE1MFRDYmFzRWhYUUlSTFctTURoTFpsaTBaVjRQeVFKWF9vbDNRQ1NaZXZiNFFUTUIwTEFNQkdmSlJHVGNBbldmM3NjUQ?oc=5",
-            "source": "seco.admin.ch",
+            "source": "Staatssekretariat für Wirtschaft SECO",
             "pubDate": "Tue, 09 Jun 2026 10:52:17 GMT",
             "urgency": "low",
             "local": true,
@@ -1773,7 +1826,7 @@
             "title": "Gruppo di lavoro per il coordinamento della attività in materia di buona pratica di laboratorio (GdL)",
             "titleEN": "Working group for the coordination of activities regarding good laboratory practice (WG)",
             "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPLTctWXZibkEzZEVjaW5FZVhEa3g5WUExRGRSX0phV2ZKYVpyandxT0hTejhCRWE2d2g3OGI4S2ZneFN1dDM4T3VpLXNCM2JjU2F1VGRKVGlVZTdiRGwyaGxDeTRiNV93aFQyc1NWWldaYW1MRHNWcTRidVNXajh5QU0zeHRPVVhZbnh5ZUZ6MzRHcHNZRkNILTlwY1dEUGMtXzZRVXZEdk5ucDVSTXlpUGFTcWVoak5QajB4dzFtQlk4RWJwRkE?oc=5",
-            "source": "Salute.gov.it",
+            "source": "Ministero Salute",
             "pubDate": "Tue, 02 Dec 2025 03:04:18 GMT",
             "urgency": "low",
             "local": true,
@@ -1782,6 +1835,16 @@
         ],
         "ma": [],
         "market": [
+          {
+            "title": "Regolamentazione sui coefficienti di adeguamento del prezzo dei terreni in base alle fluttuazioni del mercato.",
+            "titleEN": "Regulation on land price adjustment coefficients based on market fluctuations.",
+            "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNV052RUZ2WG13MGlBRHJHNzNseDc3RTZIUmlKXzBXVTZDa0lqSWRDZDhCVXJRMlRFYnZtVUUwLVFoZFlsaWlQR0xpejRadHhJQ1B2ay12eDF1ZDNKbWV0ei02TGZzR3FDVndGc0RROXlVd1owc2htLVMxdUtMTTh2M2xreGtQUENmRm13dzhB?oc=5",
+            "source": "Vietnam.vn",
+            "pubDate": "Wed, 22 Jul 2026 06:23:11 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "it"
+          },
           {
             "title": "Attestato di prestazione energetica, obblighi e novità 2025",
             "titleEN": "Energy performance certificate, obligations and news for 2025",
@@ -1821,16 +1884,6 @@
             "urgency": "low",
             "local": true,
             "lang": "it"
-          },
-          {
-            "title": "Normativa energetica del settore edilizio: come si è evoluta",
-            "titleEN": "Energy regulations in the building sector: how they have evolved",
-            "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPNGZ2NGFPRTJmS0h3Q053eVVUYlBjSWtGRDdWaFVQM0N2WTM5OFFrSk02bEJidUhmYWQzME02d3hvLXJ6Yk9lVXZmVHFZUTJZejlaejB4MWNPaFVKTW1sdUx1VTFnSkcwQzVaaDVUcHNlY28xNXhyZFpONTFPdHNyTEVNNG1HcFQ5QVhUX3ZWWXJNMUFrbkViZA?oc=5",
-            "source": "Infobuildenergia",
-            "pubDate": "Mon, 31 Mar 2025 07:00:00 GMT",
-            "urgency": "low",
-            "local": true,
-            "lang": "it"
           }
         ],
         "regulatory": [
@@ -1847,6 +1900,14 @@
             "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPa3Q5SThzb1FTYU13ellOUGtZOVVFTU9wY3M5d01vNTBWMFRSWVlQNW9TeHZ2ZUQtVkN6TVdvRTlSTktTbnZTcGpoWVpfanJPSnpROXhXb0xERzcwaEY3ZzljTU9vOG81SndYdHoxd0l0dkJzZjFZNG1nWXV2dGRmQVA4Qy1mNHNpQ0Radlg1YjU5VkpNU0NvS3NSZmVhcndHZ2U1YV93?oc=5",
             "source": "EY",
             "pubDate": "Fri, 25 Jul 2025 07:00:00 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
             "urgency": "medium",
             "local": false
           },
@@ -1878,10 +1939,10 @@
             "local": false
           },
           {
-            "title": "Italy Optical Metrology Systems - Market Analysis, Forecast, Size, Trends and Insights",
-            "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSlFSeDZnREJSN0R6bElKLVlobDg3SGItR3BHVk9jX3NzMzIwV2VZTzZBTmhyUjNPSFZGZHh3d3VXc2lRN0pUZWtSTWpuWlRVU3M0Q2djR2kyZ2J2SlB5Y2dQcExFU0JNOTRoVThKQ0RGWXVCV2F3Ti1xRmdxbHJSeW5TX1E1MnZVeXhxWmhhbnF5dDVzMGJjX1JpTnJNMGl1d01SMU5ETWQxZk1NY1R1bWx3?oc=5",
+            "title": "Italy Pressure Calibration Equipment - Market Analysis, Forecast, Size, Trends and Insights",
+            "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVkNieVJROTJRS2VrYmVubUQwNkhXY3hySmpBRG44ZmlLYmxJMndDZ3BZWUJDMThFWFA0NmR6REVsWUdUNmJjV0JZdzRmcUZiVjZLVGkwblQyMHhpOGdsd3daZkE5RnZ6NTFqeFhTanEwTHJWdEl5dHZXX3hWazQ4S2NPX1ZmQnY4V3VxenVZSTBycEQ3dE1uUnN0dHFvVUE5cWFIMEtQNVdUUk9PTmtVVFVlclRqZHVR?oc=5",
             "source": "IndexBox",
-            "pubDate": "Fri, 17 Jul 2026 07:00:00 GMT",
+            "pubDate": "Sun, 26 Jul 2026 18:15:26 GMT",
             "urgency": "low",
             "local": false
           }
@@ -1904,26 +1965,10 @@
             "local": false
           },
           {
-            "title": "Stellantis-backed ACC said to cancel plans for Italy gigafactory",
-            "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBtSDVFNmw0QkZ6R0FKM3BHNmJpTTduRVRuZmt3ZzZ3WndsUFRxSWNiaGdGYmRJSkF3b2hwSnZ4OWJJNy1tRmRLbFNQNjBndE5aWjctMEJrMXFURVRXRFp1MXRNWGFueFJNejJ2LUlJR1VURW5QeDl4U3BEc3Y?oc=5",
-            "source": "Automotive News",
-            "pubDate": "Fri, 14 Nov 2025 08:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
             "title": "ACC pauses gigafactory plans: A setback for EV growth",
             "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYjFEZUFQWWhzWU1PcWc4eVV3Z1NFck4xRVBINXZNQ2RKNnMwWnJRSmduMXhDYlNobmc5MnBaVDhHMTJtbnB3MkNMTkg3TTRqaUExQ3lYYV9YeTRvcWIwSENJMWFvUjlzblRNR3BtSzEyOTQ1aUt6OE5jRVVXSHdqTFctb01hSXpRdGNzS1RYMF9PTUxxcEZOWk1BMWd1UDdqVGh6ZC1SVFR1U2Mwa0ln?oc=5",
             "source": "Automotive Manufacturing Solutions",
             "pubDate": "Wed, 11 Feb 2026 08:00:00 GMT",
-            "urgency": "low",
-            "local": false
-          },
-          {
-            "title": "Stellantis producirá 300.000 transmisiones híbridas en Italia",
-            "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5HNjRMZ3dEVUgtQnBscm9xRFNfZUUwMU9LanIyeFhGa1VhejRhdDg2SmF1Q2ZnelpOUDU5bjNEeW9MbndyZVl5Tlp0cXR3TWRCQ0JvdVFJVGNuN3BjbXpfXzg4dGp3NWE5SVM3MjQ3ZHNHbVYtbkE?oc=5",
-            "source": "mobilityportal.eu",
-            "pubDate": "Tue, 27 Jan 2026 14:35:35 GMT",
             "urgency": "low",
             "local": false
           },
@@ -1942,7 +1987,17 @@
             "titleEN": "Bertonico - Turano: the establishment of the rock wool factory confirmed",
             "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOOTVsS1h6QU5TXzVFT09MQy1OUzlZNVFZdE9TR1FkalUteEF0dzhOWkZaZ1JsM0N3TlBaMkstVTFiUk1WbjhBRDF6aFpmcmN1cjZRTm93dFgxUm81SElublU4UFBHbHotdXBJSkwwdzdUM0VMdDFXdUNVVy1RWmlxUjhabzFuLTFxTy1fN1VRRHMzWVRFOEtSdlVELUhUc2ZOczVwWk04dkVMYzB5c2thSEw4R1pvRVoxT3JuWVRxNTRhWlFIVHQyQlhUQQ?oc=5",
             "source": "Il Cittadino di Lodi",
-            "pubDate": "Thu, 16 Jul 2026 15:17:56 GMT",
+            "pubDate": "Thu, 16 Jul 2026 07:00:00 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "it"
+          },
+          {
+            "title": "Opel investe in Algeria: nuovo stabilimento per auto e produzione locale di motori",
+            "titleEN": "Opel invests in Algeria: new car plant and local engine production",
+            "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOeWJ5MVVuTUh2RENCN2tyMFhocnJHc0NYRS1GMUk4c2VmU2htbTBxVGxDbEVRR3NoTV9LV1ZOc2doZGg0djFiaERnM3FfRFU1TFJ5NTgtVHh4ajg4QUdWNGQwVGJTVm92bTR2Wk1hRVRxTENJQUtoZUx2UVhoS2R0Q181ZnhxWmQ2WF80bkxhaHJscmRkUzBv?oc=5",
+            "source": "CarX.it",
+            "pubDate": "Sat, 25 Jul 2026 09:04:52 GMT",
             "urgency": "low",
             "local": true,
             "lang": "it"
@@ -1956,9 +2011,27 @@
             "urgency": "low",
             "local": true,
             "lang": "it"
+          },
+          {
+            "title": "Silicon Box: firmato al Ministero l'accordo di sviluppo per la nuova fabbrica di Novara",
+            "titleEN": "Silicon Box: development agreement for the new Novara factory signed at the Ministry",
+            "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNaHl1R3BrQnpaS3VNUHowQ083eWt5cDh1Tk5MajI5QjZxN21mT2UtWjktbGJHcWR3S0pFZUVBaTRQeEFad3BoVF9UVmFEVldaaVVCYlhJN0hCZG5LLUFKajBuVWFnSmRNU1VqLW5aMnBBWnI5YVQwbUpvRGZJRlo1ZDNRM2RkUElhSTZkYzRrVkFLUjVN?oc=5",
+            "source": "NovaraToday",
+            "pubDate": "Tue, 31 Mar 2026 07:00:00 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "it"
           }
         ],
         "emerging": [
+          {
+            "title": "Computex and InnoVex 2026: Taipei at the heart of the global AI scene",
+            "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQeWFRcldrdFRXdl9XWTRGR3FRVmdrVFJ2UzJMSTM2YTJqLV9Kdm5WMjFkekRLU1NETG1XWkUzRkJscklLbG1iZjBtVm5fSU1tQTR4NWFpdUhVWFJyU21xQzdmT00wckFCekdacWJKbFIxcmFKZmNGMXlOeUxUX0VZc0NOMzFBamxsTEY2VFdVSDg1RWE2QVN5aFhaQlhOajk2bTdDQ1RDYTk4OXg2S2ZZ?oc=5",
+            "source": "Startupbusiness.it",
+            "pubDate": "Fri, 12 Jun 2026 07:00:00 GMT",
+            "urgency": "low",
+            "local": false
+          },
           {
             "title": "Environmental, social and governance | UK Regulatory Outlook January 2026",
             "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPLXA3S1hUZUdXdmNzTmpNVW1DVVZhV0Fvb2g0NEZlVWc2WkZ1ZkREbTRwVXRRUk9fcUo1aURUdm4walRmREM5c0l3Vk4zbl9WUTBNbHV2REN0cHlRRUk3MHZxTDRoazNqMHF2aWJiVjB5eGI4UFJoZGE5X0F6T2N1NEJyWU52dVJzQ1VZVzBwM3JDM2lzQjNvclgxWVdtOEoxZjNpQQ?oc=5",
@@ -1984,12 +2057,14 @@
             "local": false
           },
           {
-            "title": "Computex and InnoVex 2026: Taipei at the heart of the global AI scene",
-            "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQeWFRcldrdFRXdl9XWTRGR3FRVmdrVFJ2UzJMSTM2YTJqLV9Kdm5WMjFkekRLU1NETG1XWkUzRkJscklLbG1iZjBtVm5fSU1tQTR4NWFpdUhVWFJyU21xQzdmT00wckFCekdacWJKbFIxcmFKZmNGMXlOeUxUX0VZc0NOMzFBamxsTEY2VFdVSDg1RWE2QVN5aFhaQlhOajk2bTdDQ1RDYTk4OXg2S2ZZ?oc=5",
-            "source": "Startupbusiness.it",
-            "pubDate": "Fri, 12 Jun 2026 07:00:00 GMT",
+            "title": "TÜV Italia e Syniergy a KeyEnergy 2026 con un modello certificabile per le energie rinnovabili",
+            "titleEN": "TÜV Italia and Syniergy at KeyEnergy 2026 with a certifiable model for renewable energy",
+            "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQSzhkS0hKWTNWUkljSFkzdDhwTEQ2SU43SXNGOFJBNjVtR0sxWmxBamF4ZHlnYnFoZERBUXoxSUc1R016N1pGUnozN2pGTl9zV1BYcVFEYmdIQnZpNVhjRHVIRjlnSlZILTJvekdrZTFVRTBhTkZ3VTdtX1lON2tmMzUwVHhaVkt0Nm1KYU9CdVRjTVpUcnhla1FKUnZOUXY4OTIwVVRGeEF2UnlkUUZadzN3UnRwMkczb25sWnEzTjhzSFZ3R3NMMzhKd2p5QXJJXzdn0gHTAUFVX3lxTFBLOGRLSEpZM1ZSSWNIWTN0OHBMRDZJTjdJc0Y4UkE2NW1HSzFabEFqYXhkeWdicWhkREFRejFJRzVHTXo3WkZSejM3akZOX3NXUFhxUURiZ0hCdmk1WGNEdUhGOWdKVkgtMm96R2tlMVVFMGFORndVN21fWU43a2YzNTBUeFpWS3Q2bUphT0J1VGNNWlRyeGVrUUpSdk5Rdjg5MjBVVEZ4QXZSeWRRRlp3M3dSdHAyRzNvbmxacTNOOHNIVndHc0wzOEp3anlBcklfN2c?oc=5",
+            "source": "ImpresaCity",
+            "pubDate": "Tue, 21 Jul 2026 03:35:20 GMT",
             "urgency": "low",
-            "local": false
+            "local": true,
+            "lang": "it"
           },
           {
             "title": "Il Gruppo Vitali presenta il Bilancio di Sostenibilità 2024",
@@ -1997,16 +2072,6 @@
             "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQSko3WGVkUEUwVFBPcmh5UDNDRmI0Q1VNU1VYcGV4cTgwenRpVndWUzZpZ2tqbS1QYzd0dUk0NnpGby1IdUdGZEttMXhnVmR1VkRPbjEtQnRWR0ZHYUtDUW04MmMwZTRIek11bXhIZHBPWi1UX1BxOFZTMlNEOThCVw?oc=5",
             "source": "Sky TG24",
             "pubDate": "Wed, 07 Jan 2026 08:00:00 GMT",
-            "urgency": "low",
-            "local": true,
-            "lang": "it"
-          },
-          {
-            "title": "Rivoluzionare i mercati dei certificati di energia rinnovabile con la tokenizzazione",
-            "titleEN": "Revolutionizing renewable energy certificate markets with tokenization",
-            "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSkh6SU0xd0Q2Zl9vX3BaZWFVc0ZZbllFSlV1RzEwN0NJV1ExbjBSakxmQk5vblY5ejFjRFhyektkbDdKTHNKdHBNcWVxOFd1aV9udHpxcGoteG9Xd0tIZjU2MWw0TWlXOGtCa3VlbXBMc1pSWGIzQ0hlVUlQOEFCR2V5VUxvaVI0YUw0?oc=5",
-            "source": "IBM",
-            "pubDate": "Mon, 08 Dec 2025 20:05:35 GMT",
             "urgency": "low",
             "local": true,
             "lang": "it"
@@ -2022,11 +2087,11 @@
             "lang": "it"
           },
           {
-            "title": "Salzgitter ed EWE, intesa sull’idrogeno verde",
-            "titleEN": "Salzgitter and EWE, agreement on green hydrogen",
-            "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOaEt4cV9Cdmp5Ry1QUTZnd3pUUm9sTHZsTHZiQU45WWg3MDJiSnFTWFgxVkpXSlMyNFplakcwcHhtSzNnNHdWQVpodnptclBBM05aajdOb0JjXy04WmtTYlNjTVhiVngwT2NETTNDOXc3Z0d1M05XSmVGczJsbk41d01OLTF2YnMwODlZb1hXYlBPWGNNdkx2OTZ3?oc=5",
-            "source": "siderweb.com",
-            "pubDate": "Wed, 10 Jun 2026 07:00:00 GMT",
+            "title": "Rivoluzionare i mercati dei certificati di energia rinnovabile con la tokenizzazione",
+            "titleEN": "Revolutionizing renewable energy certificate markets with tokenization",
+            "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSkh6SU0xd0Q2Zl9vX3BaZWFVc0ZZbllFSlV1RzEwN0NJV1ExbjBSakxmQk5vblY5ejFjRFhyektkbDdKTHNKdHBNcWVxOFd1aV9udHpxcGoteG9Xd0tIZjU2MWw0TWlXOGtCa3VlbXBMc1pSWGIzQ0hlVUlQOEFCR2V5VUxvaVI0YUw0?oc=5",
+            "source": "IBM",
+            "pubDate": "Mon, 08 Dec 2025 20:05:35 GMT",
             "urgency": "low",
             "local": true,
             "lang": "it"
@@ -2040,11 +2105,7 @@
           "year": "2025",
           "source": "World Bank"
         },
-        "inflation": {
-          "value": 1.53,
-          "year": "2025",
-          "source": "World Bank"
-        },
+        "inflation": null,
         "interestRate": {
           "bank": "ECB",
           "value": "4.50%",
@@ -2054,7 +2115,7 @@
     },
     {
       "country": "Switzerland",
-      "fetchedAt": "2026-07-24T09:13:58.956055+00:00",
+      "fetchedAt": "2026-07-27T10:35:01.347585+00:00",
       "highCount": 0,
       "feeds": {
         "competitor": [
@@ -2074,6 +2135,16 @@
             "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE53dlN4bUliTEIxdFY2ajN0YWlCcnRFRkxuMDVLVGRjVGM3VVZlWDNhRHpmeEdKODF1MHNlbFdKN01Rb2lJSkJwYVBWWk85Z3RuMkc2a2FVaHlHMVJNM3dLSy1GRTRNTHh1TzdJaTlxam1jVHhiSTlabQ?oc=5",
             "source": "Fortune Business Insights",
             "pubDate": "Mon, 29 Jun 2026 07:00:00 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "de"
+          },
+          {
+            "title": "Dekra auf Weltwirtschaftsforum in Davos",
+            "titleEN": "Dekra at the World Economic Forum in Davos",
+            "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOYW5HX1pYbG5wamJBOWt6TndzcWxmRlRRWURKZnpPQlBMMmZwOFRiVnl0cjFLQk4xVG0yWjZkVEZFdkpmMUpFVGRLUm1aOGJPVldmQTJZRDQyb2x1a1ZSM3o5QjVrTVpIeVdVTm5CYTFyMmQ1QmllZzdQVGNVOTRtX2ZhemlNZw?oc=5",
+            "source": "QZ-online",
+            "pubDate": "Tue, 21 Jan 2025 08:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "de"
@@ -2122,21 +2193,21 @@
             "lang": "de"
           },
           {
-            "title": "Indien verschärft Importregeln: Ab 2026 BIS-Zertifizierung für Maschinen Pflicht",
-            "titleEN": "India is tightening import rules: BIS certification for machines will be mandatory from 2026",
-            "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPcUs4OXZXc0VLOGo1NkJpMFJlaE5GeEZiVmVmYmVHZW1DczBDOTM5cExjU05ZOW5sUnB0ME5Xbk5CbTQtQ25rTVQ0eEV2RDVuUmVMLVJTRUJLUzBIWmExZEpfdXFoc0wzckRMQ0l3U2xNNWNNdEFDVjNkRGRhVVhkby1DLS11ZHBacDUtQXh0ZVY3b0RkTS1HeTRNUlBWWEFsMUpyMmoxUUNSaTJGTk5iV2VScmdudDNIM0NUT2xEZWs5Y3c?oc=5",
-            "source": "produktion.de",
-            "pubDate": "Thu, 13 Nov 2025 08:00:00 GMT",
+            "title": "Marktgrößenprognosen für Prüfung, Inspektion und Zertifizierung bis 2037",
+            "titleEN": "Testing, Inspection and Certification Market Size Forecasts to 2037",
+            "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPMzg0Rkx3bjNXNUQzUndZbDREWTdBUlV6NXhGcldoTjNldVdKQXNQSE1pNHo4RnRudEdIa3I1c0gtbWt6WWtIWDJVRG5fRVpqbUtUOXpBZnRYNUQwempydzI1b1FCVGhURXFsWU42OWlRUjZsT0YwY1h2WXRldC1GQ1l0bTM2bTBVQmllemRHVWdvS0VH?oc=5",
+            "source": "Research Nester",
+            "pubDate": "Wed, 10 Sep 2025 07:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "de"
           },
           {
-            "title": "Energiewende mit System",
-            "titleEN": "Systematic energy transition",
-            "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE85Q0NwVExoamdRNFBMVXJQTWd2TUhELUdfSTdmTTNma29lVElfM1NQWlVwUmdjakx5QUhob0stbE84VHpRRm1ydWZGeFlZNUVuUjlvRjZZUFBsLUFpWFBBMnBDamxaV1RRU05UNFpjT01wSElJVGU4?oc=5",
-            "source": "stadt+werk",
-            "pubDate": "Wed, 27 May 2026 03:53:11 GMT",
+            "title": "Indien verschärft Importregeln: Ab 2026 BIS-Zertifizierung für Maschinen Pflicht",
+            "titleEN": "India is tightening import rules: BIS certification for machines will be mandatory from 2026",
+            "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPcUs4OXZXc0VLOGo1NkJpMFJlaE5GeEZiVmVmYmVHZW1DczBDOTM5cExjU05ZOW5sUnB0ME5Xbk5CbTQtQ25rTVQ0eEV2RDVuUmVMLVJTRUJLUzBIWmExZEpfdXFoc0wzckRMQ0l3U2xNNWNNdEFDVjNkRGRhVVhkby1DLS11ZHBacDUtQXh0ZVY3b0RkTS1HeTRNUlBWWEFsMUpyMmoxUUNSaTJGTk5iV2VScmdudDNIM0NUT2xEZWs5Y3c?oc=5",
+            "source": "produktion.de",
+            "pubDate": "Thu, 13 Nov 2025 08:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "de"
@@ -2160,6 +2231,14 @@
             "local": false
           },
           {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
             "title": "The Future of the TIC Sector: Opportunity in Transformation",
             "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTUhlU2VBME56bTlvcTFCTnFRRWoyejBCSEluLWJ6dVhHNUFXc3hRaW02czNhOWtydXNiMEhZWW9UWXhsUl9hX25VSWZaS1ZxZGZGbVVlN0dwYzdLY085OTF1VFdzamlsR29nRkQ1RzdaNExRblhWY1AyanpmTEFfNzFfRHMyTXZ6MDZkbGFVdW9Zd0E?oc=5",
             "source": "Investec",
@@ -2170,6 +2249,14 @@
         ],
         "tenders": [],
         "standards": [
+          {
+            "title": "Kistler offers service for piezoelectric force sensors and measuring chains",
+            "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNMWo1TkJ0UWZnNGJIR0daUkxpRXNOa1l3ZEp4TWFiYmZPQTUwbVhUbV9UQUVfUDJ1dmNJUXEzcDFSTVlxb1pqU2dmVlFmTDNaYUFQNktNWGZWSTlOdXVKczg3QWJPTXZIb0JGRnZTLVhNMWs3RVVxM1A5RENCVTduMmRHQzdQRXlMd2hKekhaZEtudmNVVnJBeGphQmlPNkljTnZsQVFFaG4xcHhNU292WHlORTNnRFRQZ0RFa0FGU0JDbHR4cXc?oc=5",
+            "source": "Today's Medical Developments",
+            "pubDate": "Wed, 12 Mar 2025 07:00:00 GMT",
+            "urgency": "low",
+            "local": false
+          },
           {
             "title": "30 Years of Accredited Calibrations at Endress+Hauser Flow",
             "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNT2NiY25EZjFySjFKYndTdVdaTm1adWtUaDNoWlNHRnJXNlhMSmJTU2Q0RGQ1RlZ0QXk2STl3UVQtMUFqdUlZcEUxdHVNNFZmVEdScUl4c2FzQjNESXdzblpxTEVRTGRhcGR0MjVnaEJTSEl3bDRwWFJDVmRvNFZxWlliT3FyakpBUUliM1R5Q1Y?oc=5",
@@ -2186,16 +2273,6 @@
             "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE92WEZxMVZBYy1WdDU2ajNZbkRmZ2o3OUd6RlBQVGY3VlRpWGJjWlZxZ3NQaU53MWlkNWt5SnUycFVJd3c1QTVSelZLTWF4WTB6NzVZcDlnMlFzN0JoaERVMk52dHdmdUdOOHFwNXFHbmtfbGxSMHc?oc=5",
             "source": "tech-insider.org",
             "pubDate": "Sat, 11 Jul 2026 11:07:46 GMT",
-            "urgency": "low",
-            "local": true,
-            "lang": "de"
-          },
-          {
-            "title": "Rheinmetall baut Europas größte Munitionsfabrik",
-            "titleEN": "Rheinmetall is building Europe's largest ammunition factory",
-            "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNbTJVUEVVRWhBOWVoek9MSnJpaE5LQTh1VXFBR0NKSzkzVzRCekJHaVNtQnVqN0pmcTRfZkF2d1M5S1VRdElNVmJVaFJtb2YtRHlHQWVCUHJYaFBiR25Wc3I4Sk9hX3RvRGstMWs2MGQxQnhrd3NyMzgyUTByTE5fM2EzdUNUdHc?oc=5",
-            "source": "InvestmentWeek",
-            "pubDate": "Fri, 29 Aug 2025 07:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "de"
@@ -2235,15 +2312,25 @@
             "pubDate": "Tue, 13 Jan 2026 08:00:00 GMT",
             "urgency": "low",
             "local": false
+          },
+          {
+            "title": "Wasserstoff Aktien und ETFs - Eine Lohnenswerte Investition?",
+            "titleEN": "Hydrogen stocks and ETFs - a worthwhile investment?",
+            "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBjTUUybkpsYURjaDJ1TXBDbzNfWE1uREVZelJjbUdqVDVUS3J2d1lULTlmRGlyVjlDTHJXODdlT0ZPenMwSV9oYURTVDhqS2x1YmFGRVdxM3ZKc05KVFhweWtqQWdoMGR3cWc?oc=5",
+            "source": "SQUAREVEST",
+            "pubDate": "Thu, 14 Aug 2025 07:00:00 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "de"
           }
         ],
         "esg": []
       },
       "macro": {
         "gdp": {
-          "value": 1.3,
+          "value": 0.33,
           "year": "2025",
-          "source": "World Bank"
+          "source": "World Bank (NY.GDP.PCAP.KD.ZG)"
         },
         "inflation": {
           "value": 0.15,
@@ -2259,10 +2346,18 @@
     },
     {
       "country": "Spain",
-      "fetchedAt": "2026-07-24T09:14:03.256306+00:00",
+      "fetchedAt": "2026-07-27T10:35:10.146546+00:00",
       "highCount": 0,
       "feeds": {
         "competitor": [
+          {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
+            "urgency": "medium",
+            "local": false
+          },
           {
             "title": "Enac refuerza la acreditación del sector agroalimentario con más de 500 actividades acreditadas",
             "titleEN": "Enac reinforces the accreditation of the agri-food sector with more than 500 accredited activities",
@@ -2284,16 +2379,6 @@
             "lang": "es"
           },
           {
-            "title": "La pista de la nueva ANMAT: cómo actualiza controles a laboratorios y flexibiliza la regulación de productos",
-            "titleEN": "The clue of the new ANMAT: how it updates laboratory controls and makes product regulation more flexible",
-            "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOaVQtSXJxblZyYkdoSDBBalBCVWQwaXBEWUdsaDJxRlRKT2FPRmhLUXRyZzhIUExTSjBWNXhBaGItU3FZdTh4bEpqRDRmN1lYTmpEb2hOelR6aUxLNUFpQzFWUWdlaW82T08wamtqY1htTHl4TjBjWng3OFY4Q3U0X2dqMTFscEtsejIwU2FmZHVDUzVuQzRIMlNheXVjMlNiT2hUSGpPUWc4ZlhENTJhb1RmUFFPazFSVWg4bFFwOWd4cEFqM1J5ZlB0eWhVVW1xUkxSb1RtckptS0phUGJVWEo3NNIB_gFBVV95cUxOR3JBSWpMdnFmUkFoSU9uY0dNSmFQeV9McS1Za0FRVTUyZVJ4NklVemhrMlBjcERyYzVDZVJKdDB5dVV1QkU4YTZ3TnM3S1NlM0RSRzVTYjd0NmdQWXN3cGVDOFZBTEZzY3BHNnFPdmJKZ1EzRmFUR3A1WHVaZDNwR21DTDl2SHd1WXZlX0U3dEhOVDNrNWVVcmN4cHctSkxoZk1HV2N2UzdHWFJkMk5EWHJNQ1YxN2tYZXhqVEpZZG9lcGRHa1I0Z2Y4RVhZQUNoSi1xQUJPTHVuSGZ2RXBwdzZKcWtnZGp5eFN4YUVHOFNmRXQtb3A0UGVTYUNxUQ?oc=5",
-            "source": "Infobae",
-            "pubDate": "Mon, 27 Oct 2025 07:00:00 GMT",
-            "urgency": "low",
-            "local": true,
-            "lang": "es"
-          },
-          {
             "title": "ODAC refuerza controles en inspección de mercancías con acreditación a Maridom",
             "titleEN": "ODAC reinforces controls in merchandise inspection with Maridom accreditation",
             "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOcUZXRlNtUXdYdVI3TU1OWEFrcXFJdUdxT0NudDBkWTV0LU13S1hfTWVncGtwN0Q1NzVSTElKYVh4YkhxajduanJQTktCU00wWUdHVFh4ekx4YTEtQ2wtMTd1WnI4Ql9HVU9raDRMWm5abHdtNWxQZ2FVa25waUxLa2pYVEJpcm5Ddzk0UTd2OHhCdXlWejdGNjhlN3hXdnBGbS1CTjhlT2JLWTdIMnJr?oc=5",
@@ -2309,6 +2394,16 @@
             "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYXVEcVFtcEJrOVM5Q0JUUGdMYVJBVDRfeUg3MFhVYXJDVkt4RkJIbEpKazZTMTFtSHFPOGxHUFY2ZGpKUlluTnc0MEd5M3otYmFpZTR0elotaVNDdUVMOFMtY2o0Q3BTaU0yODdPdHlldmhybUlJZzRobmJVeDFHaWR2NjVpTjFHOU9MMHZVWEFtWUdUR09MQUx0QjRkLVg2Y3RHV1QtUTc0SFluaURDdnllN1dkVXplWFZMT196NDl2dw?oc=5",
             "source": "Argentina.gob.ar",
             "pubDate": "Mon, 11 May 2026 07:00:00 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "es"
+          },
+          {
+            "title": "ODAC acredita laboratorio que evalúa calidad de tuberías utilizadas en proyectos de infraestructura",
+            "titleEN": "ODAC accredits a laboratory that evaluates the quality of pipes used in infrastructure projects",
+            "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOYmVBS2wwQllvSzZFMG05c3pnYUM1aURnMUFTZlJrMmp3MG9NNm5XZHJXRHlWSHk2dlFpTVM3OC16ckxhZFNoUzhUMTFJclU0MUFSWVo3SGV5bm1DRVJiaVc1d1ZmZktZbzV3MEZWU1FhRFBXVmlsZnplT3AyLTUxdVh0S2c2dWpwZW5EcnBoX2dEU01kZWxuUWZIa01EeFEtQTFYdC1FX3Q3MDBDQ1Y3UmcycU05R3pSY2pJ?oc=5",
+            "source": "Presidencia de la República Dominicana",
+            "pubDate": "Wed, 25 Mar 2026 07:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "es"
@@ -2347,21 +2442,21 @@
             "lang": "es"
           },
           {
-            "title": "DOG 25 del 6/2/2026 - ORDEN de 9 de enero de 2026 por la que se establecen las bases reguladoras con carácter plurianual (2026-2027) para la concesión, en régimen de concurrencia no competitiva, de las ayudas al posicionamiento de las empresas gal",
-            "titleEN": "DOG 25 of 6/2/2026 - ORDER of January 9, 2026 establishing the regulatory bases on a multi-year basis (2026-2027) for the granting, under a non-competitive competition regime, of aid for the positioning of gal companies",
-            "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMTc1VzJBT2xlcnBSdDdHSnVlb0pKcTAtVnp2UWF6NGxDd1ZlWVExQVhSRHhocGJUbVlBLU5MRDh2aktOQk1CcDdLbTM3Smt6bUZ6VHZkZUVCd01paF9HQjQ2cHQ4WlBxZGcxeDVXWU80NzJmbW9aMXZhLWg1WU1VMDBOZ1ZZblYxWDFF?oc=5",
-            "source": "Xunta de Galicia",
-            "pubDate": "Fri, 06 Feb 2026 08:00:00 GMT",
+            "title": "Carbono y certificados: el plan verde 'pharma' para no perder mercado",
+            "titleEN": "Carbon and certificates: the green 'pharma' plan to avoid losing the market",
+            "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQT2NROVRMNy15UDgyWmxWY21qbWJ4aWh1SGM5eFZYLTNCekJhSUJnSVF0NlQtdTlNUGIyTU8zQmtMWU0tbmxnc0hCSVlvS0NJQ0FnRXBUOUNBRHhQS2VHTnJnQVA2Uy01MGhXVUI5c2pxNVEzVG5TX3Z0ckNuTXpLT1RYQ3lmV1U4ZEJZRzFXRDVzdjJIbzJTbDgxZkFMU2o1SDFuSjJQTVI3WnJLZzdsTThDaWZuX01sUkIzaVJDS1UxemhMbjBMTVQ4OEc3OVVmbUw3Zm03NE4yUnhTTmprWktYMnRJUdIB6wFBVV95cUxNc3pMT3R0NVRSeFo1NVdwaDgzbUx1ZTJmMXk3RXNFLWNteEJLanVxVkJ6U3ZUelRMYWRCczdqMnc2NHZtSE1ydkRBX3hkS1lPMzVqc1JtVnlTUjRGZ2ZyZnkwT2lsSktjRzVyNWhyWENyS0ViOXBQRjBfcnJncGlfbU5TakZvY0lIRDRrcVRXbElreGNxSFcydjgza1pLRndKOUVrVEdSeGdSZUhwcDBEMDRDNXRsdFZ0Q0psWnA0aUpaVXpkWjhQUFlsbHd0YVRiZHQyenRqM0JyblNBRGhGMXZ4Nmo5Z3VVcXBv?oc=5",
+            "source": "Redacción médica",
+            "pubDate": "Sun, 03 May 2026 07:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "es"
           },
           {
-            "title": "Casino Barcelona renueva la certificación Biosphere y refuerza su posicionamiento sostenible",
-            "titleEN": "Casino Barcelona renews Biosphere certification and reinforces its sustainable positioning",
-            "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNLUF1OHc5RmpQd3Foc3I1QUFIVldXaEtDY2NOZHNBbGRlVlNhZkJRMXY3WnBmU3NZMGp2VENiNEY2QWVaNTNqelpJZVhudllOcE4xcHNNUGNXSWUwdTZzeWxwQ3pZdUJkdTJNX1dKRUJnRU1yeFFBaWdwaUlUaW1ISGwyYWpLWDlGcWQyQjFISnRkN0lmUE1EYmtFdmJTc29NSVYtYkVvUFVEdHFtaV9MMDVFRFFJX21wSTBzMkhGVXFNQU45eG5TelZ0am5ZaE1rc1VtNjkwUGtoemM?oc=5",
-            "source": "Gambling Insider",
-            "pubDate": "Tue, 24 Mar 2026 07:00:00 GMT",
+            "title": "Los dispositivos médicos tendrán una certificación que facilite su acceso al mercado",
+            "titleEN": "Medical devices will have a certification that facilitates their access to the market",
+            "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNV2JDME9yOUJyS1ZIUzY1Q2I5bXlfaGdub2NOd3ZPVVdYOE0yZ1BLSXIwUmp6LVFER04taHpiUkZyZUZRMjNNb3VtWElrR1paZlVTRmVRNEVyVmszc3FheW1NRlZXaHdibVhjLWthUWUwU1lQWGdWM2NNVUdEQy1oOUMyaXZaQnhaYzc1MUJ3Q3BUQUx1TDVZMjF6WU9nMDNPX0ltQnF0UWgyYk1qd0ZkSDhObw?oc=5",
+            "source": "Ehealth Reporter",
+            "pubDate": "Tue, 21 Apr 2026 07:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "es"
@@ -2381,6 +2476,14 @@
             "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPa3Q5SThzb1FTYU13ellOUGtZOVVFTU9wY3M5d01vNTBWMFRSWVlQNW9TeHZ2ZUQtVkN6TVdvRTlSTktTbnZTcGpoWVpfanJPSnpROXhXb0xERzcwaEY3ZzljTU9vOG81SndYdHoxd0l0dkJzZjFZNG1nWXV2dGRmQVA4Qy1mNHNpQ0Radlg1YjU5VkpNU0NvS3NSZmVhcndHZ2U1YV93?oc=5",
             "source": "EY",
             "pubDate": "Fri, 25 Jul 2025 07:00:00 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
             "urgency": "medium",
             "local": false
           },
@@ -2464,21 +2567,21 @@
             "lang": "es"
           },
           {
-            "title": "Con 940.000.000€ de inversión, otro gigante chino creará 3.500 empleos en Valladolid con una fábrica de reciclaje de baterías",
-            "titleEN": "With €940,000,000 of investment, another Chinese giant will create 3,500 jobs in Valladolid with a battery recycling factory",
-            "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOZUo2SmJtajNEQ1RuU0JDekJsbzV3TXByeTR3YUFFdXFiR0ExTjVPZEwwenhsN2tFVzFzSVc2b2xKVWhBNl9pOWtRV1pNYVVWWWFjdTJrV3dudlBsbkJOS2VtVjUzUUo0V2drTGRhU1drOEhVT1BtX1FrWDBiTWRqNzU0NGU4cGFLXzY1dzVQZnVSZkJ6S2RVVlVsRXVOTjNTYUF4WWpOTnlIUi1NX1B6bFhOY3M1Tmp0Vm42NHZkczR1dTFfdWN5ZFBnM21tSXluNnA0SDVwUFVEYVMtdmNfMUVacmxnaUM4MmJwZzdIRDFoRExSenozdw?oc=5",
-            "source": "Híbridos y Eléctricos",
-            "pubDate": "Fri, 03 Jul 2026 07:00:00 GMT",
+            "title": "Qué es Gotion, el gigante que ha elegido Valladolid para uno de los mayores proyectos industriales de Europa",
+            "titleEN": "What is Gotion, the giant that has chosen Valladolid for one of the largest industrial projects in Europe",
+            "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPUzd2QTBERWRybGQ2ZmRPVElpR1pBeWVRaDdpelRDTE9SdEs5OXpHUGJCbG5valpxZGZQclNZSENzOFNoSjF3VDVCdnZieDRyTkxCSkV0SDlQVExsSDNvQWFZSi1BdElHTm1WM0tUa0NvMGNxUThJbXgzSF9rT2kxLVhiMFBrZUlrblhwdHViaWNVYTVqTkN6VzJRdTVyT2toM05UN3k2dFQzSHctZ3NZdm1FQ0xlWjVoejBYYXdJZ1R4Vno0dXhNbU5LdlRUUHhOTndkeVR4X201eW4tZkVoVVp5ZDBIenV4d2t3Rm93?oc=5",
+            "source": "Tribuna de Valladolid.",
+            "pubDate": "Wed, 01 Jul 2026 07:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "es"
           },
           {
-            "title": "La inversión de SAIC, al detalle: ensamblaje completo en Ferrol y componentes de chasis e interior en As Pontes",
-            "titleEN": "SAIC's investment, in detail: complete assembly in Ferrol and chassis and interior components in As Pontes",
-            "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPQkZoZ0xaeVV3WllQLWlEbEJkSkJCeEpablV1ZlVSRFpZUmF3eS1KNktOSEpuV2VpZEhlNkZiR283MFI2c2ZGS3dIcmFldEFGejVTT2JKU3ZUeWpFYm1WZHUtN3FLU1lNQ09vZlJlSGJwT2UxR1phWEJxNndBVXBjdjVVRzAteFpiNHJ1WHlHWjQxUGdndkYwVF9qdGRxRm53MU9RdXJDYTc0TVhPZzRobWRtQzhuOHVFaUQ4MVllZTR4QWpIaG9TM014ajJ6dFlhdmxoZzFDNNIB3AFBVV95cUxOeDF6RERSWWZXVThHb24tS3QtZmhYRGdiSEljM3dfdDM5RXJlZmpIS1d3UTFZUlZnZGdFcFZUc2IycVBheWFybC1JczQyUEJ3MVJ6X2QyZ2N4XzViY0lNSnVNV3dnUXlzLVBrbVMtZmxlRm4tRnJFTWRGc1lrNTFPak8teHJ3Z0Y3UmNjSVNRanhkTHVwX2IyUnpyMlM0bmFoanMzZ0lCRDl1UnoxWV9kaWF4MzBoMFRnYmtvUVNaY3RHb3RUWDIxdUg2WU9jM1pMQWhjN2JHRDgyOWVs?oc=5",
-            "source": "Economía Digital",
-            "pubDate": "Fri, 26 Jun 2026 07:00:00 GMT",
+            "title": "Con 940.000.000€ de inversión, otro gigante chino creará 3.500 empleos en Valladolid con una fábrica de reciclaje de baterías",
+            "titleEN": "With €940,000,000 of investment, another Chinese giant will create 3,500 jobs in Valladolid with a battery recycling factory",
+            "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOZUo2SmJtajNEQ1RuU0JDekJsbzV3TXByeTR3YUFFdXFiR0ExTjVPZEwwenhsN2tFVzFzSVc2b2xKVWhBNl9pOWtRV1pNYVVWWWFjdTJrV3dudlBsbkJOS2VtVjUzUUo0V2drTGRhU1drOEhVT1BtX1FrWDBiTWRqNzU0NGU4cGFLXzY1dzVQZnVSZkJ6S2RVVlVsRXVOTjNTYUF4WWpOTnlIUi1NX1B6bFhOY3M1Tmp0Vm42NHZkczR1dTFfdWN5ZFBnM21tSXluNnA0SDVwUFVEYVMtdmNfMUVacmxnaUM4MmJwZzdIRDFoRExSenozdw?oc=5",
+            "source": "Híbridos y Eléctricos",
+            "pubDate": "Fri, 03 Jul 2026 07:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "es"
@@ -2514,21 +2617,21 @@
             "lang": "es"
           },
           {
-            "title": "“Fertiberia lidera la transformación hacia la agricultura sostenible con el primer fertilizante de bajas emisiones a base de hidrógeno verde”",
-            "titleEN": "“Fertiberia leads the transformation towards sustainable agriculture with the first low-emission fertilizer based on green hydrogen”",
-            "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdHVnbnUzbVVJX2Q2TWNOb0ZUeVB3cDJUSURsNW9DWHZwTzNtOG9nZWpWaF9hbldPSUVRTVR0VVg5UFh4dkV4YWhQTkhOSWRXNFBRNW5DdDhvZUNuSDNzRmI1Y3JUWHQxMkRhRS1nVDdTaHpCUmEwYUd1VnY4bGozamlIZzFyLWZuY1p2Vng1YUpVQWkxUUM4am9ZX1R6WTJ6U3QyYTl3?oc=5",
-            "source": "Corresponsables",
-            "pubDate": "Tue, 28 Jan 2025 08:00:00 GMT",
-            "urgency": "low",
-            "local": true,
-            "lang": "es"
-          },
-          {
             "title": "El Hidrógeno y su Potencial en la Eficiencia Energética del Real Estate",
             "titleEN": "Hydrogen and its Potential in the Energy Efficiency of Real Estate",
             "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPcEdRSUxHbkFIUDdIUHd6amlUTXIwdHhwMWFiNkVmU1c4QXVCV0Y1WmpKMDdOLW91VWlRQjUzb2pxZkttTGM4cHI2QUlKc01jRkcweDdvekN4SUlxRE95QTlTYjgtTTBoeFNwRTVfUW5VbU4wNjNJRzNhOTBYVjFVZTkxd0oza1k1YmxoaE51bThiQ0ZQV2U2dXAwbFk?oc=5",
             "source": "Inmobiliare",
             "pubDate": "Sun, 16 Nov 2025 13:44:57 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "es"
+          },
+          {
+            "title": "“Fertiberia lidera la transformación hacia la agricultura sostenible con el primer fertilizante de bajas emisiones a base de hidrógeno verde”",
+            "titleEN": "“Fertiberia leads the transformation towards sustainable agriculture with the first low-emission fertilizer based on green hydrogen”",
+            "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdHVnbnUzbVVJX2Q2TWNOb0ZUeVB3cDJUSURsNW9DWHZwTzNtOG9nZWpWaF9hbldPSUVRTVR0VVg5UFh4dkV4YWhQTkhOSWRXNFBRNW5DdDhvZUNuSDNzRmI1Y3JUWHQxMkRhRS1nVDdTaHpCUmEwYUd1VnY4bGozamlIZzFyLWZuY1p2Vng1YUpVQWkxUUM4am9ZX1R6WTJ6U3QyYTl3?oc=5",
+            "source": "Corresponsables",
+            "pubDate": "Tue, 28 Jan 2025 08:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "es"
@@ -2556,7 +2659,7 @@
     },
     {
       "country": "Austria",
-      "fetchedAt": "2026-07-24T09:14:07.016764+00:00",
+      "fetchedAt": "2026-07-27T10:35:14.546157+00:00",
       "highCount": 0,
       "feeds": {
         "competitor": [
@@ -2576,6 +2679,16 @@
             "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE53dlN4bUliTEIxdFY2ajN0YWlCcnRFRkxuMDVLVGRjVGM3VVZlWDNhRHpmeEdKODF1MHNlbFdKN01Rb2lJSkJwYVBWWk85Z3RuMkc2a2FVaHlHMVJNM3dLSy1GRTRNTHh1TzdJaTlxam1jVHhiSTlabQ?oc=5",
             "source": "Fortune Business Insights",
             "pubDate": "Mon, 29 Jun 2026 07:00:00 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "de"
+          },
+          {
+            "title": "Dekra auf Weltwirtschaftsforum in Davos",
+            "titleEN": "Dekra at the World Economic Forum in Davos",
+            "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOYW5HX1pYbG5wamJBOWt6TndzcWxmRlRRWURKZnpPQlBMMmZwOFRiVnl0cjFLQk4xVG0yWjZkVEZFdkpmMUpFVGRLUm1aOGJPVldmQTJZRDQyb2x1a1ZSM3o5QjVrTVpIeVdVTm5CYTFyMmQ1QmllZzdQVGNVOTRtX2ZhemlNZw?oc=5",
+            "source": "QZ-online",
+            "pubDate": "Tue, 21 Jan 2025 08:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "de"
@@ -2624,21 +2737,21 @@
             "lang": "de"
           },
           {
-            "title": "Indien verschärft Importregeln: Ab 2026 BIS-Zertifizierung für Maschinen Pflicht",
-            "titleEN": "India is tightening import rules: BIS certification for machines will be mandatory from 2026",
-            "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPcUs4OXZXc0VLOGo1NkJpMFJlaE5GeEZiVmVmYmVHZW1DczBDOTM5cExjU05ZOW5sUnB0ME5Xbk5CbTQtQ25rTVQ0eEV2RDVuUmVMLVJTRUJLUzBIWmExZEpfdXFoc0wzckRMQ0l3U2xNNWNNdEFDVjNkRGRhVVhkby1DLS11ZHBacDUtQXh0ZVY3b0RkTS1HeTRNUlBWWEFsMUpyMmoxUUNSaTJGTk5iV2VScmdudDNIM0NUT2xEZWs5Y3c?oc=5",
-            "source": "produktion.de",
-            "pubDate": "Thu, 13 Nov 2025 08:00:00 GMT",
+            "title": "Marktgrößenprognosen für Prüfung, Inspektion und Zertifizierung bis 2037",
+            "titleEN": "Testing, Inspection and Certification Market Size Forecasts to 2037",
+            "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPMzg0Rkx3bjNXNUQzUndZbDREWTdBUlV6NXhGcldoTjNldVdKQXNQSE1pNHo4RnRudEdIa3I1c0gtbWt6WWtIWDJVRG5fRVpqbUtUOXpBZnRYNUQwempydzI1b1FCVGhURXFsWU42OWlRUjZsT0YwY1h2WXRldC1GQ1l0bTM2bTBVQmllemRHVWdvS0VH?oc=5",
+            "source": "Research Nester",
+            "pubDate": "Wed, 10 Sep 2025 07:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "de"
           },
           {
-            "title": "Energiewende mit System",
-            "titleEN": "Systematic energy transition",
-            "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE85Q0NwVExoamdRNFBMVXJQTWd2TUhELUdfSTdmTTNma29lVElfM1NQWlVwUmdjakx5QUhob0stbE84VHpRRm1ydWZGeFlZNUVuUjlvRjZZUFBsLUFpWFBBMnBDamxaV1RRU05UNFpjT01wSElJVGU4?oc=5",
-            "source": "stadt+werk",
-            "pubDate": "Wed, 27 May 2026 03:53:11 GMT",
+            "title": "Indien verschärft Importregeln: Ab 2026 BIS-Zertifizierung für Maschinen Pflicht",
+            "titleEN": "India is tightening import rules: BIS certification for machines will be mandatory from 2026",
+            "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPcUs4OXZXc0VLOGo1NkJpMFJlaE5GeEZiVmVmYmVHZW1DczBDOTM5cExjU05ZOW5sUnB0ME5Xbk5CbTQtQ25rTVQ0eEV2RDVuUmVMLVJTRUJLUzBIWmExZEpfdXFoc0wzckRMQ0l3U2xNNWNNdEFDVjNkRGRhVVhkby1DLS11ZHBacDUtQXh0ZVY3b0RkTS1HeTRNUlBWWEFsMUpyMmoxUUNSaTJGTk5iV2VScmdudDNIM0NUT2xEZWs5Y3c?oc=5",
+            "source": "produktion.de",
+            "pubDate": "Thu, 13 Nov 2025 08:00:00 GMT",
             "urgency": "low",
             "local": true,
             "lang": "de"
@@ -2658,6 +2771,14 @@
             "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPa3Q5SThzb1FTYU13ellOUGtZOVVFTU9wY3M5d01vNTBWMFRSWVlQNW9TeHZ2ZUQtVkN6TVdvRTlSTktTbnZTcGpoWVpfanJPSnpROXhXb0xERzcwaEY3ZzljTU9vOG81SndYdHoxd0l0dkJzZjFZNG1nWXV2dGRmQVA4Qy1mNHNpQ0Radlg1YjU5VkpNU0NvS3NSZmVhcndHZ2U1YV93?oc=5",
             "source": "EY",
             "pubDate": "Fri, 25 Jul 2025 07:00:00 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
             "urgency": "medium",
             "local": false
           },
@@ -2684,16 +2805,6 @@
             "lang": "de"
           },
           {
-            "title": "Rheinmetall baut Europas größte Munitionsfabrik",
-            "titleEN": "Rheinmetall is building Europe's largest ammunition factory",
-            "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNbTJVUEVVRWhBOWVoek9MSnJpaE5LQTh1VXFBR0NKSzkzVzRCekJHaVNtQnVqN0pmcTRfZkF2d1M5S1VRdElNVmJVaFJtb2YtRHlHQWVCUHJYaFBiR25Wc3I4Sk9hX3RvRGstMWs2MGQxQnhrd3NyMzgyUTByTE5fM2EzdUNUdHc?oc=5",
-            "source": "InvestmentWeek",
-            "pubDate": "Fri, 29 Aug 2025 07:00:00 GMT",
-            "urgency": "low",
-            "local": true,
-            "lang": "de"
-          },
-          {
             "title": "Streit um die Wüste: Wie ein Industrieprojekt die Astronomie gefährdet",
             "titleEN": "Dispute over the desert: How an industrial project is endangering astronomy",
             "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQdFY2eEZHTUQzYUx5aXY0RGxMQXczMVIwNHdxVkE1dGRJOUhtZUp4ZU11bnVXWk91MnlUakxRb0JaZ2tEV2hvX3ZaOFVIcFFrRFBjOWZDUGVZMGNmV3hZUXZ3ZnJUMGxGM3o0Mk1FZk9LSFRtNDVTWElHRExSSGpjOGF2cURscWJfeW9VU3dDTkdXQTZSelpOWHVVc3lmZzBraWRnZTRxRUVxa09jQjNzYnpLeW5QajNZZm9QQVZlYlg1RzNpSWc?oc=5",
@@ -2704,7 +2815,18 @@
             "lang": "de"
           }
         ],
-        "emerging": [],
+        "emerging": [
+          {
+            "title": "Wasserstoff Aktien und ETFs - Eine Lohnenswerte Investition?",
+            "titleEN": "Hydrogen stocks and ETFs - a worthwhile investment?",
+            "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBjTUUybkpsYURjaDJ1TXBDbzNfWE1uREVZelJjbUdqVDVUS3J2d1lULTlmRGlyVjlDTHJXODdlT0ZPenMwSV9oYURTVDhqS2x1YmFGRVdxM3ZKc05KVFhweWtqQWdoMGR3cWc?oc=5",
+            "source": "SQUAREVEST",
+            "pubDate": "Thu, 14 Aug 2025 07:00:00 GMT",
+            "urgency": "low",
+            "local": true,
+            "lang": "de"
+          }
+        ],
         "esg": []
       },
       "macro": {
@@ -2727,7 +2849,7 @@
     },
     {
       "country": "Denmark",
-      "fetchedAt": "2026-07-24T09:14:10.184211+00:00",
+      "fetchedAt": "2026-07-27T10:35:27.102131+00:00",
       "highCount": 1,
       "feeds": {
         "competitor": [],
@@ -2747,6 +2869,14 @@
             "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPa3Q5SThzb1FTYU13ellOUGtZOVVFTU9wY3M5d01vNTBWMFRSWVlQNW9TeHZ2ZUQtVkN6TVdvRTlSTktTbnZTcGpoWVpfanJPSnpROXhXb0xERzcwaEY3ZzljTU9vOG81SndYdHoxd0l0dkJzZjFZNG1nWXV2dGRmQVA4Qy1mNHNpQ0Radlg1YjU5VkpNU0NvS3NSZmVhcndHZ2U1YV93?oc=5",
             "source": "EY",
             "pubDate": "Fri, 25 Jul 2025 07:00:00 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
             "urgency": "medium",
             "local": false
           },
@@ -2811,7 +2941,7 @@
     },
     {
       "country": "Slovenia",
-      "fetchedAt": "2026-07-24T09:14:13.346689+00:00",
+      "fetchedAt": "2026-07-27T10:35:59.992169+00:00",
       "highCount": 0,
       "feeds": {
         "competitor": [],
@@ -2835,6 +2965,14 @@
             "local": false
           },
           {
+            "title": "Spain Testing, Inspection, And Certification Market Size & Outlook, 2033",
+            "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYVE2dkdlOVh2MTZxQ280RFlXbWllTzN4ZHV4aVB2SGUyU1loVHJxVDZPOUl4T0tTRHJOVi1SOXQyajFINk13Zm1kMTRibzZRZGxhRFQ1TjRrVjZCU3A1dHdJYlVienE5T1d3aFZENFZRSndRdVdvWWwtWGNNbXhwT1dLU0xQMXkyblV6a1RoX1FwTlE2X1gtMGpYaVZZeUlN?oc=5",
+            "source": "Grand View Research",
+            "pubDate": "Fri, 09 May 2025 06:28:28 GMT",
+            "urgency": "medium",
+            "local": false
+          },
+          {
             "title": "The Future of the TIC Sector: Opportunity in Transformation",
             "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTUhlU2VBME56bTlvcTFCTnFRRWoyejBCSEluLWJ6dVhHNUFXc3hRaW02czNhOWtydXNiMEhZWW9UWXhsUl9hX25VSWZaS1ZxZGZGbVVlN0dwYzdLY085OTF1VFdzamlsR29nRkQ1RzdaNExRblhWY1AyanpmTEFfNzFfRHMyTXZ6MDZkbGFVdW9Zd0E?oc=5",
             "source": "Investec",
@@ -2844,7 +2982,16 @@
           }
         ],
         "tenders": [],
-        "standards": [],
+        "standards": [
+          {
+            "title": "CLR Labs wins ISO 17025 accreditation for biometrics testing across EU",
+            "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNMHV4YXltalBSNlJ1SDR1U3U5V3Ytak5nVkhYOXY5aE5zOHJlaTBVam1QQ2FXQmIzQWtHbnh1dk9zU2hVZkNabGFNNEtGZ09PZ0tJNWM2dzJLYTN0cWNJbm41dE9RWlVzQmgzRHpFS0JIOVpaZlkzeVZDOUg0eDAtWHpfaFVNdUNuVnRKVDJqdkIxR21GQjNhS2pUMzl1MDhyM2I0WG5CTHAxekVZWWc?oc=5",
+            "source": "Biometric Update",
+            "pubDate": "Mon, 04 May 2026 07:00:00 GMT",
+            "urgency": "medium",
+            "local": false
+          }
+        ],
         "investments": [
           {
             "title": "Slovenia And France Sign Declaration As EDF Competes With Westinghouse For Krško Nuclear Project",
@@ -2875,16 +3022,8 @@
         "esg": []
       },
       "macro": {
-        "gdp": {
-          "value": 1.06,
-          "year": "2025",
-          "source": "World Bank"
-        },
-        "inflation": {
-          "value": 2.37,
-          "year": "2025",
-          "source": "World Bank"
-        },
+        "gdp": null,
+        "inflation": null,
         "interestRate": {
           "bank": "ECB",
           "value": "4.50%",
